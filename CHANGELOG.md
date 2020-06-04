@@ -1,3 +1,6 @@
+## 1.1.0
+* Deploy to GitHub pages
+
 ## 1.0.0
 * Add koa server
 
