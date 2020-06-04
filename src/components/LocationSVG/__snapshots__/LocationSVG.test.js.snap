@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationSVG renders as expected 1`] = `
+<svg
+  className="LocationSVG"
+>
+  <use
+    xlinkHref="#LocationSymbol"
+  />
+</svg>
+`;

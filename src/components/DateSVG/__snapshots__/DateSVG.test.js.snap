@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateSVG renders as expected 1`] = `
+<svg
+  className="DateSVG"
+>
+  <use
+    xlinkHref="#DateSymbol"
+  />
+</svg>
+`;
