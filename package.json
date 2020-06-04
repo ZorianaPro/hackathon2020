@@ -1,6 +1,8 @@
 {
   "name": "hackathon2020",
   "version": "1.0.0",
+  "author": "ZorianaPro (zoryanalesyk@gmail.com)",
+  "homepage": "https://zorianapro.github.io/hackathon2020/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
