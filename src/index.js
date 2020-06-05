@@ -12,6 +12,14 @@ if (module.hot) {
   module.hot.accept();
 }
 
+
+
+
+
+
+
+
+
 if ("__REDUX_DEVTOOLS_EXTENSION__" in window) {
   devAdditions = window.__REDUX_DEVTOOLS_EXTENSION__();
 }
