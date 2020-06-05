@@ -20,7 +20,7 @@
     "lint:ci": "eslint --format junit -o test-results/eslint/results.xml --ext js,jsx src/",
     "start": "react-scripts start",
     "test": "react-scripts test",
-    "test:ci": "CI=true npm test -- --ci --reporters='default' --reporters='jest-junit'"
+    "test:ci": "CI=true npm test -- --ci --reporters='default' --reporters='jest-junit'",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
