@@ -23,7 +23,7 @@ ReactDOM.render(
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>,lsasads
+  </React.StrictMode>,
   document.getElementById("root")
 );
 
