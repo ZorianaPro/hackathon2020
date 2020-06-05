@@ -1,13 +1,29 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Lato', Sans-Serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--eerie-black-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --baby-pink-color: #f3bdc2;
+  --banana-mania-color: #fce9b7;
+  --periwinkie-crayola-color: #CEDAFD;
+  --powder-blue-color: #C5E7E6;
+  --eerie-black-color: #1F1F1F;
+  --maize-crayola-color: #ECBF3F;
+  --middle-blue-green-color: #94D0C7;
+  --salmon-pink-color: #FF8793;
+  --liberty-color: #5559BD;
+  --white-color: #fff
+}
+
+/*Rules*/
+/* - all units should be ems*/
+/* - lets use 8px grid, 4,8,16,24,32 ets */

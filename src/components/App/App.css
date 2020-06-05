@@ -1,0 +1,55 @@
+.App {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  color: var(--eerie-black-color);
+  font-size: 1em;
+  letter-spacing: 0.125em;
+}
+
+.App .App-Main-Section-Container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  position: relative;
+}
+
+.App .App-Main-Section {
+  height: 100vh;
+}
+
+.App .App-Main-Section-Title {
+  font-size: 3em;
+  width: 70%;
+  margin: 1em 0;
+}
+
+.App .App-Main-Section-Info {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.App .App-Main-Section-Info svg {
+  width: 2em;
+  height: 2em;
+}
+
+.App .App-Main-Section-Info p {
+  margin: 0.5em;
+  font-size: 1.5em;
+}
+
+.App .App-Main-Section-Info .App-Main-Section-Date,
+.App .App-Main-Section-Info .App-Main-Section-Location {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.App .App-Main-Section-Info .Button {
+  margin: 2em 0;
+}

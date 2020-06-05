@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SVGSpriteSheet renders as expected 1`] = `
+<svg
+  className="SVGSpriteSheet"
+  id="SVGSpriteSheet"
+>
+  <LocationSymbol />
+  <DateSymbol />
+</svg>
+`;
