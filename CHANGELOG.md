@@ -1,3 +1,6 @@
+## 1.3.0
+* Add redux and state
+
 ## 1.2.0
 * [Main Section](https://github.com/ZorianaPro/hackathon2020/issues/4)
 * Add button component
