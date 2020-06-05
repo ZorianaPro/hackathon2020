@@ -1,3 +1,8 @@
+## 1.3.0
+* [Idea Section](https://github.com/ZorianaPro/hackathon2020/issues/8)
+####ToDo:
+* Display all ideas here
+
 ## 1.2.0
 * [Main Section](https://github.com/ZorianaPro/hackathon2020/issues/4)
 * Add button component

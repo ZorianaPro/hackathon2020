@@ -31,9 +31,20 @@ class App extends Component {
          </div>
        </div>
       </section>
+      <hr/>
       <section className="Registration">
 
       </section>
+      <hr/>
+      <section className="App-Ideas-Section">
+        <div className="App-Ideas-Section-Container">
+          <div className="App-Section-Title">
+            Ideas
+          </div>
+
+        </div>
+      </section>
+      <hr/>
       <SVGSpriteSheet/>
     </div>
     );
