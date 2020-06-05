@@ -1,3 +1,7 @@
+## 1.3.0
+* [Idea Info overlay](https://github.com/ZorianaPro/hackathon2020/issues/14)
+* Add eslint
+
 ## 1.2.0
 * [Main Section](https://github.com/ZorianaPro/hackathon2020/issues/4)
 * Add button component

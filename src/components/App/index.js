@@ -5,6 +5,7 @@ import SVGSpriteSheet from '../SVGSpriteSheet';
 import LocationSVG from '../LocationSVG';
 import DateSVG from "../DateSVG";
 import Button from "../Button";
+import IdeaInfoOverlay from '../IdeaInfoOverlay'
 
 class App extends Component {
   render() {
@@ -35,6 +36,7 @@ class App extends Component {
 
       </section>
       <SVGSpriteSheet/>
+      <IdeaInfoOverlay/>
     </div>
     );
   }
