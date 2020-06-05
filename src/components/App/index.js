@@ -1,14 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import Header from "../Header";
 import SVGSpriteSheet from '../SVGSpriteSheet';
 import LocationSVG from '../LocationSVG';
 import DateSVG from "../DateSVG";
 import Button from "../Button";
+import IdeaCard from "../IdeaCard";
 
-class App extends Component {
-  render() {
-    return (
+import { ideas } from '../../server/mockServerData';
+
+const App = () => {
+
+  return (
     <div className="App">
       <section className="App-Main-Section">
        <div className="App-Main-Section-Container">
@@ -34,10 +37,23 @@ class App extends Component {
       <section className="Registration">
 
       </section>
+      <section className="App-Ideas-Section">
+        <div className="App-Ideas-Section-Container">
+          {
+            (ideas || []).map((idea) => {
+              return (
+                <IdeaCard id={idea.id}
+                name={idea.name}
+                description={idea.description}
+                teamId={idea.teamId}/>
+              )
+            })
+          }
+        </div>
+      </section>
       <SVGSpriteSheet/>
     </div>
-    );
-  }
-}
+  );
+};
 
 export default App;
