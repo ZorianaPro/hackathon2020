@@ -17,7 +17,6 @@ describe('IdeaInfoOverlay', () => {
 		beforeEach(() => {
 			overlay = mount(<IdeaInfoOverlay/>);
 			overlay.find('.IdeaInfoOverlay-Close').simulate('click');
-			overlay.update();
 		});
 		it('closes overlay', () => {
 			expect(overlay.exists('.IdeaInfoOverlay')).toBe(false);

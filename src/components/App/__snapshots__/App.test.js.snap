@@ -43,15 +43,22 @@ exports[`App renders as expected 1`] = `
       </div>
     </div>
   </section>
+  <hr />
   <section
     className="Registration"
   />
+  <hr />
   <section
     className="App-Ideas-Section"
   >
     <div
       className="App-Ideas-Section-Container"
     >
+      <div
+        className="App-Section-Title"
+      >
+        Ideas
+      </div>
       <IdeaCard
         description="Any long description Any long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long description"
         id={1}
@@ -66,6 +73,8 @@ exports[`App renders as expected 1`] = `
       />
     </div>
   </section>
+  <hr />
   <SVGSpriteSheet />
+  <IdeaInfoOverlay />
 </div>
 `;
