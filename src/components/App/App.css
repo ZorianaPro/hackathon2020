@@ -1,5 +1,5 @@
 .App {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: normal;
   font-weight: 100;
   color: var(--eerie-black-color);
@@ -62,3 +62,4 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+

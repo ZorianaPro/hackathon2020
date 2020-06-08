@@ -1,15 +1,15 @@
 .Button {
-    width: fit-content;
-    padding: 1em;
-    border: 1px solid var(--eerie-black-color);
-    border-radius: 0.25em;
-    background-color: var(--liberty-color);
-    color: var(--white-color);
-    cursor: pointer;
-    transition: all ease-in 100ms;
+  width: fit-content;
+  padding: 1em;
+  border: 1px solid var(--eerie-black-color);
+  border-radius: 0.25em;
+  background-color: var(--liberty-color);
+  color: var(--white-color);
+  cursor: pointer;
+  transition: all ease-in 100ms;
 }
 
 .Button:hover {
-    color: var(--eerie-black-color);
-    background-color: var(--periwinkie-crayola-color);
+  color: var(--eerie-black-color);
+  background-color: var(--periwinkie-crayola-color);
 }
