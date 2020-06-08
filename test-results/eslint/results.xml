@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/App/App.test.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/App/App.test.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/App/App.test" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/App/index.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/App/index.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/App/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/App/reducer.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/App/reducer.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/App/reducer" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/Books/index.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/Books/index.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/Books/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/Button/Button.test.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/Button/Button.test.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/Button/Button.test" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/Button/index.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/Button/index.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/Button/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSVG/DateSVG.test.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSVG/DateSVG.test.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSVG/DateSVG.test" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSVG/index.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSVG/index.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSVG/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSymbol/DateSymbol.test.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSymbol/DateSymbol.test.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSymbol/DateSymbol.test" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSymbol/index.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSymbol/index.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/DateSymbol/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/Header/Header.test.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/Header/Header.test.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/Header/Header.test" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="1" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/Header/index.js">
+<testcase time="0" name="org.eslint.no-empty-pattern" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/Header/index"><failure message="Unexpected empty object pattern."><![CDATA[line 4, col 17, Warning - Unexpected empty object pattern. (no-empty-pattern)]]></failure></testcase>
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSVG/LocationSVG.test.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSVG/LocationSVG.test.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSVG/LocationSVG.test" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSVG/index.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSVG/index.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSVG/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSymbol/LocationSymbol.test.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSymbol/LocationSymbol.test.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSymbol/LocationSymbol.test" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSymbol/index.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSymbol/index.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/LocationSymbol/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/SVGSpriteSheet/SVGSpritesheet.test.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/SVGSpriteSheet/SVGSpritesheet.test.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/SVGSpriteSheet/SVGSpritesheet.test" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/SVGSpriteSheet/index.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/components/SVGSpriteSheet/index.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/components/SVGSpriteSheet/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/index.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/index.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/rootReducer.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/rootReducer.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/rootReducer" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/server/index.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/server/index.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/server/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/serviceWorker.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/serviceWorker.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/serviceWorker" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/setupTests.js">
+<testcase time="0" name="/Users/yoanadimova/Workspace/hackathon2020/src/setupTests.js" classname="/Users/yoanadimova/Workspace/hackathon2020/src/setupTests" />
+</testsuite>
+</testsuites>

@@ -1,5 +1,5 @@
 .App {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: normal;
   font-weight: 100;
   color: var(--eerie-black-color);
@@ -8,12 +8,13 @@
   position: relative;
 }
 
-.App .App-Main-Section-Container {
+.App .App-Main-Section-Container,
+.App .App-Ideas-Section-Container {
   margin: 0 auto;
-  width: 100%;
   max-width: 1200px;
   height: 100%;
   position: relative;
+  padding: 0 2em;
 }
 
 .App .App-Main-Section {
@@ -31,6 +32,7 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  padding: 0 2em;
 }
 
 .App .App-Main-Section-Info svg {
@@ -53,4 +55,21 @@
 
 .App .App-Main-Section-Info .Button {
   margin: 2em 0;
+}
+
+.App .App-Ideas-Section-Container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.App .App-Section-Title {
+  font-size: 4em;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+}
+
+.App hr {
+  opacity: 0.3;
 }
