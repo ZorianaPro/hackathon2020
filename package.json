@@ -8,6 +8,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.9",
+    "prettier": "^2.0.5",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
@@ -16,8 +19,9 @@
     "build": "react-scripts build",
     "coverage:ci": "CI=true npm test -- --ci --coverage",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext js,jsx src/",
-    "lint:ci": "eslint --format junit -o test-results/eslint/results.xml --ext js,jsx src/",
+    "lint": "./node_modules/.bin/eslint './src/**/*.{js,jsx}'",
+    "lint:fix": "./node_modules/.bin/eslint  './src/**/*.{js,jsx}' --fix",
+    "lint:ci": "./node_modules/.bin/eslint  --format junit -o test-results/eslint/results.xml --ext js,jsx src/",
     "start": "react-scripts start",
     "test": "react-scripts test",
     "test:ci": "CI=true npm test -- --ci --reporters='default' --reporters='jest-junit'",
@@ -26,6 +30,16 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "./node_modules/.bin/prettier --write"
+    ]
   },
   "browserslist": {
     "production": [

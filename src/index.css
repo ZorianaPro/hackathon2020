@@ -1,27 +1,28 @@
 body {
   margin: 0;
-  font-family: 'Lato', Sans-Serif;
+  font-family: "Lato", Sans-Serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--eerie-black-color);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 :root {
   --baby-pink-color: #f3bdc2;
   --banana-mania-color: #fce9b7;
-  --periwinkie-crayola-color: #CEDAFD;
-  --powder-blue-color: #C5E7E6;
-  --eerie-black-color: #1F1F1F;
-  --maize-crayola-color: #ECBF3F;
-  --middle-blue-green-color: #94D0C7;
-  --salmon-pink-color: #FF8793;
-  --liberty-color: #5559BD;
-  --white-color: #fff
+  --periwinkie-crayola-color: #cedafd;
+  --powder-blue-color: #c5e7e6;
+  --eerie-black-color: #1f1f1f;
+
+  --maize-crayola-color: #ecbf3f;
+  --middle-blue-green-color: #94d0c7;
+  --salmon-pink-color: #ff8793;
+  --liberty-color: #5559bd;
+  --white-color: #fff;
 }
 
 /*Rules*/
