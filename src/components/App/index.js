@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
 import Header from "../Header";
-import SVGSpriteSheet from "../SVGSpriteSheet";
-import LocationSVG from "../LocationSVG";
+import SVGSpriteSheet from '../SVGSpriteSheet';
+import LocationSVG from '../LocationSVG';
 import DateSVG from "../DateSVG";
 import Button from "../Button";
 import IdeaCard from "../IdeaCard";
 
 import { ideas } from '../../server/mockServerData';
+import IdeaInfoOverlay from '../IdeaInfoOverlay'
 
 const App = () => {
 
@@ -58,6 +59,7 @@ const App = () => {
       </section>
       <hr/>
       <SVGSpriteSheet/>
+      <IdeaInfoOverlay/>
     </div>
   );
 };

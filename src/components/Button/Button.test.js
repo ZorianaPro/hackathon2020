@@ -40,7 +40,6 @@ describe("Button", () => {
       };
       button = mount(<Button {...props} onClick={clickHandler()} />);
       button.simulate("click");
-      button.update();
     });
 
     it("display title", () => {

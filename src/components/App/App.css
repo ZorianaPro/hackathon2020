@@ -5,6 +5,7 @@
   color: var(--eerie-black-color);
   font-size: 1em;
   letter-spacing: 0.125em;
+  position: relative;
 }
 
 .App .App-Main-Section-Container,
