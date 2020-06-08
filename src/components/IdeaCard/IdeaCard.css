@@ -54,46 +54,13 @@
     transition: all ease-in 100ms;
 }
 
-.Team {
-    border-top: 1px solid var(--liberty-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1em;
-}
-
-.Team .Team-Member {
-    width: 2em;
-    height: 2em;
-    border-radius: 50%;
-    background-color: var(--white-color);
-    display: inline-block;
-    margin-right: -0.5em;
-    border: 1px solid;
-    text-align: center;
-    cursor: pointer;
-}
-
-.Team .Team-Member p {
-    margin: 0.4em 0 0 0;
-    line-height: 2em;
-    vertical-align: center;
-    font-size: 0.8em;
-}
-
-.Team .Team-Join {
-    margin-left: 2em;
-    cursor: pointer;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all ease-in 100ms;
-}
-
 .IdeaCard .IdeaCard-Actions .IdeaCard-More:hover {
    text-decoration: underline;
 }
 
-.Team .Team-Join:hover {
-    text-decoration: underline;
+.IdeaCard .IdeaCard-Actions .Idea-Actions-Join {
+    padding-top: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all ease-in 100ms;
 }

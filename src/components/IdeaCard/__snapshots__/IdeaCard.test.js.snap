@@ -1,45 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IdeaCard renders as expected 1`] = `
-<div
-  className="IdeaCard"
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
 >
-  <div
-    className="IdeaCard-Container"
-  >
+  <IdeaCard>
     <div
-      className="IdeaCard-Info"
+      className="IdeaCard"
     >
       <div
-        className="IdeaCard-Info-Name"
-      />
-      <div
-        className="IdeaCard-Info-Description"
-      />
-    </div>
-    <div
-      className="IdeaCard-Actions"
-    >
-      <div
-        className="Team"
+        className="IdeaCard-Container"
       >
         <div
-          className="Team-Members"
-        />
-        <div
-          className="Team-Join"
-          onClick={[Function]}
+          className="IdeaCard-Info"
         >
-          + join
+          <div
+            className="IdeaCard-Info-Name"
+          />
+          <div
+            className="IdeaCard-Info-Description"
+          />
+        </div>
+        <div
+          className="IdeaCard-Actions"
+        >
+          <Team
+            full={false}
+          >
+            <div
+              className="Team Team--short"
+            >
+              <div
+                className="Team-Members"
+              />
+            </div>
+          </Team>
+          <div
+            className="Idea-Actions-Join"
+            onClick={[Function]}
+          >
+            + join
+          </div>
+          <div
+            className="IdeaCard-More"
+            onClick={[Function]}
+          >
+            MORE
+          </div>
         </div>
       </div>
-      <div
-        className="IdeaCard-More"
-        onClick={[Function]}
-      >
-        MORE
-      </div>
     </div>
-  </div>
-</div>
+  </IdeaCard>
+</Provider>
 `;

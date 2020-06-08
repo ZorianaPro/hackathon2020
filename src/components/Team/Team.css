@@ -1,0 +1,75 @@
+.Team.Team--short {
+    border-top: 1px solid var(--liberty-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1em;
+}
+
+.Team.Team--short .Team-Member {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    display: inline-block;
+    margin-right: -0.5em;
+    border: 1px solid;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Team.Team--short .Team-Member p {
+    margin: 0.4em 0 0 0;
+    line-height: 2em;
+    vertical-align: center;
+    font-size: 0.8em;
+}
+
+.Team.Team--short .Team-Join {
+    margin-left: 2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all ease-in 100ms;
+}
+
+.Team.Team--short .Team-Join:hover {
+    text-decoration: underline;
+}
+
+.Team.Team--full .Team-Members {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Team.Team--full .Team-Member {
+    display: flex;
+    min-width: 10em;
+    margin: 2em 2em 0 0;
+}
+.Team.Team--full .Team-Member p {
+    border-radius: 50%;
+    background-color: var(--white-color);
+    border: 1px solid;
+    text-align: center;
+    width: 3em;
+    height: 3em;
+    margin: 0 1em 0 0;
+    line-height: 3em;
+}
+
+.Team.Team--full .Team-Member .Team-Member-Info-Name {
+    font-weight: 700;
+    margin-bottom: 0.125em;
+}
+
+.Team.Team--full .Team-Member .Team-Member-Info-Email {
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+.Team.Team--full .Team-Member .Team-Member-Info-Position {
+    margin-top: 1em;
+}
