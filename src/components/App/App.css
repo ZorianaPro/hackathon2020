@@ -65,6 +65,8 @@
 .App .App-Section-Title {
   font-size: 4em;
   font-style: italic;
+  width: 100%;
+  text-align: center;
 }
 
 .App hr {
