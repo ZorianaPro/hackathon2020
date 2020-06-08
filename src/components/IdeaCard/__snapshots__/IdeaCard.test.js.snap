@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IdeaCard renders as expected 1`] = `
+<div
+  className="IdeaCard"
+>
+  <div
+    className="IdeaCard-Container"
+  >
+    <div
+      className="IdeaCard-Info"
+    >
+      <div
+        className="IdeaCard-Info-Name"
+      />
+      <div
+        className="IdeaCard-Info-Description"
+      />
+    </div>
+    <div
+      className="IdeaCard-Actions"
+    >
+      <div
+        className="Team"
+      >
+        <div
+          className="Team-Members"
+        />
+        <div
+          className="Team-Join"
+          onClick={[Function]}
+        >
+          + join
+        </div>
+      </div>
+      <div
+        className="IdeaCard-More"
+        onClick={[Function]}
+      >
+        MORE
+      </div>
+    </div>
+  </div>
+</div>
+`;
