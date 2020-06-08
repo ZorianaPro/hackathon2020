@@ -1,5 +1,6 @@
 ##1.4.0
 * [Idea card](https://github.com/ZorianaPro/hackathon2020/issues/7)
+*
 ####To DO:
 * Add team members component
 * Add functions to open overlays

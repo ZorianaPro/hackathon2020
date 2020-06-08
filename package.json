@@ -33,8 +33,10 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
-    }
+      "pre-commit": "lint-staged && npm run test:ci",
+      "pre-push": "npm run lint && npm run test:ci",
+      "post-pull": "npm install"
+    },
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
