@@ -1,3 +1,8 @@
+## 1.5.0
+* [Idea Section](https://github.com/ZorianaPro/hackathon2020/issues/8)
+####ToDo:
+* Display all ideas here
+
 ##1.4.0
 * [Idea card](https://github.com/ZorianaPro/hackathon2020/issues/7)
 *

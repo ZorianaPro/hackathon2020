@@ -10,11 +10,10 @@
 .App .App-Main-Section-Container,
 .App .App-Ideas-Section-Container {
   margin: 0 auto;
-  padding: 0 2em;
-  width: 100%;
   max-width: 1200px;
   height: 100%;
   position: relative;
+  padding: 0 2em;
 }
 
 .App .App-Main-Section {
@@ -63,3 +62,13 @@
   flex-wrap: wrap;
 }
 
+.App .App-Section-Title {
+  font-size: 4em;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+}
+
+.App hr {
+  opacity: 0.3;
+}

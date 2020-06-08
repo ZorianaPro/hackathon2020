@@ -1,6 +1,6 @@
 {
   "name": "hackathon2020",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": "ZorianaPro (zoryanalesyk@gmail.com)",
   "homepage": "https://zorianapro.github.io/hackathon2020/",
   "private": true,
@@ -34,9 +34,9 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm run test:ci",
-      "pre-push": "npm run lint && npm run test:ci",
+      "pre-push": "lint-staged && npm run test:ci",
       "post-pull": "npm install"
-    },
+    }
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [

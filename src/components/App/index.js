@@ -34,12 +34,17 @@ const App = () => {
          </div>
        </div>
       </section>
+      <hr/>
       <section className="Registration">
 
       </section>
+      <hr/>
       <section className="App-Ideas-Section">
         <div className="App-Ideas-Section-Container">
-          {
+          <div className="App-Section-Title">
+            Ideas
+          </div>
+{
             (ideas || []).map((idea) => {
               return (
                 <IdeaCard id={idea.id}
@@ -51,6 +56,7 @@ const App = () => {
           }
         </div>
       </section>
+      <hr/>
       <SVGSpriteSheet/>
     </div>
   );
