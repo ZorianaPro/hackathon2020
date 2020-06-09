@@ -3,10 +3,6 @@ import { actions } from "./actions";
 const initialState = {
 	open: false,
 	content: {
-		id: '',
-		name: '',
-		description: '',
-		team: {}
 	}
 };
 

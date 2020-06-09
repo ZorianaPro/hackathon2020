@@ -1,9 +1,16 @@
+## 1.8.0
+* [Join Idea Overlay](https://github.com/ZorianaPro/hackathon2020/issues/12)
+####ToDo:
+- add tests for actions and reducers
+- add tests for Join Idea Overlay
+- add form to url
+- form validation
+- submit form
+
 ## 1.7.0
 * [Team component](https://github.com/ZorianaPro/hackathon2020/issues/24)
 * Open and close info overlay with redux state
 * pass content tot overlay
-####ToDo:
-- add tests for actions and reducers
 
 ## 1.6.0
 * [Idea Info overlay](https://github.com/ZorianaPro/hackathon2020/issues/14)
@@ -11,16 +18,10 @@
 
 ## 1.5.0
 * [Idea Section](https://github.com/ZorianaPro/hackathon2020/issues/8)
-####ToDo:
-* Display all ideas here
 
 ##1.4.0
 * [Idea card](https://github.com/ZorianaPro/hackathon2020/issues/7)
 *
-####To DO:
-* Add team members component
-* Add functions to open overlays
-* Take all info from the state
 
 ## 1.3.0
 * Add redux and state

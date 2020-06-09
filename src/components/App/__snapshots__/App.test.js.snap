@@ -76,5 +76,6 @@ exports[`App renders as expected 1`] = `
   <hr />
   <SVGSpriteSheet />
   <IdeaInfoOverlay />
+  <JoinIdeaOverlay />
 </div>
 `;

@@ -3,7 +3,6 @@ import { shallow, mount } from 'enzyme';
 import IdeaCard from './';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store'
-import { teams } from '../../server/mockServerData'
 
 describe('IdeaCard', () => {
 	const initialState = {
