@@ -1,46 +1,55 @@
-import React, { useState, useEffect } from 'react';
-import './IdeaInfoOverlay.css'
+import React, { useState, useEffect, useCallback } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import Team from '../Team';
+import './IdeaInfoOverlay.css';
+import { close } from './actions';
 
 const IdeaInfoOverlay = ({
-
+	team,
+  dispatch,
+	isOpen,
+	content
 }) => {
 
-	const [open, setOpen] = useState(true);
+	dispatch = useDispatch();
+
+	[isOpen, content] = useSelector(state => [
+		state.ideaInfoOverlayReducer.open,
+		state.ideaInfoOverlayReducer.ideaContent
+	]);
+
+	const closeOverlay = () => {
+		dispatch(close())
+	};
 
 	return (
 		<div>
-			{ open
-				&& <div className='IdeaInfoOverlay'>
+			{ isOpen
+				&& <div className="IdeaInfoOverlay" key={`idea-${content.id}-overlay`}>
 					<div className="IdeaInfoOverlay-Container">
 						<div className="IdeaInfoOverlay-Box">
-							<div className="IdeaInfoOverlay-Close" onClick={() => setOpen(false)}>
+							<div className="IdeaInfoOverlay-Close" onClick={() => closeOverlay()}>
 								close
 							</div>
 							<div className="IdeaInfoOverlay-Title">
-								Idea Name
+								{content.name}
 							</div>
 							<div className="IdeaInfoOverlay-Description">
-								Idea description Idea descriptionIdea descriptionIdea descriptionIdea
-								descriptionIdea descriptionIdea description
-								Idea descriptionIdea descriptionIdea descriptionIdea descriptionIdea
-								descriptionIdea descriptionIdea descriptionIdea descriptionIdea descriptionIdea
-								descriptionIdea description
-								Idea descriptionIdea description
+								{content.description}
 							</div>
 							<div className="IdeaInfoOverlay-Team">
 								<div className="IdeaInfoOverlay-Team-Title">
 									Team
 								</div>
-								<div className="Team">
-
-								</div>
+							<Team full={ true }
+							      team={ content.team }/>
 							</div>
 						</div>
 					</div>
 				</div>
 			}
 		</div>
-	)
+	);
 };
 
 export default IdeaInfoOverlay;

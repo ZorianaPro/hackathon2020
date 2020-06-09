@@ -1,3 +1,10 @@
+## 1.7.0
+* [Team component](https://github.com/ZorianaPro/hackathon2020/issues/24)
+* Open and close info overlay with redux state
+* pass content tot overlay
+####ToDo:
+- add tests for actions and reducers
+
 ## 1.6.0
 * [Idea Info overlay](https://github.com/ZorianaPro/hackathon2020/issues/14)
 * Add eslint

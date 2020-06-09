@@ -4,17 +4,20 @@ const teams = [
 		members: [
 			{
 				id: 1,
-				name: 'Mgdf Drfg',
+				firstName: 'Drfg',
+				lastName: 'Drfg',
 				position: 'Software Engineer',
 				email: 'dfgdg@dff.fff'
 			}, {
 				id: 2,
-				name: 'Mgdf Drfg',
+				firstName: 'Drfg',
+				lastName: 'Drfg',
 				position: 'Software Engineer',
 				email: 'dfgdg@dff.fff'
 			}, {
 				id: 3,
-				name: 'Mgdf Drfg',
+				firstName: 'Drfg',
+				lastName: 'Drfg',
 				position: 'Software Engineer',
 				email: 'dfgdg@dff.fff'
 			}
@@ -24,17 +27,20 @@ const teams = [
 		members: [
 			{
 				id: 1,
-				name: 'Mgdf Drfg',
+				firstName: 'Drfg',
+				lastName: 'Drfg',
 				position: 'Software Engineer',
 				email: 'dfgdg@dff.fff'
 			}, {
 				id: 2,
-				name: 'Mgdf Drfg',
+				firstName: 'Drfg',
+				lastName: 'Drfg',
 				position: 'Software Engineer',
 				email: 'dfgdg@dff.fff'
 			}, {
 				id: 3,
-				name: 'Mgdf Drfg',
+				firstName: 'Drfg',
+				lastName: 'Drfg',
 				position: 'Software Engineer',
 				email: 'dfgdg@dff.fff'
 			}
