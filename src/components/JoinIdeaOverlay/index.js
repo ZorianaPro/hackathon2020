@@ -3,13 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import './JoinIdeaOverlay.css';
 import '../Overlay/Overlay.css';
 import { close } from './actions';
-import Button from "../Button";
 
 const JoinIdeaOverlay = ({
 	team,
   dispatch,
 	isOpen,
-	content
+	ideaId
 }) => {
 
 	dispatch = useDispatch();
@@ -18,11 +17,11 @@ const JoinIdeaOverlay = ({
 	const [lastName, setLastName] = useState('');
 	const [email, setEmail] = useState('');
 	const [position, setPosition] = useState('');
-	const [ideaId, setIdeaId] = useState('');
+	const [sumbitFrom, setSubmitForm] = useState(false);
 
-	[isOpen, content] = useSelector(state => [
+	[isOpen, ideaId] = useSelector(state => [
 		state.joinIdeaOverlayReducer.open,
-		state.joinIdeaOverlayReducer.content
+		state.joinIdeaOverlayReducer.content.id
 	]);
 
 	const handleChange = useCallback(
@@ -38,8 +37,6 @@ const JoinIdeaOverlay = ({
 					return setEmail(value);
 				case 'position':
 					return setPosition(value);
-				case 'ideaId':
-					return setIdeaId(value);
 			}
 
 		}, []
@@ -54,23 +51,34 @@ const JoinIdeaOverlay = ({
 	const joinIdea = useCallback(
 		(e) => {
 			e.preventDefault();
-			debugger
+			const data = {
+				ideaId: ideaId,
+				firstName: firstName,
+				lastName: lastName,
+				email: email,
+				position: position
+			};
+			console.log(data)
+			// submit idea to the backend
+			// update state
+			// clean form
+			// show success message
 			return false
-		}, []
+		}, [ideaId, firstName, lastName, email, position]
 	);
 
 	const animateLabel = useCallback(
-		(input, action='') => {
+		(input, focus=true) => {
 		const labelName = input.name;
 		const labels = document.getElementsByTagName('label');
 			for( let i = 0; i < labels.length; i++ ) {
 				if (labels[i].htmlFor === labelName)
-					if (action === 'focusIn') {
-						labels[i].classList.add('focus');
-					} else {
+					if (!focus) {
 						if (input.value === '') {
 							labels[i].classList.remove('focus');
 						}
+					} else {
+						labels[i].classList.add('focus');
 					}
 			}
 		},[]);
@@ -89,37 +97,33 @@ const JoinIdeaOverlay = ({
 							</div>
 							<form  className="JoinIdeaOverlay-Form" action="" onSubmit={(e) => joinIdea(e)} method="POST">
 								<div className="JoinIdeaOverlay-Input-Container">
-									<label htmlFor="firstName">First Name*</label>
+									<label htmlFor="firstName" className={`${firstName !== '' ? 'focus' : ''}`}>First Name*</label>
 									<input type="text" name="firstName" required value={firstName}
-									       onFocus={(e) => animateLabel(e.target, 'focusIn')}
-									       onBlur={(e) => animateLabel(e.target, 'focusOut')}
+									       onFocus={(e) => animateLabel(e.target, true)}
+									       onBlur={(e) => animateLabel(e.target, false)}
 									       onChange={(e) => handleChange(e.target)}/>
 								</div>
 								<div className="JoinIdeaOverlay-Input-Container">
-									<label htmlFor="lastName">Last Name*</label>
+									<label htmlFor="lastName" className={`${lastName !== '' ? 'focus' : ''}`}>Last Name*</label>
 									<input type="text" name="lastName" required value={lastName}
-									       onFocus={(e) => animateLabel(e.target, 'focusIn')}
-									       onBlur={(e) => animateLabel(e.target, 'focusOut')}
+									       onFocus={(e) => animateLabel(e.target, true)}
+									       onBlur={(e) => animateLabel(e.target, false)}
 									       onChange={(e) => handleChange(e.target)}/>
 								</div>
 								<div className="JoinIdeaOverlay-Input-Container">
-									<label htmlFor="email">Your email*</label>
+									<label htmlFor="email" className={`${email !== '' ? 'focus' : ''}`}>Your email*</label>
 									<input type="email" name="email" required value={email}
-									       onFocus={(e) => animateLabel(e.target, 'focusIn')}
-									       onBlur={(e) => animateLabel(e.target, 'focusOut')}
+									       onFocus={(e) => animateLabel(e.target, true)}
+									       onBlur={(e) => animateLabel(e.target, false)}
 									       onChange={(e) => handleChange(e.target)}/>
 								</div>
 								<div className="JoinIdeaOverlay-Input-Container">
-									<label htmlFor="position">Position*</label>
+									<label htmlFor="position" className={`${position !== '' ? 'focus' : ''}`}>Position*</label>
 									<input type="text" name="position" required value={position}
-									       onFocus={(e) => animateLabel(e.target, 'focusIn')}
-									       onBlur={(e) => animateLabel(e.target, 'focusOut')}
+									       onFocus={(e) => animateLabel(e.target, true)}
+									       onBlur={(e) => animateLabel(e.target, false)}
 									       onChange={(e) => handleChange(e.target)}/>
 								</div>
-								<select name="ideaId" value={ideaId} onChange={(e) => handleChange(e.target)}>
-									<option >Please select the idea from the list</option>
-									<option value={1}> Idea Name </option>
-								</select>
 								<button type="submit">Submit</button>
 							</form>
 							</div>
