@@ -3,3 +3,33 @@
     font-size: 2.2em;
     padding-top: 1em;
 }
+
+.JoinIdeaOverlay .JoinIdeaOverlay-Input-Container {
+    position: relative;
+    margin-top: 2em;
+}
+
+.JoinIdeaOverlay .JoinIdeaOverlay-Input-Container label {
+    display: block;
+    transition: all ease-in 300ms;
+    position: absolute;
+    bottom: 6px;
+    z-index: -10;
+}
+
+.JoinIdeaOverlay .JoinIdeaOverlay-Input-Container label.focus {
+    bottom: 40px;
+}
+
+.JoinIdeaOverlay .JoinIdeaOverlay-Form button {
+    width: fit-content;
+    padding: 1em;
+    border: 1px solid var(--eerie-black-color);
+    border-radius: 0.25em;
+    background-color: var(--liberty-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all ease-in 100ms;
+    margin-top: 1em;
+    float: right;
+}

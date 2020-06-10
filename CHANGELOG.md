@@ -3,9 +3,6 @@
 ####ToDo:
 - add tests for actions and reducers
 - add tests for Join Idea Overlay
-- add form to url
-- form validation
-- submit form
 
 ## 1.7.0
 * [Team component](https://github.com/ZorianaPro/hackathon2020/issues/24)
