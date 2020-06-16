@@ -4,6 +4,8 @@ const Logger = require("koa-logger");
 const cors = require("koa-cors");
 const Router = require("koa-router");
 const HttpStatus = require("http-status");
+const db = require('./db');
+const Idea = require('./controllers/idea');
 
 const app = new Koa();
 
@@ -16,25 +18,33 @@ app.use(cors());
 
 const router = new Router();
 
-router.get("/book", async (ctx, next) => {
-  const books = [
-    "Learn somehting man",
-    "Fluent Python",
-    "Pro Python",
-    "The Go programming language",
-  ];
+router.get("/idea", async (ctx, next) => {
+  const idea = await Idea.showAll()
 
   ctx.status = HttpStatus.OK;
-  ctx.body = books;
+  ctx.body = idea;
+  await next();
+});
+
+router.post("/idea", async (ctx, next) => {
+  const content = ctx.request.body
+  const idea = await Idea.create({content})
+
+  ctx.status = HttpStatus.OK;
+  ctx.body = idea.toJSON();
   await next();
 });
 
 app.use(router.routes()).use(router.allowedMethods());
 
-app.listen(PORT, function () {
-  console.log(
-    "==> 🌎  Listening on port %s. Visit http://localhost:%s/",
-    PORT,
-    PORT
-  );
-});
+db.connect()
+.then(() => {
+  app.listen(PORT, function () {
+    console.log(
+      "==> 🌎  Listening on port %s. Visit http://localhost:%s/",
+      PORT,
+      PORT
+    );
+  })
+})
+

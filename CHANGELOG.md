@@ -1,3 +1,5 @@
+## 1.8.0
+* Connect to mongoDB, made test get and post requests
 ## 1.7.0
 * [Team component](https://github.com/ZorianaPro/hackathon2020/issues/24)
 * Open and close info overlay with redux state
