@@ -4,77 +4,111 @@ exports[`App renders as expected 1`] = `
 <div
   className="App"
 >
+  <article>
+    <Nav />
+    <Header />
+  </article>
   <section
-    className="App-Main-Section"
+    className="Inspiration"
   >
     <div
-      className="App-Main-Section-Container"
+      className="Title--with-image"
     >
-      <Header />
-      <div
-        className="App-Main-Section-Info"
-      >
-        <div
-          className="App-Main-Section-Title"
-        >
-          Cool name for our cool hackathon
-        </div>
-        <div
-          className="App-Main-Section-Date"
-        >
-          <DateSVG />
-          <p>
-             12-15 December 2020 
-          </p>
-        </div>
-        <div
-          className="App-Main-Section-Location"
-        >
-          <LocationSVG />
-          <p>
-             Online 
-          </p>
-        </div>
-        <Button
-          action="scroll"
-          target="Registration"
-          title="Go to registration"
-        />
-      </div>
-    </div>
-  </section>
-  <hr />
-  <section
-    className="Registration"
-  />
-  <hr />
-  <section
-    className="App-Ideas-Section"
-  >
-    <div
-      className="App-Ideas-Section-Container"
-    >
-      <div
+      <img
+        alt="Inspiration"
+        src="inspiration.PNG"
+      />
+      <h1
         className="App-Section-Title"
       >
-        Ideas
-      </div>
-      <IdeaCard
-        description="Any long description Any long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long description"
-        id={1}
-        name="Idea 1 name"
-        teamId={1}
-      />
-      <IdeaCard
-        description="Any long description"
-        id={2}
-        name="Idea 2 name"
-        teamId={2}
-      />
+        Inspiration
+      </h1>
     </div>
   </section>
-  <hr />
+  <main
+    className="App-Main-Section"
+  >
+    <hr />
+    <section
+      className="App-Ideas-Section"
+    >
+      <div
+        className="Title--with-image"
+      >
+        <img
+          alt="Registration"
+          src="ideas.PNG"
+        />
+        <h1
+          className="App-Section-Title"
+        >
+          Ideas
+        </h1>
+      </div>
+      <div
+        className="App-Ideas-Section-Container"
+      >
+        <IdeaCard
+          description="Any long description Any long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long description"
+          id={1}
+          name="Idea 1 name"
+          teamId={1}
+        />
+        <IdeaCard
+          description="Any long description"
+          id={2}
+          name="Idea 2 name"
+          teamId={2}
+        />
+      </div>
+    </section>
+    <hr />
+    <section
+      className="Registration"
+    >
+      <div
+        className="Title--with-image"
+      >
+        <img
+          alt="Registration"
+          src="registration.PNG"
+        />
+        <h1
+          className="App-Section-Title"
+        >
+          Registration
+        </h1>
+      </div>
+    </section>
+    <hr />
+    <section
+      className="Rules"
+    >
+      <div
+        className="Title--with-image"
+      >
+        <img
+          alt="Rules"
+          src="rules.PNG"
+        />
+        <h1
+          className="App-Section-Title"
+        >
+          Rules
+        </h1>
+      </div>
+    </section>
+    <hr />
+  </main>
   <SVGSpriteSheet />
+<<<<<<< Updated upstream
   <IdeaInfoOverlay />
+<<<<<<< Updated upstream
+=======
+  <JoinIdeaOverlay />
+=======
+  <IdeaInfoOverlayWrapper />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 </div>
 `;

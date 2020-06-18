@@ -1,65 +1,70 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Nav from "../Nav";
 import Header from "../Header";
-import SVGSpriteSheet from '../SVGSpriteSheet';
-import LocationSVG from '../LocationSVG';
-import DateSVG from "../DateSVG";
-import Button from "../Button";
+import SVGSpriteSheet from "../SVGSpriteSheet";
 import IdeaCard from "../IdeaCard";
+import { ideas } from "../../server/mockServerData";
+import IdeaInfoOverlay from "../IdeaInfoOverlay";
+import JoinIdeaOverlay from "../JoinIdeaOverlay";
 
-import { ideas } from '../../server/mockServerData';
-import IdeaInfoOverlay from '../IdeaInfoOverlay'
+import registrationImg from "../../assets/registration.PNG";
+import inspirationImg from "../../assets/inspiration.PNG";
+import rulesImg from "../../assets/rules.PNG";
+import ideasImg from "../../assets/ideas.PNG";
 
 const App = () => {
-
   return (
     <div className="App">
-      <section className="App-Main-Section">
-       <div className="App-Main-Section-Container">
-         <Header/>
-         <div className="App-Main-Section-Info">
-           <div className="App-Main-Section-Title">
-             Cool name for our cool hackathon
-           </div>
-           <div className="App-Main-Section-Date">
-             <DateSVG/>
-             <p> 12-15 December 2020 </p>
-           </div>
-           <div className="App-Main-Section-Location">
-             <LocationSVG/>
-             <p> Online </p>
-           </div>
-           <Button title='Go to registration'
-                   action='scroll'
-                   target='Registration'/>
-         </div>
-       </div>
-      </section>
-      <hr/>
-      <section className="Registration">
-
-      </section>
-      <hr/>
-      <section className="App-Ideas-Section">
-        <div className="App-Ideas-Section-Container">
-          <div className="App-Section-Title">
-            Ideas
-          </div>
-{
-            (ideas || []).map((idea) => {
-              return (
-                <IdeaCard id={idea.id}
-                name={idea.name}
-                description={idea.description}
-                teamId={idea.teamId}/>
-              )
-            })
-          }
+      <article>
+        <Nav />
+        <Header />
+      </article>
+      <section className="Inspiration">
+        <div className="Title--with-image">
+          <img src={inspirationImg} alt="Inspiration" />
+          <h1 className="App-Section-Title">Inspiration</h1>
         </div>
       </section>
-      <hr/>
-      <SVGSpriteSheet/>
-      <IdeaInfoOverlay/>
+      <main className="App-Main-Section">
+        <hr />
+        <section className="App-Ideas-Section">
+          <div className="Title--with-image">
+            <img src={ideasImg} alt="Registration" />
+            <h1 className="App-Section-Title">Ideas</h1>
+          </div>
+          <div className="App-Ideas-Section-Container">
+            {(ideas || []).map((idea) => {
+              return (
+                <IdeaCard
+                  id={idea.id}
+                  name={idea.name}
+                  description={idea.description}
+                  teamId={idea.teamId}
+                />
+              );
+            })}
+          </div>
+        </section>
+        <hr />
+        <section className="Registration">
+          <div className="Title--with-image">
+            <img src={registrationImg} alt="Registration" />
+            <h1 className="App-Section-Title">Registration</h1>
+          </div>
+        </section>
+        <hr />
+        <section className="Rules">
+          <div className="Title--with-image">
+            <img src={rulesImg} alt="Rules" />
+            <h1 className="App-Section-Title">Rules</h1>
+          </div>
+        </section>
+        <hr />
+      </main>
+      <SVGSpriteSheet />
+      <IdeaInfoOverlay />
+      <JoinIdeaOverlay />
     </div>
   );
 };

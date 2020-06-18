@@ -1,19 +1,19 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
-import Header from "./";
+import Nav from "../Nav";
 
 describe("Header", () => {
-  let header;
+  let nav;
 
   beforeEach(() => {
-    header = mount(<Header />);
+    nav = mount(<Nav />);
   });
 
   it("renders without crashing", () => {
-    expect(shallow.bind(shallow, <Header />)).not.toThrow();
+    expect(shallow.bind(shallow, <Nav />)).not.toThrow();
   });
 
   it("renders as expected", () => {
-    expect(header).toMatchSnapshot();
+    expect(nav).toMatchSnapshot();
   });
 });

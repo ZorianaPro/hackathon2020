@@ -8,53 +8,12 @@
   position: relative;
 }
 
-.App .App-Main-Section-Container,
 .App .App-Ideas-Section-Container {
   margin: 0 auto;
   max-width: 1200px;
   height: 100%;
   position: relative;
   padding: 0 2em;
-}
-
-.App .App-Main-Section {
-  height: 100vh;
-}
-
-.App .App-Main-Section-Title {
-  font-size: 3em;
-  width: 70%;
-  margin: 1em 0;
-}
-
-.App .App-Main-Section-Info {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  padding: 0 2em;
-}
-
-.App .App-Main-Section-Info svg {
-  width: 2em;
-  height: 2em;
-}
-
-.App .App-Main-Section-Info p {
-  margin: 0.5em;
-  font-size: 1.5em;
-}
-
-.App .App-Main-Section-Info .App-Main-Section-Date,
-.App .App-Main-Section-Info .App-Main-Section-Location {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.App .App-Main-Section-Info .Button {
-  margin: 2em 0;
 }
 
 .App .App-Ideas-Section-Container {
@@ -66,10 +25,21 @@
 .App .App-Section-Title {
   font-size: 4em;
   font-style: italic;
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
+  font-weight: 100;
 }
 
 .App hr {
   opacity: 0.3;
+}
+.Title--with-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Title--with-image img {
+  display: inline-block;
+  max-height: 350px;
 }

@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 import { shallow } from "enzyme";
-import App from './';
+import App from "./";
 
-describe('App', () => {
-  it('renders without crashing', () => {
-    expect(shallow.bind(shallow, <App/>)).not.toThrow();
+describe("App", () => {
+  it("renders without crashing", () => {
+    expect(shallow.bind(shallow, <App />)).not.toThrow();
   });
 
-  it('renders as expected', () => {
-    expect(shallow(<App/>)).toMatchSnapshot();
+  it("renders as expected", () => {
+    expect(shallow(<App />)).toMatchSnapshot();
   });
 });
-

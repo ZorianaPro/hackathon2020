@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="28" failures="3" time="6.129">
+  <testsuite name="DateSymbol" errors="0" failures="0" skipped="0" timestamp="2020-06-18T16:30:51" time="2.699" tests="2">
+    <testcase classname="DateSymbol renders without crashing" name="DateSymbol renders without crashing" time="0.006">
+    </testcase>
+    <testcase classname="DateSymbol renders as expected" name="DateSymbol renders as expected" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="IdeaCard" errors="0" failures="0" skipped="0" timestamp="2020-06-18T16:30:51" time="2.886" tests="3">
+    <testcase classname="IdeaCard renders without crashing" name="IdeaCard renders without crashing" time="0.035">
+    </testcase>
+    <testcase classname="IdeaCard renders as expected" name="IdeaCard renders as expected" time="0.007">
+    </testcase>
+    <testcase classname="IdeaCard given props renders content" name="IdeaCard given props renders content" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="Button" errors="0" failures="0" skipped="0" timestamp="2020-06-18T16:30:51" time="2.977" tests="4">
+    <testcase classname="Button renders without crashing" name="Button renders without crashing" time="0.005">
+    </testcase>
+    <testcase classname="Button renders as expected" name="Button renders as expected" time="0.012">
+    </testcase>
+    <testcase classname="Button on pass title display title" name="Button on pass title display title" time="0.097">
+    </testcase>
+    <testcase classname="Button on click display title" name="Button on click display title" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="LocationSVG" errors="0" failures="0" skipped="0" timestamp="2020-06-18T16:30:51" time="2.804" tests="2">
+    <testcase classname="LocationSVG renders without crashing" name="LocationSVG renders without crashing" time="0.012">
+    </testcase>
+    <testcase classname="LocationSVG renders as expected" name="LocationSVG renders as expected" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="LocationSymbol" errors="0" failures="0" skipped="0" timestamp="2020-06-18T16:30:54" time="0.492" tests="2">
+    <testcase classname="LocationSymbol renders without crashing" name="LocationSymbol renders without crashing" time="0.002">
+    </testcase>
+    <testcase classname="LocationSymbol renders as expected" name="LocationSymbol renders as expected" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="IdeaInfoOverlay" errors="0" failures="3" skipped="0" timestamp="2020-06-18T16:30:51" time="3.518" tests="3">
+    <testcase classname="IdeaInfoOverlay renders without crashing" name="IdeaInfoOverlay renders without crashing" time="0.203">
+      <failure>Error: expect(received).not.toThrow()
+
+Error name:    &quot;Error&quot;
+Error message: &quot;could not find react-redux context value; please ensure the component is wrapped in a &lt;Provider&gt;&quot;
+
+       6 | 
+       7 | const IdeaInfoOverlay = ({ team, dispatch, isOpen, content }) =&gt; {
+    &gt;  8 |   dispatch = useDispatch();
+         |              ^
+       9 | 
+      10 |   [isOpen, content] = useSelector((state) =&gt; [
+      11 |     state.ideaInfoOverlayReducer.open,
+
+      at useReduxContext (node_modules/react-redux/lib/hooks/useReduxContext.js:30:11)
+      at useStore (node_modules/react-redux/lib/hooks/useStore.js:28:28)
+      at useDispatch (node_modules/react-redux/lib/hooks/useDispatch.js:24:17)
+      at IdeaInfoOverlay (src/components/IdeaInfoOverlay/index.js:8:14)
+      at ReactShallowRenderer.render (node_modules/react-test-renderer/cjs/react-test-renderer-shallow.development.js:829:32)
+      at fn (node_modules/enzyme-adapter-react-16/src/ReactSixteenAdapter.js:645:55)
+      at withSetStateAllowed (node_modules/enzyme-adapter-utils/src/Utils.js:99:18)
+      at Object.render (node_modules/enzyme-adapter-react-16/src/ReactSixteenAdapter.js:645:20)
+      at new ShallowWrapper (node_modules/enzyme/src/ShallowWrapper.js:411:22)
+      at Function.shallow (node_modules/enzyme/src/shallow.js:10:10)
+      at Object.&lt;anonymous&gt; (node_modules/expect/build/toThrowMatchers.js:81:11)
+      at Object.toThrow (node_modules/expect/build/index.js:342:33)
+      at Object.&lt;anonymous&gt; (src/components/IdeaInfoOverlay/IdeaInfoOverlay.test.js:7:60)
+    at Object.&lt;anonymous&gt; (/Users/yoanadimova/Workspace/hackathon2020/src/components/IdeaInfoOverlay/IdeaInfoOverlay.test.js:7:60)
+    at Object.asyncJestTest (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)</failure>
+    </testcase>
+    <testcase classname="IdeaInfoOverlay renders as expected" name="IdeaInfoOverlay renders as expected" time="0">
+      <failure>Error: could not find react-redux context value; please ensure the component is wrapped in a &lt;Provider&gt;
+    at useReduxContext (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-redux/lib/hooks/useReduxContext.js:30:11)
+    at useStore (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-redux/lib/hooks/useStore.js:28:28)
+    at useDispatch (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-redux/lib/hooks/useDispatch.js:24:17)
+    at IdeaInfoOverlay (/Users/yoanadimova/Workspace/hackathon2020/src/components/IdeaInfoOverlay/index.js:8:14)
+    at ReactShallowRenderer.render (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-test-renderer/cjs/react-test-renderer-shallow.development.js:829:32)
+    at fn (/Users/yoanadimova/Workspace/hackathon2020/node_modules/enzyme-adapter-react-16/src/ReactSixteenAdapter.js:645:55)
+    at withSetStateAllowed (/Users/yoanadimova/Workspace/hackathon2020/node_modules/enzyme-adapter-utils/src/Utils.js:99:18)
+    at Object.render (/Users/yoanadimova/Workspace/hackathon2020/node_modules/enzyme-adapter-react-16/src/ReactSixteenAdapter.js:645:20)
+    at new ShallowWrapper (/Users/yoanadimova/Workspace/hackathon2020/node_modules/enzyme/src/ShallowWrapper.js:411:22)
+    at shallow (/Users/yoanadimova/Workspace/hackathon2020/node_modules/enzyme/src/shallow.js:10:10)
+    at Object.&lt;anonymous&gt; (/Users/yoanadimova/Workspace/hackathon2020/src/components/IdeaInfoOverlay/IdeaInfoOverlay.test.js:11:12)
+    at Object.asyncJestTest (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)</failure>
+    </testcase>
+    <testcase classname="IdeaInfoOverlay click close button closes overlay" name="IdeaInfoOverlay click close button closes overlay" time="0.17">
+      <failure>Error: could not find react-redux context value; please ensure the component is wrapped in a &lt;Provider&gt;
+    at useReduxContext (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-redux/lib/hooks/useReduxContext.js:30:11)
+    at useStore (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-redux/lib/hooks/useStore.js:28:28)
+    at useDispatch (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-redux/lib/hooks/useDispatch.js:24:17)
+    at IdeaInfoOverlay (/Users/yoanadimova/Workspace/hackathon2020/src/components/IdeaInfoOverlay/index.js:8:14)
+    at renderWithHooks (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at invokeEventListeners (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:193:27)
+    at HTMLUnknownElementImpl._dispatch (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:119:9)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:82:17)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jsdom/lib/jsdom/living/nodes/HTMLElement-impl.js:30:27)
+    at HTMLUnknownElement.dispatchEvent (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:157:21)
+    at Object.invokeGuardedCallbackDev (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at fn (/Users/yoanadimova/Workspace/hackathon2020/node_modules/enzyme-adapter-react-16/src/ReactSixteenAdapter.js:437:26)
+    at /Users/yoanadimova/Workspace/hackathon2020/node_modules/enzyme-adapter-react-16/src/ReactSixteenAdapter.js:354:37
+    at batchedUpdates$1 (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at Object.act (/Users/yoanadimova/Workspace/hackathon2020/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at wrapAct (/Users/yoanadimova/Workspace/hackathon2020/node_modules/enzyme-adapter-react-16/src/ReactSixteenAdapter.js:354:13)
+    at Object.render (/Users/yoanadimova/Workspace/hackathon2020/node_modules/enzyme-adapter-react-16/src/ReactSixteenAdapter.js:423:16)
+    at new ReactWrapper (/Users/yoanadimova/Workspace/hackathon2020/node_modules/enzyme/src/ReactWrapper.js:115:16)
+    at mount (/Users/yoanadimova/Workspace/hackathon2020/node_modules/enzyme/src/mount.js:10:10)
+    at Object.&lt;anonymous&gt; (/Users/yoanadimova/Workspace/hackathon2020/src/components/IdeaInfoOverlay/IdeaInfoOverlay.test.js:18:17)
+    at Object.asyncJestLifecycle (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:53:37)
+    at /Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)</failure>
+      <failure>TypeError: Cannot read property &apos;exists&apos; of undefined
+    at Object.&lt;anonymous&gt; (/Users/yoanadimova/Workspace/hackathon2020/src/components/IdeaInfoOverlay/IdeaInfoOverlay.test.js:22:22)
+    at Object.asyncJestTest (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/yoanadimova/Workspace/hackathon2020/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="SVGSpriteSheet" errors="0" failures="0" skipped="0" timestamp="2020-06-18T16:30:54" time="0.668" tests="4">
+    <testcase classname="SVGSpriteSheet renders without crashing" name="SVGSpriteSheet renders without crashing" time="0.001">
+    </testcase>
+    <testcase classname="SVGSpriteSheet renders as expected" name="SVGSpriteSheet renders as expected" time="0.003">
+    </testcase>
+    <testcase classname="SVGSpriteSheet id uses the id given in props" name="SVGSpriteSheet id uses the id given in props" time="0.004">
+    </testcase>
+    <testcase classname="SVGSpriteSheet className uses the className given in props" name="SVGSpriteSheet className uses the className given in props" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Team" errors="0" failures="0" skipped="0" timestamp="2020-06-18T16:30:54" time="0.579" tests="2">
+    <testcase classname="Team renders without crashing" name="Team renders without crashing" time="0.009">
+    </testcase>
+    <testcase classname="Team renders as expected" name="Team renders as expected" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="DateSVG" errors="0" failures="0" skipped="0" timestamp="2020-06-18T16:30:54" time="0.481" tests="2">
+    <testcase classname="DateSVG renders without crashing" name="DateSVG renders without crashing" time="0.001">
+    </testcase>
+    <testcase classname="DateSVG renders as expected" name="DateSVG renders as expected" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Header" errors="0" failures="0" skipped="0" timestamp="2020-06-18T16:30:51" time="4.005" tests="2">
+    <testcase classname="Header renders without crashing" name="Header renders without crashing" time="0.038">
+    </testcase>
+    <testcase classname="Header renders as expected" name="Header renders as expected" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2020-06-18T16:30:51" time="4.058" tests="2">
+    <testcase classname="App renders without crashing" name="App renders without crashing" time="0.007">
+    </testcase>
+    <testcase classname="App renders as expected" name="App renders as expected" time="0.005">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,7 +1,65 @@
-.Header {
-  height: 5em;
+/* .App .App-Main-Section {
+  height: 100vh;
+} */
+
+.App .App-Header-Section-Container {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100%;
+  position: relative;
+  padding: 0 2em;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+}
+
+.App .App-Header-Section-Title {
+  font-size: 3em;
+  width: 70%;
+  margin: 1em 0;
+}
+
+.App .App-Header-Section-Info {
+  /* position: absolute;
+  top: 50%;
+  left: 0; */
+  /* transform: translateY(-50%); */
+  padding: 0 2em;
+  flex: 50%;
+}
+
+.App .App-Header-Section-Info svg {
+  width: 2em;
+  height: 2em;
+}
+
+.App .App-Header-Section-Info p {
+  margin: 0.5em;
+  font-size: 1.5em;
+}
+
+.App .App-Header-Section-Info .App-Main-Section-Date,
+.App .App-Header-Section-Info .App-Main-Section-Location {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.App .App-Header-Section-Info .Button {
+  margin: 2em 0;
+}
+
+.App .App-Header-Section-Image {
+  /* position: absolute;
+  top: 50%;
+  left: 0; */
+  /* transform: translateY(-50%); */
+  padding: 0 2em;
+  flex: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App .App-Header-Section-Image img {
+  max-width: 100%;
 }

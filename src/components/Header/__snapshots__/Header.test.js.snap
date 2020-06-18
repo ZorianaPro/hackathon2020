@@ -2,8 +2,72 @@
 
 exports[`Header renders as expected 1`] = `
 <Header>
-  <div
-    className="Header"
-  />
+  <section>
+    <div
+      className="App-Header-Section-Container"
+    >
+      <div
+        className="App-Header-Section-Info"
+      >
+        <div
+          className="App-Header-Section-Title"
+        >
+          Cool name for our cool hackathon
+        </div>
+        <div
+          className="App-Header-Section-Date"
+        >
+          <DateSVG>
+            <svg
+              className="DateSVG"
+            >
+              <use
+                xlinkHref="#DateSymbol"
+              />
+            </svg>
+          </DateSVG>
+          <p>
+             12-15 December 2020 
+          </p>
+        </div>
+        <div
+          className="App-Header-Section-Location"
+        >
+          <LocationSVG>
+            <svg
+              className="LocationSVG"
+            >
+              <use
+                xlinkHref="#LocationSymbol"
+              />
+            </svg>
+          </LocationSVG>
+          <p>
+             Online 
+          </p>
+        </div>
+        <Button
+          action="scroll"
+          target="Registration"
+          title="Go to registration"
+        >
+          <div
+            className="Button"
+            onClick={[Function]}
+          >
+            Go to registration
+          </div>
+        </Button>
+      </div>
+      <div
+        className="App-Header-Section-Image"
+      >
+        <img
+          alt="Teaser"
+          src="teaser.PNG"
+        />
+      </div>
+    </div>
+  </section>
 </Header>
 `;
