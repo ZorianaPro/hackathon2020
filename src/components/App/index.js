@@ -9,6 +9,7 @@ import IdeaCard from "../IdeaCard";
 
 import { ideas } from '../../server/mockServerData';
 import IdeaInfoOverlay from '../IdeaInfoOverlay'
+import JoinIdeaOverlay from "../JoinIdeaOverlay";
 
 const App = () => {
 
@@ -60,6 +61,7 @@ const App = () => {
       <hr/>
       <SVGSpriteSheet/>
       <IdeaInfoOverlay/>
+      <JoinIdeaOverlay/>
     </div>
   );
 };

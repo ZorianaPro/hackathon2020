@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import Team from '../Team';
 import './IdeaInfoOverlay.css';
+import '../Overlay/Overlay.css';
 import { close } from './actions';
 
 const IdeaInfoOverlay = ({
@@ -15,7 +16,7 @@ const IdeaInfoOverlay = ({
 
 	[isOpen, content] = useSelector(state => [
 		state.ideaInfoOverlayReducer.open,
-		state.ideaInfoOverlayReducer.ideaContent
+		state.ideaInfoOverlayReducer.content
 	]);
 
 	const closeOverlay = () => {
@@ -23,12 +24,12 @@ const IdeaInfoOverlay = ({
 	};
 
 	return (
-		<div>
+		<div className="IdeaInfoOverlay">
 			{ isOpen
-				&& <div className="IdeaInfoOverlay" key={`idea-${content.id}-overlay`}>
-					<div className="IdeaInfoOverlay-Container">
-						<div className="IdeaInfoOverlay-Box">
-							<div className="IdeaInfoOverlay-Close" onClick={() => closeOverlay()}>
+				&& <div className="Overlay" key={`idea-${content.id}-overlay`}>
+					<div className="Overlay-Container">
+						<div className="Overlay-Box">
+							<div className="Overlay-Close" onClick={() => closeOverlay()}>
 								close
 							</div>
 							<div className="IdeaInfoOverlay-Title">

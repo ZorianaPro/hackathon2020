@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { teams } from '../../server/mockServerData';
 import Team from '../Team';
-import { open } from "../IdeaInfoOverlay/actions";
+import * as ideaOverlay from "../IdeaInfoOverlay/actions";
+import * as joinOverlay from "../JoinIdeaOverlay/actions";
 import  './IdeaCard.css';
 import { useDispatch } from "react-redux";
 
@@ -19,14 +20,16 @@ const IdeaCard = ({
 		}
 	});
 
-	const joinIdeaOverlay = (id) => {
-		console.log('opens join idea overlay')
-	};
-
 	dispatch = useDispatch();
 
+	const joinIdeaOverlay = useCallback(() => {
+			dispatch(joinOverlay.open({
+				id: id
+			}))
+		}, [id, dispatch]);
+
 	const openIdeaOverlay = useCallback(() => {
-		dispatch(open({
+		dispatch(ideaOverlay.open({
 			id: id,
 			name: name,
 			description: description,
@@ -49,7 +52,7 @@ const IdeaCard = ({
 					<Team full={false}
 					team={team}/>
 					<div className="Idea-Actions-Join"
-					     onClick={() => joinIdeaOverlay(id)}>
+					     onClick={() => joinIdeaOverlay()}>
 						+ join
 					</div>
 					<div className="IdeaCard-More"
