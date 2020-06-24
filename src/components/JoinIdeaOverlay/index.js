@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import './JoinIdeaOverlay.css';
 import '../Overlay/Overlay.css';
-import { close } from './actions';
+import { close, submit } from './actions';
 
 const JoinIdeaOverlay = ({
 	team,
@@ -17,7 +17,8 @@ const JoinIdeaOverlay = ({
 	const [lastName, setLastName] = useState('');
 	const [email, setEmail] = useState('');
 	const [position, setPosition] = useState('');
-	const [sumbitFrom, setSubmitForm] = useState(false);
+	const [submitFrom, setSubmitForm] = useState(false);
+	const [showThankYou, setShowThankYou] = useState(false);
 
 	[isOpen, ideaId] = useSelector(state => [
 		state.joinIdeaOverlayReducer.open,
@@ -45,12 +46,20 @@ const JoinIdeaOverlay = ({
 	const closeOverlay = useCallback(
 		() => {
 			dispatch(close())
-		}, [dispatch]
+		}, []
 	);
 
 	const joinIdea = useCallback(
 		(e) => {
 			e.preventDefault();
+			setSubmitForm(true);
+			return false
+		}, []
+	);
+
+	useEffect(() => {
+
+		if (submitFrom) {
 			const data = {
 				ideaId: ideaId,
 				firstName: firstName,
@@ -58,14 +67,19 @@ const JoinIdeaOverlay = ({
 				email: email,
 				position: position
 			};
-			console.log(data)
-			// submit idea to the backend
-			// update state
-			// clean form
-			// show success message
-			return false
-		}, [ideaId, firstName, lastName, email, position]
-	);
+			console.log(data);
+			// do all this in promise and clean state after submit
+			dispatch(submit(data));
+			setSubmitForm(false);
+			setShowThankYou(true);
+			setTimeout(() => {
+				dispatch(close());
+				setShowThankYou(false);
+			}, 3000)
+		} else {
+
+		}
+	}, [submitFrom]);
 
 	const animateLabel = useCallback(
 		(input, focus=true) => {
@@ -88,7 +102,8 @@ const JoinIdeaOverlay = ({
 			{ isOpen
 				&& <div className="Overlay">
 					<div className="Overlay-Container">
-						<div className="Overlay-Box">
+						{ !showThankYou
+							&& <div className="Overlay-Box">
 							<div className="Overlay-Close" onClick={() => closeOverlay()}>
 								close
 							</div>
@@ -126,7 +141,16 @@ const JoinIdeaOverlay = ({
 								</div>
 								<button type="submit">Submit</button>
 							</form>
+						</div>
+						}
+						{	showThankYou
+							&& <div className="Overlay-Box">
+							<div className="Overlay-Close" onClick={() => closeOverlay()}>
+								close
 							</div>
+							<div>Thank you</div>
+						</div>
+						}
 						</div>
 					</div>
 			}

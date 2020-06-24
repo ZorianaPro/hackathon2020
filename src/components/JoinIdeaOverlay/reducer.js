@@ -15,8 +15,18 @@ export default (state = initialState, action) => {
 			};
 		case actions.close:
 			return {
-				open: false,
-				content: initialState.content
+				...state,
+				open: false
+			};
+		case actions.submit:
+			return {
+				...state,
+				content: action.value
+			};
+		case actions.clean:
+			return {
+				...initialState,
+				open: true
 			};
 		default:
 			return state;
