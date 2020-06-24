@@ -1,16 +1,15 @@
 export const actions = {
-	open: 'OPEN:OVERLAY',
-	close: 'CLOSE:OVERLAY'
+	open: 'OPEN:IDEAINFO:OVERLAY',
+	close: 'CLOSE:IDEAINFO:OVERLAY'
 };
 
-export const open = (ideaInfo) => ({
+export const open = (content) => ({
 	type: actions.open,
-	value: ideaInfo
+	value: content
 });
 
 export const close = () => ({
-	type: actions.close,
-	value: false
+	type: actions.close
 });
 
 export default {

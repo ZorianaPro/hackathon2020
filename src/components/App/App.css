@@ -73,3 +73,21 @@
 .App hr {
   opacity: 0.3;
 }
+
+input, select {
+  display: block;
+  height: 2.5em;
+  border-bottom: 1px solid;
+  margin-bottom: 1em;
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  background-color: transparent
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--liberty-color);
+}

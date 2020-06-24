@@ -1,0 +1,39 @@
+.Overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(31, 31, 31, 0.8);
+    opacity: 1;
+    display: block;
+    transition: all ease-in 100ms;
+}
+
+.Overlay .Overlay-Container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Overlay .Overlay-Box {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    background-color: var(--white-color);
+    border-radius: 0.5em;
+    min-width: 17em;
+    padding: 2em;
+    max-width: 45em;
+}
+
+.Overlay .Overlay-Close {
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    cursor: pointer;
+}
