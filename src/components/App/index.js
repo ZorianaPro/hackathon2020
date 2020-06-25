@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from "../Header";
 import SVGSpriteSheet from '../SVGSpriteSheet';
@@ -6,12 +6,20 @@ import LocationSVG from '../LocationSVG';
 import DateSVG from "../DateSVG";
 import Button from "../Button";
 import IdeaCard from "../IdeaCard";
-
-import { ideas } from '../../server/mockServerData';
 import IdeaInfoOverlay from '../IdeaInfoOverlay'
 import JoinIdeaOverlay from "../JoinIdeaOverlay";
 
-const App = () => {
+const App = ({
+
+             }) => {
+
+  const [ideas, setIdeas] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:8082/ideas')
+    .then(response => response.json())
+    .then(data => setIdeas(data));
+  },[]);
 
   return (
     <div className="App">
@@ -47,12 +55,12 @@ const App = () => {
             Ideas
           </div>
 {
-            (ideas || []).map((idea) => {
+            ideas.map((idea) => {
               return (
-                <IdeaCard id={idea.id}
+                <IdeaCard id={idea._id}
                 name={idea.name}
                 description={idea.description}
-                teamId={idea.teamId}/>
+                team={idea.team}/>
               )
             })
           }

@@ -14,7 +14,7 @@ const Team = ({
 		<div className={`Team ${full ? 'Team--full' : 'Team--short'}`}>
 			<div className="Team-Members">
 				{ team
-				&& (team.members || []).map((member) => {
+				&& (team || []).map((member) => {
 					return (
 						<div className='Team-Member' key={member.id}>
 							<p>
