@@ -8,7 +8,7 @@ const JoinIdeaOverlay = ({
 	team,
   dispatch,
 	isOpen,
-	ideaId
+	id
 }) => {
 
 	dispatch = useDispatch();
@@ -20,7 +20,7 @@ const JoinIdeaOverlay = ({
 	const [submitFrom, setSubmitForm] = useState(false);
 	const [showThankYou, setShowThankYou] = useState(false);
 
-	[isOpen, ideaId] = useSelector(state => [
+	[isOpen, id] = useSelector(state => [
 		state.joinIdeaOverlayReducer.open,
 		state.joinIdeaOverlayReducer.content.id
 	]);
@@ -61,21 +61,34 @@ const JoinIdeaOverlay = ({
 
 		if (submitFrom) {
 			const data = {
-				ideaId: ideaId,
-				firstName: firstName,
-				lastName: lastName,
-				email: email,
-				position: position
+				id: id,
+				member: {
+					firstName: firstName,
+					lastName: lastName,
+					email: email,
+					position: position
+				}
 			};
 			console.log(data);
-			// do all this in promise and clean state after submit
-			dispatch(submit(data));
-			setSubmitForm(false);
-			setShowThankYou(true);
-			setTimeout(() => {
-				dispatch(close());
-				setShowThankYou(false);
-			}, 3000)
+			const requestOptions = {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			};
+			fetch('http://localhost:8082/join', requestOptions)
+			.then(response => response.json())
+			.then(() => {
+				setSubmitForm(false);
+				setShowThankYou(true);
+			})
+			.then(() => {
+				setTimeout(() => {
+					dispatch(close());
+					setShowThankYou(false);
+				}, 3000)
+			})
 		} else {
 
 		}

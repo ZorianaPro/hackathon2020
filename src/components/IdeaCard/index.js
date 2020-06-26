@@ -9,16 +9,11 @@ import { useDispatch } from "react-redux";
 const IdeaCard = ({
   name,
 	description,
-	teamId,
+	team,
 	id,
 	dispatch
 }) => {
 
-	const team = teams.find((team) =>  {
-		if (team.id === teamId) {
-			return team
-		}
-	});
 
 	dispatch = useDispatch();
 
