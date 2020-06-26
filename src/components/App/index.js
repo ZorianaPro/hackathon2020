@@ -8,6 +8,7 @@ import Button from "../Button";
 import IdeaCard from "../IdeaCard";
 import IdeaInfoOverlay from '../IdeaInfoOverlay'
 import JoinIdeaOverlay from "../JoinIdeaOverlay";
+import { Parallax, Background } from 'react-parallax';
 
 const App = ({
 
@@ -42,6 +43,22 @@ const App = ({
                    action='scroll'
                    target='Registration'/>
          </div>
+         <Parallax
+           bgImage={require('../../assets/hack.PNG')}
+           strength={500}
+           bgImageSizes={{
+             width: '100%',
+             height: '100%',
+           }}
+           style={
+             {
+               width: '100%',
+               height: '100%',
+               right: '0',
+               overflow: 'unset'
+             }
+           }
+         />
        </div>
       </section>
       <hr/>

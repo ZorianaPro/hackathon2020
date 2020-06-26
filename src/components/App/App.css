@@ -8,6 +8,11 @@
   position: relative;
 }
 
+.App .App-Main-Section-Container {
+  display: flex;
+  flex-direction: row;
+
+}
 .App .App-Main-Section-Container,
 .App .App-Ideas-Section-Container {
   margin: 0 auto;
@@ -19,6 +24,7 @@
 
 .App .App-Main-Section {
   height: 100vh;
+  background-color: rgba(206, 218, 253, .4);
 }
 
 .App .App-Main-Section-Title {
@@ -90,4 +96,8 @@ input, select {
 input:focus {
   outline: none;
   border-bottom: 1px solid var(--liberty-color);
+}
+
+.react-parallax-bgimage {
+  top: 50%
 }
