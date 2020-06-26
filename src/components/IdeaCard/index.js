@@ -44,8 +44,11 @@ const IdeaCard = ({
 					</div>
 				</div>
 				<div className="IdeaCard-Actions">
-					<Team full={false}
-					team={team}/>
+					{
+						team
+						&& <Team full={false}
+						         team={team}/>
+					}
 					<div className="Idea-Actions-Join"
 					     onClick={() => joinIdeaOverlay()}>
 						+ join

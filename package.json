@@ -1,6 +1,6 @@
 {
   "name": "hackathon2020",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "author": "ZorianaPro (zoryanalesyk@gmail.com)",
   "homepage": "https://zorianapro.github.io/hackathon2020/",
   "private": true,
@@ -10,11 +10,13 @@
     "@testing-library/user-event": "^7.2.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
+    "mongoose-autopopulate": "^0.12.2",
     "prettier": "^2.0.5",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",
-    "redux-mock-store": "^1.5.4"
+    "redux-mock-store": "^1.5.4",
+    "save-dev": "0.0.1-security"
   },
   "scripts": {
     "build": "react-scripts build",

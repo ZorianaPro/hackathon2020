@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import './App.css';
 import Header from "../Header";
 import SVGSpriteSheet from '../SVGSpriteSheet';
@@ -8,10 +8,16 @@ import Button from "../Button";
 import IdeaCard from "../IdeaCard";
 import IdeaInfoOverlay from '../IdeaInfoOverlay'
 import JoinIdeaOverlay from "../JoinIdeaOverlay";
+import * as ideaOverlay from "../IdeaInfoOverlay/actions";
+import * as addNewIdea from "../AddNewIdea/actions";
+import { useDispatch } from "react-redux";
+import AddNewIdea from "../AddNewIdea";
 
 const App = ({
-
+               dispatch
              }) => {
+
+  dispatch = useDispatch();
 
   const [ideas, setIdeas] = useState([]);
 
@@ -20,6 +26,10 @@ const App = ({
     .then(response => response.json())
     .then(data => setIdeas(data));
   },[]);
+
+  const openAddNewIdeaOverlay = useCallback(() => {
+    dispatch(addNewIdea.open())
+  }, [dispatch]);
 
   return (
     <div className="App">
@@ -38,6 +48,10 @@ const App = ({
              <LocationSVG/>
              <p> Online </p>
            </div>
+           <button className=""
+                onClick={() => openAddNewIdeaOverlay()}>
+             Add Idea
+           </button>
            <Button title='Go to registration'
                    action='scroll'
                    target='Registration'/>
@@ -70,6 +84,7 @@ const App = ({
       <SVGSpriteSheet/>
       <IdeaInfoOverlay/>
       <JoinIdeaOverlay/>
+      <AddNewIdea/>
     </div>
   );
 };

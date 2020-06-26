@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import './JoinIdeaOverlay.css';
+import './AddNewIdea.css';
 import '../Overlay/Overlay.css';
 import { close, submit } from './actions';
 import handle from '../../helpers/handlers'
 
-const JoinIdeaOverlay = ({
+const AddNewIdea = ({
 	team,
   dispatch,
 	isOpen,
@@ -18,12 +18,15 @@ const JoinIdeaOverlay = ({
 	const [lastName, setLastName] = useState('');
 	const [email, setEmail] = useState('');
 	const [position, setPosition] = useState('');
+	const [ideaName, setIdeaName] = useState('');
+	const [description, setDescription] = useState('');
+	const [error, setError] = useState('');
 	const [submitFrom, setSubmitForm] = useState(false);
 	const [showThankYou, setShowThankYou] = useState(false);
 
 	[isOpen, id] = useSelector(state => [
-		state.joinIdeaOverlayReducer.open,
-		state.joinIdeaOverlayReducer.content.id
+		state.addNewIdeaReducer.open,
+		state.addNewIdeaReducer.content.id
 	]);
 
 	const handleChange = useCallback(
@@ -39,6 +42,10 @@ const JoinIdeaOverlay = ({
 					return setEmail(value);
 				case 'position':
 					return setPosition(value);
+				case 'ideaName':
+					return setIdeaName(value);
+				case 'description':
+					return setDescription(value);
 			}
 
 		}, []
@@ -50,7 +57,7 @@ const JoinIdeaOverlay = ({
 		}, []
 	);
 
-	const joinIdea = useCallback(
+	const addNewIdea = useCallback(
 		(e) => {
 			e.preventDefault();
 			setSubmitForm(true);
@@ -59,15 +66,11 @@ const JoinIdeaOverlay = ({
 	);
 
 	useEffect(() => {
+
 		if (submitFrom) {
 			const data = {
-				id: id,
-				member: {
-					firstName: firstName,
-					lastName: lastName,
-					email: email,
-					position: position
-				}
+				name: ideaName,
+				description: description
 			};
 			console.log(data);
 			const requestOptions = {
@@ -77,8 +80,14 @@ const JoinIdeaOverlay = ({
 				},
 				body: JSON.stringify(data)
 			};
-			fetch('http://localhost:8082/join', requestOptions)
-			.then(response => response.json())
+			fetch('http://localhost:8082/addNewidea', requestOptions)
+			.then(response => {
+				if (!response.ok) {
+					throw new Error("Something vent wrong");
+				} else {
+					response.json()
+			  }
+			})
 			.then(() => {
 				setSubmitForm(false);
 				setShowThankYou(true);
@@ -88,6 +97,8 @@ const JoinIdeaOverlay = ({
 					dispatch(close());
 					setShowThankYou(false);
 				}, 3000)
+			}).catch((err) => {
+				setError(err)
 			})
 		} else {
 
@@ -95,7 +106,7 @@ const JoinIdeaOverlay = ({
 	}, [submitFrom]);
 
 	return (
-		<div className="JoinIdeaOverlay">
+		<div className="AddNewIdea">
 			{ isOpen
 				&& <div className="Overlay">
 					<div className="Overlay-Container">
@@ -104,34 +115,23 @@ const JoinIdeaOverlay = ({
 							<div className="Overlay-Close" onClick={() => closeOverlay()}>
 								close
 							</div>
-							<div className="JoinIdeaOverlay-Title">
-								Join the idea
+							<div className="AddNewIdea-Title">
+								Add new idea
 							</div>
-							<form  action="" onSubmit={(e) => joinIdea(e)} method="POST">
+							{
+								error
+							}
+							<form action="" onSubmit={(e) => addNewIdea(e)} method="POST">
 								<div>
-									<label htmlFor="firstName" className={`${firstName !== '' ? 'focus' : ''}`}>First Name*</label>
-									<input type="text" name="firstName" required value={firstName}
+									<label htmlFor="ideaName" className={`${ideaName !== '' ? 'focus' : ''}`}>Idea Name*</label>
+									<input type="text" name="ideaName" required value={ideaName}
 									       onFocus={(e) => handle.focus(e.currentTarget)}
 									       onBlur={(e) => handle.blur(e.currentTarget)}
 									       onChange={(e) => handleChange(e.target)}/>
 								</div>
 								<div>
-									<label htmlFor="lastName" className={`${lastName !== '' ? 'focus' : ''}`}>Last Name*</label>
-									<input type="text" name="lastName" required value={lastName}
-									       onFocus={(e) => handle.focus(e.currentTarget)}
-									       onBlur={(e) => handle.blur(e.currentTarget)}
-									       onChange={(e) => handleChange(e.target)}/>
-								</div>
-								<div>
-									<label htmlFor="email" className={`${email !== '' ? 'focus' : ''}`}>Your email*</label>
-									<input type="email" name="email" required value={email}
-									       onFocus={(e) => handle.focus(e.currentTarget)}
-									       onBlur={(e) => handle.blur(e.currentTarget)}
-									       onChange={(e) => handleChange(e.target)}/>
-								</div>
-								<div>
-									<label htmlFor="position" className={`${position !== '' ? 'focus' : ''}`}>Position*</label>
-									<input type="text" name="position" required value={position}
+									<label htmlFor="description" className={`${description !== '' ? 'focus' : ''}`}>Idea Description*</label>
+									<textarea name="description" required value={description}
 									       onFocus={(e) => handle.focus(e.currentTarget)}
 									       onBlur={(e) => handle.blur(e.currentTarget)}
 									       onChange={(e) => handleChange(e.target)}/>
@@ -155,4 +155,4 @@ const JoinIdeaOverlay = ({
 	);
 };
 
-export default JoinIdeaOverlay;
+export default AddNewIdea;
