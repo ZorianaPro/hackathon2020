@@ -8,16 +8,12 @@ import Button from "../Button";
 import IdeaCard from "../IdeaCard";
 import IdeaInfoOverlay from '../IdeaInfoOverlay'
 import JoinIdeaOverlay from "../JoinIdeaOverlay";
-import * as ideaOverlay from "../IdeaInfoOverlay/actions";
-import * as addNewIdea from "../AddNewIdea/actions";
-import { useDispatch } from "react-redux";
 import AddNewIdea from "../AddNewIdea";
+import AddIdeaButton from '../AddIdeaButton';
 
 const App = ({
-               dispatch
-             }) => {
 
-  dispatch = useDispatch();
+             }) => {
 
   const [ideas, setIdeas] = useState([]);
 
@@ -26,10 +22,6 @@ const App = ({
     .then(response => response.json())
     .then(data => setIdeas(data));
   },[]);
-
-  const openAddNewIdeaOverlay = useCallback(() => {
-    dispatch(addNewIdea.open())
-  }, [dispatch]);
 
   return (
     <div className="App">
@@ -48,10 +40,6 @@ const App = ({
              <LocationSVG/>
              <p> Online </p>
            </div>
-           <button className=""
-                onClick={() => openAddNewIdeaOverlay()}>
-             Add Idea
-           </button>
            <Button title='Go to registration'
                    action='scroll'
                    target='Registration'/>
@@ -68,7 +56,7 @@ const App = ({
           <div className="App-Section-Title">
             Ideas
           </div>
-{
+          {
             ideas.map((idea) => {
               return (
                 <IdeaCard id={idea._id}
@@ -78,6 +66,8 @@ const App = ({
               )
             })
           }
+
+          <AddIdeaButton/>
         </div>
       </section>
       <hr/>

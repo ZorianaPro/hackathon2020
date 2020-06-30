@@ -6,18 +6,14 @@ import { close, submit } from './actions';
 import handle from '../../helpers/handlers'
 
 const AddNewIdea = ({
-	team,
+  team,
   dispatch,
-	isOpen,
-	id
+  isOpen,
+  id
 }) => {
 
 	dispatch = useDispatch();
 
-	const [firstName, setFirstName] = useState('');
-	const [lastName, setLastName] = useState('');
-	const [email, setEmail] = useState('');
-	const [position, setPosition] = useState('');
 	const [ideaName, setIdeaName] = useState('');
 	const [description, setDescription] = useState('');
 	const [error, setError] = useState('');
@@ -34,14 +30,6 @@ const AddNewIdea = ({
 			const field = target.name;
 			const value = target.value;
 			switch (field) {
-				case 'firstName':
-					return setFirstName(value);
-				case 'lastName':
-					return setLastName(value);
-				case 'email':
-					return setEmail(value);
-				case 'position':
-					return setPosition(value);
 				case 'ideaName':
 					return setIdeaName(value);
 				case 'description':
@@ -100,8 +88,6 @@ const AddNewIdea = ({
 			}).catch((err) => {
 				setError(err)
 			})
-		} else {
-
 		}
 	}, [submitFrom]);
 
