@@ -1,18 +1,11 @@
 const Idea = require('../models/idea');
 
-const create = (data) => {
-	return Idea.create(data);
+const create = (content) => {
+	return Idea.create(content);
 };
 
 const showAll = () => {
 	return Idea.find({}).exec()
-};
-
-const addTeamMember = (id, member) => {
-	return Idea.findByIdAndUpdate(id,
-		{
-			$push: { "team": member }
-		}).exec()
 };
 
 const deleteAll = () => {
@@ -22,6 +15,5 @@ const deleteAll = () => {
 module.exports = {
 	create,
 	showAll,
-	addTeamMember,
 	deleteAll
 };

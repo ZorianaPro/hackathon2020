@@ -6,7 +6,6 @@ import '../Overlay/Overlay.css';
 import { close } from './actions';
 
 const IdeaInfoOverlay = ({
-	team,
   dispatch,
 	isOpen,
 	content
@@ -19,9 +18,9 @@ const IdeaInfoOverlay = ({
 		state.ideaInfoOverlayReducer.content
 	]);
 
-	const closeOverlay = () => {
+	const closeOverlay = useCallback(() => {
 		dispatch(close())
-	};
+	}, [dispatch]);
 
 	return (
 		<div className="IdeaInfoOverlay">
@@ -40,10 +39,13 @@ const IdeaInfoOverlay = ({
 							</div>
 							<div className="IdeaInfoOverlay-Team">
 								<div className="IdeaInfoOverlay-Team-Title">
-									Team
+									{ content.team.length !== 0 ? "Team" : 'There is no one in a team yet'}
 								</div>
-							<Team full={ true }
-							      team={ content.team }/>
+								{
+									content.team
+									&& <Team full={ true }
+									         team={ content.team }/>
+								}
 							</div>
 						</div>
 					</div>

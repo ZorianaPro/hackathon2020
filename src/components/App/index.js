@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import './App.css';
 import Header from "../Header";
 import SVGSpriteSheet from '../SVGSpriteSheet';
@@ -8,6 +8,8 @@ import Button from "../Button";
 import IdeaCard from "../IdeaCard";
 import IdeaInfoOverlay from '../IdeaInfoOverlay'
 import JoinIdeaOverlay from "../JoinIdeaOverlay";
+import AddNewIdea from "../AddNewIdea";
+import AddIdeaButton from '../AddIdeaButton';
 
 const App = ({
 
@@ -54,7 +56,7 @@ const App = ({
           <div className="App-Section-Title">
             Ideas
           </div>
-{
+          {
             ideas.map((idea) => {
               return (
                 <IdeaCard id={idea._id}
@@ -64,12 +66,15 @@ const App = ({
               )
             })
           }
+
+          <AddIdeaButton/>
         </div>
       </section>
       <hr/>
       <SVGSpriteSheet/>
       <IdeaInfoOverlay/>
       <JoinIdeaOverlay/>
+      <AddNewIdea/>
     </div>
   );
 };

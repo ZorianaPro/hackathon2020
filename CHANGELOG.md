@@ -1,9 +1,18 @@
+## 2.0.0 
+* [Add New Idea Overlay](https://github.com/ZorianaPro/hackathon2020/issues/12)
+* Changed the way of joining idea
+* Add document for member, to separate it from ideas
+* Add Idea button
+
+###ToDo:
+* Add error handling to API
+
 ## 1.9.0 
 * Connect to mongoDB, made test get and post requests
 * Add Routers, models, controllers and schemas
 * Get ideas from DB
 * Add main APIs, join idea, Add idea, List all ideas, Delete all ideas
-### PROBLEM on Join idea
+### PROBLEM on Join idea SOLVED
 Access to fetch at 'http://localhost:8082/join' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
 
 ## 1.8.0
