@@ -29,3 +29,5 @@ coverage/
 .vscode/
 .env
 .eslintcache
+
+test-results/

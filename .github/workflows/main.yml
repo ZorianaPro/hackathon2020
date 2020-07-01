@@ -1,0 +1,40 @@
+name: Build
+
+on:
+  - push
+  - pull_request
+
+runs-on: ubuntu-latest
+
+jobs:
+
+  lint:
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+        check-latest: true
+    - run: npm install
+    - run: npm run lint:ci
+    - name: Archive linter results
+        uses: actions/upload-artifact@v1
+        with:
+          name: ESLint
+          path: test-results/eslint
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+        check-latest: true
+    - run: npm install
+    - run: npm run test:ci
+    - name: Archive test results
+        uses: actions/upload-artifact@v1
+        with:
+          name: Jest
+          path: test-results/jest
+
