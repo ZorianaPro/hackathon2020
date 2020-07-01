@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import './AddNewIdea.css';
 import '../Overlay/Overlay.css';
 import { close, submit } from './actions';
+import { fetchAllIdeas } from '../Ideas/actions';
 import handle from '../../helpers/handlers'
 
 const AddNewIdea = ({
@@ -73,7 +74,7 @@ const AddNewIdea = ({
 				if (!response.ok) {
 					throw new Error("Something vent wrong");
 				} else {
-					response.json()
+					dispatch(fetchAllIdeas())
 			  }
 			})
 			.then(() => {

@@ -22,7 +22,6 @@ router.get("/members", async (ctx, next) => {
 router.post("/addNewidea", async (ctx, next) => {
 	const content = ctx.request.body;
 	const idea = await Idea.create(content);
-
 	ctx.status = HttpStatus.OK;
 	ctx.body = idea.toJSON();
 	await next();
