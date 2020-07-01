@@ -1,3 +1,7 @@
+# hackathon2020
+
+![Build](https://github.com/ZorianaPro/hackathon2020/workflows/Build/badge.svg)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
