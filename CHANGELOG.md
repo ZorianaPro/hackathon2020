@@ -1,5 +1,6 @@
 ## 2.1.0 
 * Add middleware to store
+* Try to handle errors
 
 ## 2.0.0 
 * [Add New Idea Overlay](https://github.com/ZorianaPro/hackathon2020/issues/12)

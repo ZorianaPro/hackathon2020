@@ -19,24 +19,23 @@ const ideaSchema = new Schema({
 		}
 	]
 
-}, {timestamps: true});
+}, {
+	timestamps: true,
+	emitIndexErrors: true
+});
 
 ideaSchema.plugin(require('mongoose-autopopulate'));
 
-// const handleE11000 = function(error, res, next) {
-// 	if (error.name === 'MongoError' && error.code === 11000) {
-// 		next(new Error('There was a duplicate key error'));
-// 	} else {
-// 		next();
-// 	}
-// };
+const handleE11000 = function(error, res, next) {
+	if (error.name === 'MongoError' && error.code === 11000) {
+		next(new Error('There was a duplicate key error'));
+	} else {
+		next();
+	}
+};
 
-// ideaSchema.pre('save', function(next) {
-// 	next(new Error('Something went wrong. We couldn\'t create a document'));
-// });
-//
-// ideaSchema.post('save', handleE11000);
-// ideaSchema.post('update', handleE11000);
-// ideaSchema.post('findByIdAndUpdate', handleE11000);
+ideaSchema.post('save', handleE11000);
+ideaSchema.post('update', handleE11000);
+ideaSchema.post('findByIdAndUpdate', handleE11000);
 
 module.exports = 	ideaSchema;
