@@ -15,13 +15,16 @@ jobs:
       with:
         node-version: '12'
         check-latest: true
-    - run: npm install
-    - run: npm run lint:ci
+    - name: Install dependencies
+      run: npm install
+    - name: Lint source
+      run: npm run lint:ci
     - name: Archive linter results
-        uses: actions/upload-artifact@v1
-        with:
-          name: ESLint
-          path: test-results/eslint
+      uses: actions/upload-artifact@v1
+      with:
+        name: ESLint
+        path: test-results/eslint
+
   test:
     runs-on: ubuntu-latest
     steps:
@@ -30,11 +33,13 @@ jobs:
       with:
         node-version: '12'
         check-latest: true
-    - run: npm install
-    - run: npm run test:ci
+    - name: Install dependencies
+      run: npm install
+    - name: Run unit tests
+      run: npm run test:ci
     - name: Archive test results
-        uses: actions/upload-artifact@v1
-        with:
-          name: Jest
-          path: test-results/jest
+      uses: actions/upload-artifact@v1
+      with:
+        name: Jest
+        path: test-results/jest
 
