@@ -4,12 +4,14 @@ import './JoinIdeaOverlay.css';
 import '../Overlay/Overlay.css';
 import { close, submit } from './actions';
 import handle from '../../helpers/handlers'
+import { fetchAllIdeas, error} from "../Ideas/actions";
 
 const JoinIdeaOverlay = ({
 	team,
   dispatch,
 	isOpen,
-	id
+	id,
+							 errorMessage
 }) => {
 
 	dispatch = useDispatch();
@@ -21,9 +23,10 @@ const JoinIdeaOverlay = ({
 	const [submitFrom, setSubmitForm] = useState(false);
 	const [showThankYou, setShowThankYou] = useState(false);
 
-	[isOpen, id] = useSelector(state => [
+	[isOpen, id, errorMessage] = useSelector(state => [
 		state.joinIdeaOverlayReducer.open,
-		state.joinIdeaOverlayReducer.content.id
+		state.joinIdeaOverlayReducer.content.id,
+		state.joinIdeaOverlayReducer.error
 	]);
 
 	const handleChange = useCallback(
@@ -69,7 +72,6 @@ const JoinIdeaOverlay = ({
 					position: position
 				}
 			};
-			console.log(data);
 			const requestOptions = {
 				method: 'POST',
 				headers: {
@@ -78,19 +80,23 @@ const JoinIdeaOverlay = ({
 				body: JSON.stringify(data)
 			};
 			fetch('http://localhost:8082/join', requestOptions)
-			.then(response => response.json())
-			.then(() => {
-				setSubmitForm(false);
-				setShowThankYou(true);
-			})
-			.then(() => {
-				setTimeout(() => {
-					dispatch(close());
-					setShowThankYou(false);
-				}, 3000)
-			})
-		} else {
-
+				.then(response => {
+					if (!response.ok) {
+						throw new Error("Something vent wrong");
+					} else {
+						dispatch(fetchAllIdeas());
+						setSubmitForm(false);
+						setShowThankYou(true);
+						setTimeout(() => {
+							dispatch(close());
+							setShowThankYou(false);
+						}, 2000)
+					}
+				})
+				.catch((err) => {
+					dispatch(error(err.message));
+					setSubmitForm(false);
+				})
 		}
 	}, [submitFrom]);
 
@@ -107,6 +113,9 @@ const JoinIdeaOverlay = ({
 							<div className="JoinIdeaOverlay-Title">
 								Join the idea
 							</div>
+							{
+								errorMessage
+							}
 							<form  action="" onSubmit={(e) => joinIdea(e)} method="POST">
 								<div>
 									<label htmlFor="firstName" className={`${firstName !== '' ? 'focus' : ''}`}>First Name*</label>

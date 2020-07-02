@@ -4,19 +4,7 @@ import "./index.css";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
-import rootReducer from "./rootReducer";
-
-let devAdditions;
-if (module.hot) {
-  module.hot.accept();
-}
-
-if ("__REDUX_DEVTOOLS_EXTENSION__" in window) {
-  devAdditions = window.__REDUX_DEVTOOLS_EXTENSION__();
-}
-
-const store = createStore(rootReducer, devAdditions);
+import store from './store';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,7 +1,9 @@
 export const actions = {
 	open: 'OPEN:ADDNEWIDEA:OVERLAY',
 	close: 'CLOSE:ADDNEWIDEA:OVERLAY',
-	submit: 'SUBMIT:ADDNEWIDEA:OVERLAY'
+	submit: 'SUBMIT:ADDNEWIDEA:OVERLAY',
+	response: 'RESPONCE:ADDNEWIDEA:OVERLAY',
+	error: 'ERROR:ADDNEWIDEA:OVERLAY'
 };
 
 export const open = (content = {}) => ({
@@ -17,8 +19,21 @@ export const submit = content => ({
 	value: content
 });
 
+export const response = (response) => ({
+	type: actions.response,
+	value: response
+});
+
+export const error = (err) => ({
+	type: actions.error,
+	value: err
+});
+
+
 export default {
 	open,
 	close,
-	submit
+	submit,
+	response,
+	error
 };
