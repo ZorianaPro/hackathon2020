@@ -2,9 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import './JoinIdeaOverlay.css';
 import '../Overlay/Overlay.css';
-import { close, submit } from './actions';
+import { close, submit, error } from './actions';
 import handle from '../../helpers/handlers'
-import { fetchAllIdeas, error} from "../Ideas/actions";
+import { fetchAllIdeas } from "../Ideas/actions";
 
 const JoinIdeaOverlay = ({
 	team,
@@ -79,11 +79,9 @@ const JoinIdeaOverlay = ({
 				},
 				body: JSON.stringify(data)
 			};
-			fetch('http://localhost:8082/join', requestOptions)
+			fetch('http://localhost:8082/members', requestOptions)
 				.then(response => {
-					if (!response.ok) {
-						throw new Error("Something vent wrong");
-					} else {
+					if (response.ok) {
 						dispatch(fetchAllIdeas());
 						setSubmitForm(false);
 						setShowThankYou(true);
@@ -91,11 +89,15 @@ const JoinIdeaOverlay = ({
 							dispatch(close());
 							setShowThankYou(false);
 						}, 2000)
+					} else {
+						throw response.json()
 					}
 				})
-				.catch((err) => {
-					dispatch(error(err.message));
-					setSubmitForm(false);
+				.catch((errorResponse) => {
+					errorResponse.then(err => {
+							dispatch(error(err.message));
+							setSubmitForm(false);
+						})
 				})
 		}
 	}, [submitFrom]);

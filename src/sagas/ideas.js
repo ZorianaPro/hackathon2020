@@ -3,8 +3,8 @@ import { actions, result, error } from '../components/Ideas/actions';
 
 export const fetchIdeas = async () => {
     try {
-        const responce = await fetch(`http://localhost:8082/ideas`);
-        return await responce.json();
+        const response = await fetch(`http://localhost:8082/ideas`);
+        return await response.json();
     } catch (e) {
         catchError(e)
     }

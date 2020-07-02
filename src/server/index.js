@@ -1,7 +1,7 @@
 const Koa = require("koa");
 const BodyParser = require("koa-bodyparser");
 const Logger = require("koa-logger");
-const cors = require("koa-cors");
+const cors = require("@koa/cors");
 
 const db = require('./db');
 const router = require('./routes');
