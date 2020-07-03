@@ -48,24 +48,8 @@ exports[`App renders as expected 1`] = `
     className="Registration"
   />
   <hr />
-  <section
-    className="App-Ideas-Section"
-  >
-    <div
-      className="App-Ideas-Section-Container"
-    >
-      <div
-        className="App-Section-Title"
-      >
-        Ideas
-      </div>
-      <AddIdeaButton />
-    </div>
-  </section>
+  <Ideas />
   <hr />
   <SVGSpriteSheet />
-  <IdeaInfoOverlay />
-  <JoinIdeaOverlay />
-  <AddNewIdea />
 </div>
 `;

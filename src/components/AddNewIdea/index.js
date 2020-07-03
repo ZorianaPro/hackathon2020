@@ -68,24 +68,26 @@ const AddNewIdea = ({
 				},
 				body: JSON.stringify(data)
 			};
-			fetch('http://localhost:8082/addNewidea', requestOptions)
-			.then(response => {
-				if (!response.ok) {
-					throw new Error("Something vent wrong");
-				} else {
-					dispatch(fetchAllIdeas());
-					setSubmitForm(false);
-					setShowThankYou(true);
-					setTimeout(() => {
-						dispatch(close());
-						setShowThankYou(false);
-					}, 2000)
-				}
-			})
-			.catch((err) => {
-				dispatch(error(err.message));
-				setSubmitForm(false);
-			})
+			fetch('http://localhost:8082/ideas', requestOptions)
+				.then(response => {
+					if (response.ok) {
+						dispatch(fetchAllIdeas());
+						setSubmitForm(false);
+						setShowThankYou(true);
+						setTimeout(() => {
+							dispatch(close());
+							setShowThankYou(false);
+						}, 2000)
+					} else {
+						throw response.json()
+					}
+				})
+				.catch((errorResponse) => {
+					errorResponse.then(err => {
+						dispatch(error(err.message));
+						setSubmitForm(false);
+					})
+				})
 		}
 	}, [submitFrom]);
 

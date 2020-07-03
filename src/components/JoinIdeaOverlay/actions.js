@@ -19,9 +19,9 @@ export const submit = content => ({
 	value: content
 });
 
-export const error = content => ({
+export const error = err => ({
 	type: actions.error,
-	value: content
+	value: err
 });
 
 export default {
