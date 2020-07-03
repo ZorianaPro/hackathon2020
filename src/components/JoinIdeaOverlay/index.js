@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import './JoinIdeaOverlay.css';
 import '../Overlay/Overlay.css';
-import { close, submit } from './actions';
+import { close } from './actions';
 import handle from '../../helpers/handlers'
 import { fetchAllIdeas, error} from "../Ideas/actions";
 
@@ -11,7 +11,7 @@ const JoinIdeaOverlay = ({
   dispatch,
 	isOpen,
 	id,
-							 errorMessage
+	errorMessage
 }) => {
 
 	dispatch = useDispatch();
@@ -72,14 +72,14 @@ const JoinIdeaOverlay = ({
 					position: position
 				}
 			};
-			const requestOptions = {
-				method: 'POST',
+			fetch('http://localhost:8082/join', {
+				method: 'GET',
+				mode: 'cors',
 				headers: {
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify(data)
-			};
-			fetch('http://localhost:8082/join', requestOptions)
+			})
 				.then(response => {
 					if (!response.ok) {
 						throw new Error("Something vent wrong");

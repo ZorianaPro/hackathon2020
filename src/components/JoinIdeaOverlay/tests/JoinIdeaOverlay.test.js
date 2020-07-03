@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import JoinIdeaOverlay from './';
+import JoinIdeaOverlay from '../';
 import configureStore from "redux-mock-store";
 import { Provider } from 'react-redux';
 
@@ -8,10 +8,10 @@ import { Provider } from 'react-redux';
 describe('JoinIdeaOverlay', () => {
 	const initialState = {
 		joinIdeaOverlayReducer: {
-			open: true,
-			content: {
-				id: ''
-			}
+			open: false,
+			content: {},
+			error: '',
+			userInfo: {}
 		}
 	};
 	const mockStore = configureStore();

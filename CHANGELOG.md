@@ -1,3 +1,8 @@
+## 2.3.0
+Add tests for:
+- sagas
+- Team component
+
 ## 2.2.0
 * [#34: Add CI for tests.](https://github.com/ZorianaPro/hackathon2020/issues/34)
 

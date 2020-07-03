@@ -3,13 +3,15 @@ import { actions } from "./actions";
 const initialState = {
 	open: false,
 	content: {},
-	error: ''
+	error: '',
+	userInfo: {}
 };
 
 export default (state = initialState, action) => {
 	switch (action.type) {
 		case actions.open:
 			return {
+				...state,
 				open: true,
 				content: action.value
 			};
@@ -21,17 +23,12 @@ export default (state = initialState, action) => {
 		case actions.submit:
 			return {
 				...state,
-				content: action.value
+				userInfo: action.value
 			};
 		case actions.error:
 			return {
 				...state,
 				error: action.value
-			};
-		case actions.clean:
-			return {
-				...initialState,
-				open: true
 			};
 		default:
 			return state;

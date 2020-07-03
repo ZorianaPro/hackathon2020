@@ -29,7 +29,7 @@ const Team = ({
                   </div>
                   }
               </div>
-              )) : <div> There are no members in this team yet</div>
+              )) : <div className="Team--empty">There are no members in this team yet</div>
           }
       </div>
   </div>
