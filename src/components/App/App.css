@@ -1,7 +1,7 @@
 .App {
   font-family: "Lato";
   font-style: normal;
-  font-weight: 100;
+  font-weight: 300;
   color: var(--eerie-black-color);
   font-size: 1em;
   letter-spacing: 0.125em;
@@ -25,6 +25,7 @@
   font-size: 3em;
   width: 70%;
   margin: 1em 0;
+  font-weight: 300;
 }
 
 .App .App-Main-Section-Info {
@@ -69,6 +70,7 @@
   font-style: italic;
   width: 100%;
   text-align: center;
+  font-weight: 300;
 }
 
 .App hr {
