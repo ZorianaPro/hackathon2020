@@ -1,19 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Team Team renders as expected 1`] = `
-<div
-  className="Team Team--full"
->
-  <div
-    className="Team-Members"
-  >
-    <div>
-      There are no members in this team yet
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Team renders as expected 1`] = `
 <div
   className="Team Team--full"
@@ -22,7 +8,7 @@ exports[`Team renders as expected 1`] = `
     className="Team-Members"
   >
     <div>
-      There are no members in this team yet
+       There are no members in this team yet
     </div>
   </div>
 </div>
