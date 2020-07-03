@@ -37,9 +37,6 @@
     "deploy": "gh-pages -d build",
     "server": "node ./src/server/index.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm run test:ci",
