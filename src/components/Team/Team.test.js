@@ -10,5 +10,4 @@ describe('Team', () => {
 	it('renders as expected', () => {
 		expect(shallow(<Team/>)).toMatchSnapshot();
 	});
-
 });

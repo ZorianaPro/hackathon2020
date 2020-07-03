@@ -3,7 +3,7 @@ import './Team.css';
 
 const Team = ({
 	full = true,
-	team
+	team = []
 }) => {
 
 	const initials = (firstName, lastName) => {
@@ -13,16 +13,16 @@ const Team = ({
 	return (
 		<div className={`Team ${full ? 'Team--full' : 'Team--short'}`}>
 			<div className="Team-Members">
-				{ team
-				&& (team || []).map((member) => {
-					return (
-						<div className='Team-Member' key={member.id}>
-							<p>
-								{initials(member.firstName, member.lastName)}
-							</p>
-							{
-								full
-								&&
+				{ team.length > 0 ?
+					team.map((member) => {
+						return (
+							<div className='Team-Member' key={member.id}>
+								<p>
+									{initials(member.firstName, member.lastName)}
+								</p>
+								{
+									full
+									&&
 									<div className="Team-Member-Info">
 										<div className="Team-Member-Info-Name">
 											{`${member.firstName} ${member.lastName}`}
@@ -34,11 +34,15 @@ const Team = ({
 											{member.position}
 										</div>
 									</div>
-							}
-						</div>
+								}
+							</div>
 
-					)
-				})
+						)
+					}) :
+					<div>
+						There are no members in this team yet
+					</div>
+
 				}
 			</div>
 		</div>

@@ -59,23 +59,13 @@ exports[`App renders as expected 1`] = `
       >
         Ideas
       </div>
-      <IdeaCard
-        description="Any long description Any long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long descriptionAny long description"
-        id={1}
-        name="Idea 1 name"
-        teamId={1}
-      />
-      <IdeaCard
-        description="Any long description"
-        id={2}
-        name="Idea 2 name"
-        teamId={2}
-      />
+      <AddIdeaButton />
     </div>
   </section>
   <hr />
   <SVGSpriteSheet />
   <IdeaInfoOverlay />
   <JoinIdeaOverlay />
+  <AddNewIdea />
 </div>
 `;
