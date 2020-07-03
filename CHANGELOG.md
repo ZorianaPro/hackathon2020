@@ -1,3 +1,6 @@
+## 2.3.0
+* [#37: Add navigation & scroll to sections.](https://github.com/ZorianaPro/hackathon2020/issues/37)
+
 ## 2.2.0
 * [#34: Add CI for tests.](https://github.com/ZorianaPro/hackathon2020/issues/34)
 
