@@ -1,7 +1,46 @@
 .Header {
   height: 5em;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 100%;
-  align-items: center;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  /* align-items: center; */
+}
+
+.Header-Navigation {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.Header-Navigation li {
+  list-style-type: none;
+  padding-right: 10px;
+}
+
+.Header-Navigation a {
+  text-decoration: none;
+  color: var(--eerie-black-color);
+}
+
+.Header-Navigation a.active,
+.Header-Navigation a.active::after {
+  width: 100%;
+}
+
+.Header-Navigation a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    margin-top: 3px;
+    background: var( --middle-blue-green-color);
+    transition: width .3s;
+}
+
+.Header-Navigation a:hover::after {
+    width: 100%;
+    transition: width .3s;
 }

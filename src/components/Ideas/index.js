@@ -23,10 +23,10 @@ const Ideas = ({
 
     useEffect(() => {
         dispatch(fetchAllIdeas())
-    },[]);
+    }, []);
 
     return (
-        <section className="App-Ideas-Section">
+        <section id="ideas" className="App-Ideas-Section">
             <div className="App-Ideas-Section-Container">
                 <div className="App-Section-Title">
                     Ideas

@@ -44,15 +44,12 @@ const App = ({
         <h1 className="App-Section-Title">Inspiration</h1>
       </section>
       <hr />
-      <section id="ideas" className="Ideas">
-        <h1 className="App-Section-Title">Inspiration</h1>
-      </section>
+      <Ideas />
       <hr />
       <section id="rules" className="Rules">
         <h1 className="App-Section-Title">Rules</h1>
       </section>
       <hr />
-      <Ideas />
       <hr />
       <SVGSpriteSheet />
     </div >
