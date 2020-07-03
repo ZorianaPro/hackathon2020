@@ -1,0 +1,43 @@
+name: Build
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+        check-latest: true
+    - name: Install dependencies
+      run: npm install
+    - name: Lint source
+      run: npm run lint:ci
+    - name: Archive linter results
+      uses: actions/upload-artifact@v1
+      with:
+        name: ESLint
+        path: test-results/eslint
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+        check-latest: true
+    - name: Install dependencies
+      run: npm install
+    - name: Run unit tests
+      run: npm run test:ci
+    - name: Archive test results
+      uses: actions/upload-artifact@v1
+      with:
+        name: Jest
+        path: test-results/jest
+

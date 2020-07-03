@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JoinIdeaOverlay renders as expected 1`] = `
+exports[`AddNewIdea renders as expected 1`] = `
 <Provider
   store={
     Object {
@@ -13,9 +13,9 @@ exports[`JoinIdeaOverlay renders as expected 1`] = `
     }
   }
 >
-  <JoinIdeaOverlay>
+  <AddNewIdea>
     <div
-      className="JoinIdeaOverlay"
+      className="AddNewIdea"
     >
       <div
         className="Overlay"
@@ -33,9 +33,9 @@ exports[`JoinIdeaOverlay renders as expected 1`] = `
               close
             </div>
             <div
-              className="JoinIdeaOverlay-Title"
+              className="AddNewIdea-Title"
             >
-              Join the idea
+              Add new idea
             </div>
             <form
               action=""
@@ -45,12 +45,12 @@ exports[`JoinIdeaOverlay renders as expected 1`] = `
               <div>
                 <label
                   className=""
-                  htmlFor="firstName"
+                  htmlFor="ideaName"
                 >
-                  First Name*
+                  Idea Name*
                 </label>
                 <input
-                  name="firstName"
+                  name="ideaName"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -62,51 +62,16 @@ exports[`JoinIdeaOverlay renders as expected 1`] = `
               <div>
                 <label
                   className=""
-                  htmlFor="lastName"
+                  htmlFor="description"
                 >
-                  Last Name*
+                  Idea Description*
                 </label>
-                <input
-                  name="lastName"
+                <textarea
+                  name="description"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
                   required={true}
-                  type="text"
-                  value=""
-                />
-              </div>
-              <div>
-                <label
-                  className=""
-                  htmlFor="email"
-                >
-                  Your email*
-                </label>
-                <input
-                  name="email"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  required={true}
-                  type="email"
-                  value=""
-                />
-              </div>
-              <div>
-                <label
-                  className=""
-                  htmlFor="position"
-                >
-                  Position*
-                </label>
-                <input
-                  name="position"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  required={true}
-                  type="text"
                   value=""
                 />
               </div>
@@ -120,6 +85,6 @@ exports[`JoinIdeaOverlay renders as expected 1`] = `
         </div>
       </div>
     </div>
-  </JoinIdeaOverlay>
+  </AddNewIdea>
 </Provider>
 `;

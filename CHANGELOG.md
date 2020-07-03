@@ -1,3 +1,6 @@
+## 2.2.0
+* [#34: Add CI for tests.](https://github.com/ZorianaPro/hackathon2020/issues/34)
+
 ## 2.1.0 
 * Add middleware to store
 * Error handling and showing in views

@@ -1,7 +1,10 @@
 {
   "name": "hackathon2020",
-  "version": "2.1.0",
-  "author": "ZorianaPro (zoryanalesyk@gmail.com)",
+  "version": "2.2.0",
+  "author": {
+    "name": "ZorianaPro",
+    "email": "zoryanalesyk@gmail.com"
+  },
   "homepage": "https://zorianapro.github.io/hackathon2020/",
   "private": true,
   "dependencies": {
@@ -35,9 +38,6 @@
     "deploy": "gh-pages -d build",
     "server": "node ./src/server/index.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm run test:ci",
@@ -69,6 +69,7 @@
     "enzyme-to-json": "^3.5.0",
     "gh-pages": "^3.0.0",
     "http-status": "^1.4.2",
+    "jest-junit": "^11.0.1",
     "koa": "^2.11.0",
     "koa-body": "^4.1.1",
     "koa-bodyparser": "^4.2.1",
@@ -95,5 +96,10 @@
     "coverageReporters": [
       "text"
     ]
+  },
+  "jest-junit": {
+    "outputDirectory": "test-results/jest",
+    "outputName": "results.xml",
+    "suiteName": "hackathon2020"
   }
 }
