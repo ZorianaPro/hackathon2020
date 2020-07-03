@@ -27,8 +27,16 @@ const memberSchema = new Schema({
 });
 
 const handleE11000 = function(error, res, next) {
-	if (error.name === 'MongoError' && error.code === 11000) {
-		next(new Error('There was a duplicate key error'));
+	if (error.name === 'MongoError') {
+		if (error.code === 11000) {
+			if (error.keyPattern.email) {
+				next(new Error(`This email is used. Please, use a different email`));
+			} else {
+				next(new Error(`There was a duplicate key error`));
+			}
+		} else {
+			next(new Error(`Something went terribly wrong. Contact zoryana.lesyk@experteer.com to fix it`));
+		}
 	} else {
 		next();
 	}

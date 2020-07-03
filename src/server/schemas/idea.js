@@ -26,16 +26,24 @@ const ideaSchema = new Schema({
 
 ideaSchema.plugin(require('mongoose-autopopulate'));
 
-const handleE11000 = function(error, res, next) {
-	if (error.name === 'MongoError' && error.code === 11000) {
-		next(new Error('There was a duplicate key error'));
+const handleErr = function(error, res, next) {
+	if (error.name === 'MongoError') {
+		if (error.code === 11000) {
+			if (error.keyPattern.name) {
+				next(new Error(`Idea with this name already exists. Please, use a different name for your idea`));
+			} else {
+				next(new Error(`There was a duplicate key error`));
+			}
+		} else {
+			next(new Error(`Something went terribly wrong. Contact zoryana.lesyk@experteer.com to fix it`));
+		}
 	} else {
 		next();
 	}
 };
 
-ideaSchema.post('save', handleE11000);
-ideaSchema.post('update', handleE11000);
-ideaSchema.post('findByIdAndUpdate', handleE11000);
+ideaSchema.post('save', handleErr);
+ideaSchema.post('update', handleErr);
+ideaSchema.post('findByIdAndUpdate', handleErr);
 
 module.exports = 	ideaSchema;
