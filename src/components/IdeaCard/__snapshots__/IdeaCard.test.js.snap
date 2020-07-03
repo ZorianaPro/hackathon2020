@@ -33,17 +33,6 @@ exports[`IdeaCard renders as expected 1`] = `
         <div
           className="IdeaCard-Actions"
         >
-          <Team
-            full={false}
-          >
-            <div
-              className="Team Team--short"
-            >
-              <div
-                className="Team-Members"
-              />
-            </div>
-          </Team>
           <div
             className="Idea-Actions-Join"
             onClick={[Function]}
