@@ -30,5 +30,8 @@ db.connect()
       PORT
     );
   })
+})
+.catch((err) =>{
+  throw err;
 });
 

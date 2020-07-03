@@ -2,8 +2,8 @@ import { actions } from "./actions";
 
 const initialState = {
 	open: false,
-	content: {
-	}
+	content: {},
+	error: ''
 };
 
 export default (state = initialState, action) => {
@@ -22,6 +22,11 @@ export default (state = initialState, action) => {
 			return {
 				...state,
 				content: action.value
+			};
+		case actions.error:
+			return {
+				...state,
+				error: action.value
 			};
 		case actions.clean:
 			return {

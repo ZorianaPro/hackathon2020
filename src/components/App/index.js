@@ -5,23 +5,11 @@ import SVGSpriteSheet from '../SVGSpriteSheet';
 import LocationSVG from '../LocationSVG';
 import DateSVG from "../DateSVG";
 import Button from "../Button";
-import IdeaCard from "../IdeaCard";
-import IdeaInfoOverlay from '../IdeaInfoOverlay'
-import JoinIdeaOverlay from "../JoinIdeaOverlay";
-import AddNewIdea from "../AddNewIdea";
-import AddIdeaButton from '../AddIdeaButton';
+import Ideas from "../Ideas";
 
 const App = ({
 
              }) => {
-
-  const [ideas, setIdeas] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:8082/ideas')
-    .then(response => response.json())
-    .then(data => setIdeas(data));
-  },[]);
 
   return (
     <div className="App">
@@ -51,30 +39,9 @@ const App = ({
 
       </section>
       <hr/>
-      <section className="App-Ideas-Section">
-        <div className="App-Ideas-Section-Container">
-          <div className="App-Section-Title">
-            Ideas
-          </div>
-          {
-            ideas.map((idea) => {
-              return (
-                <IdeaCard id={idea._id}
-                name={idea.name}
-                description={idea.description}
-                team={idea.team}/>
-              )
-            })
-          }
-
-          <AddIdeaButton/>
-        </div>
-      </section>
+        <Ideas/>
       <hr/>
       <SVGSpriteSheet/>
-      <IdeaInfoOverlay/>
-      <JoinIdeaOverlay/>
-      <AddNewIdea/>
     </div>
   );
 };

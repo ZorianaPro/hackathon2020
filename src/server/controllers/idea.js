@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const Idea = require('../models/idea');
 
 const create = (content) => {

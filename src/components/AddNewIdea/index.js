@@ -2,27 +2,29 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import './AddNewIdea.css';
 import '../Overlay/Overlay.css';
-import { close, submit } from './actions';
+import { close, submit, error } from './actions';
+import { fetchAllIdeas } from '../Ideas/actions';
 import handle from '../../helpers/handlers'
 
 const AddNewIdea = ({
   team,
   dispatch,
   isOpen,
-  id
+  id,
+  errorMessage
 }) => {
 
 	dispatch = useDispatch();
 
 	const [ideaName, setIdeaName] = useState('');
 	const [description, setDescription] = useState('');
-	const [error, setError] = useState('');
 	const [submitFrom, setSubmitForm] = useState(false);
 	const [showThankYou, setShowThankYou] = useState(false);
 
-	[isOpen, id] = useSelector(state => [
+	[isOpen, id, errorMessage] = useSelector(state => [
 		state.addNewIdeaReducer.open,
-		state.addNewIdeaReducer.content.id
+		state.addNewIdeaReducer.content.id,
+		state.addNewIdeaReducer.error
 	]);
 
 	const handleChange = useCallback(
@@ -54,13 +56,11 @@ const AddNewIdea = ({
 	);
 
 	useEffect(() => {
-
 		if (submitFrom) {
 			const data = {
 				name: ideaName,
 				description: description
 			};
-			console.log(data);
 			const requestOptions = {
 				method: 'POST',
 				headers: {
@@ -73,20 +73,18 @@ const AddNewIdea = ({
 				if (!response.ok) {
 					throw new Error("Something vent wrong");
 				} else {
-					response.json()
-			  }
+					dispatch(fetchAllIdeas());
+					setSubmitForm(false);
+					setShowThankYou(true);
+					setTimeout(() => {
+						dispatch(close());
+						setShowThankYou(false);
+					}, 2000)
+				}
 			})
-			.then(() => {
+			.catch((err) => {
+				dispatch(error(err.message));
 				setSubmitForm(false);
-				setShowThankYou(true);
-			})
-			.then(() => {
-				setTimeout(() => {
-					dispatch(close());
-					setShowThankYou(false);
-				}, 3000)
-			}).catch((err) => {
-				setError(err)
 			})
 		}
 	}, [submitFrom]);
@@ -105,7 +103,7 @@ const AddNewIdea = ({
 								Add new idea
 							</div>
 							{
-								error
+								errorMessage
 							}
 							<form action="" onSubmit={(e) => addNewIdea(e)} method="POST">
 								<div>
