@@ -9,40 +9,50 @@ import Ideas from "../Ideas";
 
 const App = ({
 
-             }) => {
+}) => {
 
   return (
-    <div className="App">
-      <section className="App-Main-Section">
-       <div className="App-Main-Section-Container">
-         <Header/>
-         <div className="App-Main-Section-Info">
-           <div className="App-Main-Section-Title">
-             Cool name for our cool hackathon
-           </div>
-           <div className="App-Main-Section-Date">
-             <DateSVG/>
-             <p> 12-15 December 2020 </p>
-           </div>
-           <div className="App-Main-Section-Location">
-             <LocationSVG/>
-             <p> Online </p>
-           </div>
-           <Button title='Go to registration'
-                   action='scroll'
-                   target='Registration'/>
-         </div>
-       </div>
-      </section>
-      <hr/>
-      <section className="Registration">
 
+    <div className="App">
+      <Header />
+      <section id="about" className="App-Main-Section">
+        <div className="App-Main-Section-Container">
+          <div className="App-Main-Section-Info">
+            <div className="App-Main-Section-Title">
+              Cool name for our cool hackathon
+           </div>
+            <div className="App-Main-Section-Date">
+              <DateSVG />
+              <p> 12-15 December 2020 </p>
+            </div>
+            <div className="App-Main-Section-Location">
+              <LocationSVG />
+              <p> Online </p>
+            </div>
+            <Button title='Go to registration'
+              action='scroll'
+              target='Registration' />
+          </div>
+        </div>
       </section>
-      <hr/>
-        <Ideas/>
-      <hr/>
-      <SVGSpriteSheet/>
-    </div>
+      <hr />
+      <section id="registration" className="Registration">
+        <h1 className="App-Section-Title">Registration</h1>
+      </section>
+      <hr />
+      <section id="inspiration" className="Inspiration">
+        <h1 className="App-Section-Title">Inspiration</h1>
+      </section>
+      <hr />
+      <Ideas />
+      <hr />
+      <section id="rules" className="Rules">
+        <h1 className="App-Section-Title">Rules</h1>
+      </section>
+      <hr />
+      <hr />
+      <SVGSpriteSheet />
+    </div >
   );
 };
 
