@@ -1,12 +1,14 @@
-import React from 'react';
-import './Header.css';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
+import React from "react";
+import "./Header.css";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const Header = ({}) => {
   const handleClick = (event) => {
-    event.target.classList.toggle('active');
-    console.log(event.target);
+    event.target.classList.toggle("active");
   };
+
+  const isNavLinkActive = (path) =>
+    `${window.location.pathname}${window.location.hash}` === path;
 
   return (
     <div className="Header">
@@ -16,9 +18,7 @@ const Header = ({}) => {
             to="/#about"
             smooth={true}
             isActive={() => {
-              return (
-                window.location.pathname + window.location.hash === '/#about'
-              );
+              return isNavLinkActive("/#about");
             }}
           >
             About
@@ -30,10 +30,7 @@ const Header = ({}) => {
             to="/#registration"
             smooth={true}
             isActive={() => {
-              return (
-                window.location.pathname + window.location.hash ===
-                '/#registration'
-              );
+              return isNavLinkActive("/#registration");
             }}
           >
             Registration
@@ -45,10 +42,7 @@ const Header = ({}) => {
             to="/#inspiration"
             smooth={true}
             isActive={() => {
-              return (
-                window.location.pathname + window.location.hash ===
-                '/#inspiration'
-              );
+              return isNavLinkActive("/#inspiration");
             }}
           >
             Inspiration
@@ -60,9 +54,7 @@ const Header = ({}) => {
             to="/#ideas"
             smooth={true}
             isActive={() => {
-              return (
-                window.location.pathname + window.location.hash === '/#ideas'
-              );
+              return isNavLinkActive("/#ideas");
             }}
           >
             Ideas
@@ -74,9 +66,7 @@ const Header = ({}) => {
             to="/#rules"
             smooth={true}
             isActive={() => {
-              return (
-                window.location.pathname + window.location.hash === '/#rules'
-              );
+              return isNavLinkActive("/#rules");
             }}
           >
             Rules

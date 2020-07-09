@@ -1,12 +1,10 @@
 .Header {
   height: 5em;
   display: flex;
-  /* justify-content: space-between; */
   width: 100%;
   position: fixed;
   background-color: white;
   z-index: 1;
-  /* align-items: center; */
 }
 
 .Header-Navigation {
@@ -17,7 +15,7 @@
 
 .Header-Navigation li {
   list-style-type: none;
-  padding-right: 10px;
+  padding-right: 1em;
 }
 
 .Header-Navigation a {
@@ -31,16 +29,16 @@
 }
 
 .Header-Navigation a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    margin-top: 3px;
-    background: var( --middle-blue-green-color);
-    transition: width .3s;
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  margin-top: 0.5em;
+  background: var(--middle-blue-green-color);
+  transition: width 0.3s;
 }
 
 .Header-Navigation a:hover::after {
-    width: 100%;
-    transition: width .3s;
+  width: 100%;
+  transition: width 0.3s;
 }
