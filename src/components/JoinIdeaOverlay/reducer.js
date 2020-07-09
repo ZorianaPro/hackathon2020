@@ -30,6 +30,13 @@ export default (state = initialState, action) => {
 				...state,
 				error: action.value
 			};
+		case actions.clean:
+			return {
+				...state,
+				content: {},
+				error: '',
+				userInfo: {}
+			};
 		default:
 			return state;
 	}

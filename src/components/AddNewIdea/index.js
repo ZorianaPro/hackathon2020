@@ -2,9 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import './AddNewIdea.css';
 import '../Overlay/Overlay.css';
-import { close, submit, error } from './actions';
+import { close, submit, error, clean } from './actions';
 import { fetchAllIdeas } from '../Ideas/actions';
-import handle from '../../helpers/handlers'
+import handle from '../../support/handlers';
+import ideaService from '../../services/idea'
 
 const AddNewIdea = ({
   team,
@@ -26,6 +27,13 @@ const AddNewIdea = ({
 		state.addNewIdeaReducer.content.id,
 		state.addNewIdeaReducer.error
 	]);
+
+	const cleanState = () => {
+		setIdeaName('');
+		setDescription('');
+		setSubmitForm(false);
+		dispatch(clean());
+	};
 
 	const handleChange = useCallback(
 		(target) => {
@@ -61,26 +69,15 @@ const AddNewIdea = ({
 				name: ideaName,
 				description: description
 			};
-			const requestOptions = {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify(data)
-			};
-			fetch('http://localhost:8082/ideas', requestOptions)
-				.then(response => {
-					if (response.ok) {
-						dispatch(fetchAllIdeas());
-						setSubmitForm(false);
-						setShowThankYou(true);
-						setTimeout(() => {
-							dispatch(close());
-							setShowThankYou(false);
-						}, 2000)
-					} else {
-						throw response.json()
-					}
+			ideaService.post(data)
+				.then(() => {
+					dispatch(fetchAllIdeas());
+					setShowThankYou(true);
+					cleanState();
+					setTimeout(() => {
+						dispatch(close());
+						setShowThankYou(false);
+					}, 2000)
 				})
 				.catch((errorResponse) => {
 					errorResponse.then(err => {

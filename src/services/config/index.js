@@ -4,12 +4,8 @@ export default {
   api: {
     base: isProduction
       ? ''
-      : 'http://localhost:8082/',
+      : 'http://localhost:8082',
     ideas: '/ideas',
     members: '/members'
-  },
-  actor: deviceService.isSmartphone()
-    ? actors.phone
-    : actors.desktop,
-  countryVersion: countryVersionService.current()
+  }
 };

@@ -2,7 +2,8 @@ export const actions = {
 	open: 'OPEN:JOINIDEA:OVERLAY',
 	close: 'CLOSE:JOINIDEA:OVERLAY',
 	submit: 'SUBMIT:JOINIDEA:OVERLAY',
-	error: 'ERROR:JOINIDEA:OVERLAY'
+	error: 'ERROR:JOINIDEA:OVERLAY',
+	clean: 'CLEAN:JOINIDEA:OVERLAY'
 };
 
 export const open = (content = {}) => ({
@@ -24,9 +25,14 @@ export const error = err => ({
 	value: err
 });
 
+export const clean = () => ({
+	type: actions.clean
+});
+
 export default {
 	open,
 	close,
 	submit,
-	error
+	error,
+	clean
 };

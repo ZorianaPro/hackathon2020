@@ -1,7 +1,9 @@
 ## 2.3.0
-Add tests for:
+* Add tests for:
 - sagas
 - Team component
+- idea and member services
+* Create idea and member services
 
 ## 2.2.0
 * [#34: Add CI for tests.](https://github.com/ZorianaPro/hackathon2020/issues/34)

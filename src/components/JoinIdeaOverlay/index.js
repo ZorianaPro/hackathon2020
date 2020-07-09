@@ -2,9 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import './JoinIdeaOverlay.css';
 import '../Overlay/Overlay.css';
-import { close, submit, error } from './actions';
-import handle from '../../helpers/handlers'
+import { close, submit, error, clean } from './actions';
+import handle from '../../support/handlers'
 import { fetchAllIdeas } from "../Ideas/actions";
+import memberService from "../../services/member";
 
 const JoinIdeaOverlay = ({
 	team,
@@ -22,6 +23,16 @@ const JoinIdeaOverlay = ({
 	const [position, setPosition] = useState('');
 	const [submitFrom, setSubmitForm] = useState(false);
 	const [showThankYou, setShowThankYou] = useState(false);
+
+	const cleanState = () => {
+		setFirstName('');
+		setLastName('');
+		setEmail('');
+		setPosition('');
+		setSubmitForm(false);
+		dispatch(clean());
+	};
+
 
 	[isOpen, id, errorMessage] = useSelector(state => [
 		state.joinIdeaOverlayReducer.open,
@@ -72,32 +83,22 @@ const JoinIdeaOverlay = ({
 					position: position
 				}
 			};
-			const requestOptions = {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify(data)
-			};
-			fetch('http://localhost:8082/members', requestOptions)
-				.then(response => {
-					if (response.ok) {
-						dispatch(fetchAllIdeas());
-						setSubmitForm(false);
-						setShowThankYou(true);
-						setTimeout(() => {
-							dispatch(close());
-							setShowThankYou(false);
-						}, 2000)
-					} else {
-						throw response.json()
-					}
+
+			memberService.post(data)
+				.then(() => {
+					dispatch(fetchAllIdeas());
+					setShowThankYou(true);
+					cleanState();
+					setTimeout(() => {
+						dispatch(close());
+						setShowThankYou(false);
+					}, 2000)
 				})
 				.catch((errorResponse) => {
 					errorResponse.then(err => {
-							dispatch(error(err.message));
-							setSubmitForm(false);
-						})
+						dispatch(error(err.message));
+						setSubmitForm(false);
+					})
 				})
 		}
 	}, [submitFrom]);
