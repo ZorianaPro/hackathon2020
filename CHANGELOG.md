@@ -1,9 +1,12 @@
-## 2.3.0
+## 2.4.0
 * Add tests for:
 - sagas
 - Team component
 - idea and member services
 * Create idea and member services
+
+## 2.3.0
+* [#37: Add navigation & scroll to sections.](https://github.com/ZorianaPro/hackathon2020/issues/37)
 
 ## 2.2.0
 * [#34: Add CI for tests.](https://github.com/ZorianaPro/hackathon2020/issues/34)
