@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { NavHashLink as NavLink } from "react-router-hash-link";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const Header = ({}) => {
   const handleClick = (event) => {
