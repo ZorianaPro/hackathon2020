@@ -1,25 +1,24 @@
-import { put, all, takeLatest, fork, call } from 'redux-saga/effects';
-import { actions, result, error } from '../components/Ideas/actions';
+import { put, all, takeLatest, fork, call } from "redux-saga/effects";
+import { actions, result, error } from "../components/Ideas/actions";
 
 export const fetchIdeas = async () => {
-    try {
-        const response = await fetch(`http://localhost:8082/ideas`);
-        return await response.json();
-    } catch (e) {
-        catchError(e)
-    }
+  try {
+    const response = await fetch(`http://localhost:8082/ideas`);
+    return await response.json();
+  } catch (e) {
+    catchError(e);
+  }
 };
 
 export function* catchError(e) {
-    yield put(error(e))
+  yield put(error(e));
 }
 
-
 export function* getIdeas() {
-    const ideasAll = yield call(fetchIdeas);
-    yield put(result(ideasAll))
+  const ideasAll = yield call(fetchIdeas);
+  yield put(result(ideasAll));
 }
 
 export function* ideasActionWatcher() {
-    yield takeLatest(actions.fetchAllIdeas, getIdeas)
+  yield takeLatest(actions.fetchAllIdeas, getIdeas);
 }

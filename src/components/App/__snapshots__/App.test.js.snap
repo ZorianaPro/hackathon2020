@@ -4,13 +4,14 @@ exports[`App renders as expected 1`] = `
 <div
   className="App"
 >
+  <Header />
   <section
     className="App-Main-Section"
+    id="about"
   >
     <div
       className="App-Main-Section-Container"
     >
-      <Header />
       <div
         className="App-Main-Section-Info"
       >
@@ -46,9 +47,39 @@ exports[`App renders as expected 1`] = `
   <hr />
   <section
     className="Registration"
-  />
+    id="registration"
+  >
+    <h1
+      className="App-Section-Title"
+    >
+      Registration
+    </h1>
+  </section>
+  <hr />
+  <section
+    className="Inspiration"
+    id="inspiration"
+  >
+    <h1
+      className="App-Section-Title"
+    >
+      Inspiration
+    </h1>
+  </section>
   <hr />
   <Ideas />
+  <hr />
+  <section
+    className="Rules"
+    id="rules"
+  >
+    <h1
+      className="App-Section-Title"
+    >
+      Rules
+    </h1>
+  </section>
+  <hr />
   <hr />
   <SVGSpriteSheet />
 </div>
