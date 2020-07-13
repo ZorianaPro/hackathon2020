@@ -15,7 +15,6 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
     "mongoose-autopopulate": "^0.12.2",
-    "prettier": "^2.0.5",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-hash-link": "^1.2.2",
@@ -41,15 +40,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run test:ci",
-      "pre-push": "lint-staged && npm run test:ci",
-      "post-pull": "npm install"
+      "pre-commit": "CI=true npm run lint && npm run test:ci",
+      "pre-push": "CI=true npm run lint && npm run test:ci"
     }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "./node_modules/.bin/prettier --write"
-    ]
   },
   "browserslist": {
     "production": [
