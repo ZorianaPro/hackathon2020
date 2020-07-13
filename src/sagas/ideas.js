@@ -15,7 +15,6 @@ export function* catchError(e) {
     yield put(error(e))
 }
 
-
 export function* getIdeas() {
     const ideasAll = yield call(fetchIdeas);
     yield put(result(ideasAll))

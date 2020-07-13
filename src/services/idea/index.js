@@ -32,7 +32,7 @@ const get = () => {
       return res;
     }
     throw res.json();
-  });
+  })
 };
 
 export default {

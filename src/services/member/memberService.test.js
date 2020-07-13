@@ -37,7 +37,7 @@ describe('memberService', () => {
 
     describe('and the API call fails', () => {
       beforeAll(() => {
-        fetchMock.get(
+        fetchMock.post(
           `${config.api.base}${config.api.members}`,
           500
         );
@@ -48,7 +48,7 @@ describe('memberService', () => {
       });
 
       it('rejects with status', () => {
-        expect(memberService.get()).rejects.toThrow('500: Internal Server Error');
+        expect(memberService.post()).rejects.toThrow('500: Internal Server Error');
       });
 
       it('calls the API', () => {

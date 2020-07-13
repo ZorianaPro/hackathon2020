@@ -1,9 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header renders as expected 1`] = `
-<Header>
-  <div
-    className="Header"
-  />
-</Header>
-`;
+exports[`Header renders as expected 1`] = `undefined`;

@@ -38,7 +38,7 @@ describe('idea service', () => {
 
     describe('and the API call fails', () => {
       beforeAll(() => {
-        fetchMock.get(
+        fetchMock.post(
           `${config.api.base}${config.api.ideas}`,
           500
         );
@@ -49,7 +49,7 @@ describe('idea service', () => {
       });
 
       it('rejects with status', () => {
-        expect(ideaService.get()).rejects.toThrow('500: Internal Server Error');
+        expect(ideaService.post()).rejects.toThrow('500: Internal Server Error');
       });
 
       it('calls the API', () => {
