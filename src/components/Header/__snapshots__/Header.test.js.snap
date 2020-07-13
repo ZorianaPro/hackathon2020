@@ -1,3 +1,257 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header renders as expected 1`] = `undefined`;
+exports[`Header renders as expected 1`] = `
+<Header>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <div
+        className="Header"
+      >
+        <ul
+          className="Header-Navigation"
+          onClick={[Function]}
+        >
+          <li>
+            <NavHashLink
+              isActive={[Function]}
+              smooth={true}
+              to="/#about"
+            >
+              <NavLink
+                isActive={[Function]}
+                onClick={[Function]}
+                to="/#about"
+              >
+                <Link
+                  aria-current={null}
+                  onClick={[Function]}
+                  to={
+                    Object {
+                      "hash": "#about",
+                      "pathname": "/",
+                      "search": "",
+                      "state": null,
+                    }
+                  }
+                >
+                  <LinkAnchor
+                    aria-current={null}
+                    href="/#about"
+                    navigate={[Function]}
+                    onClick={[Function]}
+                  >
+                    <a
+                      aria-current={null}
+                      href="/#about"
+                      onClick={[Function]}
+                    >
+                      About
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </NavLink>
+            </NavHashLink>
+          </li>
+          <li>
+            |
+          </li>
+          <li>
+            <NavHashLink
+              isActive={[Function]}
+              smooth={true}
+              to="/#registration"
+            >
+              <NavLink
+                isActive={[Function]}
+                onClick={[Function]}
+                to="/#registration"
+              >
+                <Link
+                  aria-current={null}
+                  onClick={[Function]}
+                  to={
+                    Object {
+                      "hash": "#registration",
+                      "pathname": "/",
+                      "search": "",
+                      "state": null,
+                    }
+                  }
+                >
+                  <LinkAnchor
+                    aria-current={null}
+                    href="/#registration"
+                    navigate={[Function]}
+                    onClick={[Function]}
+                  >
+                    <a
+                      aria-current={null}
+                      href="/#registration"
+                      onClick={[Function]}
+                    >
+                      Registration
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </NavLink>
+            </NavHashLink>
+          </li>
+          <li>
+            |
+          </li>
+          <li>
+            <NavHashLink
+              isActive={[Function]}
+              smooth={true}
+              to="/#inspiration"
+            >
+              <NavLink
+                isActive={[Function]}
+                onClick={[Function]}
+                to="/#inspiration"
+              >
+                <Link
+                  aria-current={null}
+                  onClick={[Function]}
+                  to={
+                    Object {
+                      "hash": "#inspiration",
+                      "pathname": "/",
+                      "search": "",
+                      "state": null,
+                    }
+                  }
+                >
+                  <LinkAnchor
+                    aria-current={null}
+                    href="/#inspiration"
+                    navigate={[Function]}
+                    onClick={[Function]}
+                  >
+                    <a
+                      aria-current={null}
+                      href="/#inspiration"
+                      onClick={[Function]}
+                    >
+                      Inspiration
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </NavLink>
+            </NavHashLink>
+          </li>
+          <li>
+            |
+          </li>
+          <li>
+            <NavHashLink
+              isActive={[Function]}
+              smooth={true}
+              to="/#ideas"
+            >
+              <NavLink
+                isActive={[Function]}
+                onClick={[Function]}
+                to="/#ideas"
+              >
+                <Link
+                  aria-current={null}
+                  onClick={[Function]}
+                  to={
+                    Object {
+                      "hash": "#ideas",
+                      "pathname": "/",
+                      "search": "",
+                      "state": null,
+                    }
+                  }
+                >
+                  <LinkAnchor
+                    aria-current={null}
+                    href="/#ideas"
+                    navigate={[Function]}
+                    onClick={[Function]}
+                  >
+                    <a
+                      aria-current={null}
+                      href="/#ideas"
+                      onClick={[Function]}
+                    >
+                      Ideas
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </NavLink>
+            </NavHashLink>
+          </li>
+          <li>
+            |
+          </li>
+          <li>
+            <NavHashLink
+              isActive={[Function]}
+              smooth={true}
+              to="/#rules"
+            >
+              <NavLink
+                isActive={[Function]}
+                onClick={[Function]}
+                to="/#rules"
+              >
+                <Link
+                  aria-current={null}
+                  onClick={[Function]}
+                  to={
+                    Object {
+                      "hash": "#rules",
+                      "pathname": "/",
+                      "search": "",
+                      "state": null,
+                    }
+                  }
+                >
+                  <LinkAnchor
+                    aria-current={null}
+                    href="/#rules"
+                    navigate={[Function]}
+                    onClick={[Function]}
+                  >
+                    <a
+                      aria-current={null}
+                      href="/#rules"
+                      onClick={[Function]}
+                    >
+                      Rules
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </NavLink>
+            </NavHashLink>
+          </li>
+        </ul>
+      </div>
+    </Router>
+  </BrowserRouter>
+</Header>
+`;
