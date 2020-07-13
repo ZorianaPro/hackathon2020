@@ -36,8 +36,10 @@ export default (state = initialState, action) => {
 			};
 		case actions.clean:
 			return {
-				...initialState,
-				open: true
+				...state,
+				content: {},
+				response: '',
+				error: ''
 			};
 		default:
 			return state;

@@ -3,7 +3,8 @@ export const actions = {
 	close: 'CLOSE:ADDNEWIDEA:OVERLAY',
 	submit: 'SUBMIT:ADDNEWIDEA:OVERLAY',
 	response: 'RESPONCE:ADDNEWIDEA:OVERLAY',
-	error: 'ERROR:ADDNEWIDEA:OVERLAY'
+	error: 'ERROR:ADDNEWIDEA:OVERLAY',
+	clean:  'CLEAN:ADDNEWIDEA:OVERLAY',
 };
 
 export const open = (content = {}) => ({
@@ -29,11 +30,16 @@ export const error = (err) => ({
 	value: err
 });
 
+export const clean = () => ({
+	type: actions.clean
+});
+
 
 export default {
 	open,
 	close,
 	submit,
 	response,
-	error
+	error,
+	clean
 };
