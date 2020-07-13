@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
         case actions.result:
             return {
                 ...state,
-                loading:false,
+                loading: false,
                 ideas: action.value,
             };
         case actions.error:

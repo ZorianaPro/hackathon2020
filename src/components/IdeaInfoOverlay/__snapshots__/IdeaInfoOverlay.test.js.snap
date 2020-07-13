@@ -58,8 +58,10 @@ exports[`IdeaInfoOverlay renders as expected 1`] = `
                   <div
                     className="Team-Members"
                   >
-                    <div>
-                       There are no members in this team yet
+                    <div
+                      className="Team--empty"
+                    >
+                      There are no members in this team yet
                     </div>
                   </div>
                 </div>
