@@ -1,3 +1,7 @@
+## 2.4.1
+- Change header to not be fixed. Because when its fixed, on scroll to the section, section header is cut, because its under the header.
+Better fix would be to have space reserved, but I was to lazy to do it)
+
 ## 2.4.0
 * Add tests for:
 - sagas
