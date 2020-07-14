@@ -45,16 +45,7 @@ exports[`App renders as expected 1`] = `
     </div>
   </section>
   <hr />
-  <section
-    className="Registration"
-    id="registration"
-  >
-    <h1
-      className="App-Section-Title"
-    >
-      Registration
-    </h1>
-  </section>
+  <Registration />
   <hr />
   <section
     className="Inspiration"
