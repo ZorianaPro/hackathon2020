@@ -1,3 +1,6 @@
+## 2.5.0
+* [#11: Add Footer.](https://github.com/ZorianaPro/hackathon2020/issues/1)
+
 ## 2.4.0
 * Add tests for:
 - sagas
