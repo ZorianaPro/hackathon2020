@@ -1,5 +1,5 @@
 ## 2.5.0
-* [#37: registration section.](https://github.com/ZorianaPro/hackathon2020/issues/22)
+* [#9: registration section.](https://github.com/ZorianaPro/hackathon2020/issues/22)
 * Change some styles for Ideas section, to not have App classes there
 
 ## 2.4.0
