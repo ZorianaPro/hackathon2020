@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/hackathon2020/static/css/main.aff3f2df.chunk.css",
-    "main.js": "/hackathon2020/static/js/main.4b20cd32.chunk.js",
-    "main.js.map": "/hackathon2020/static/js/main.4b20cd32.chunk.js.map",
+    "main.css": "/hackathon2020/static/css/main.f2cf4d10.chunk.css",
+    "main.js": "/hackathon2020/static/js/main.ad5d4d7e.chunk.js",
+    "main.js.map": "/hackathon2020/static/js/main.ad5d4d7e.chunk.js.map",
     "runtime-main.js": "/hackathon2020/static/js/runtime-main.114e5251.js",
     "runtime-main.js.map": "/hackathon2020/static/js/runtime-main.114e5251.js.map",
-    "static/js/2.042d9852.chunk.js": "/hackathon2020/static/js/2.042d9852.chunk.js",
-    "static/js/2.042d9852.chunk.js.map": "/hackathon2020/static/js/2.042d9852.chunk.js.map",
+    "static/js/2.e5f3261e.chunk.js": "/hackathon2020/static/js/2.e5f3261e.chunk.js",
+    "static/js/2.e5f3261e.chunk.js.map": "/hackathon2020/static/js/2.e5f3261e.chunk.js.map",
     "index.html": "/hackathon2020/index.html",
-    "precache-manifest.fb49ddc89cc5151c892377a5d6017941.js": "/hackathon2020/precache-manifest.fb49ddc89cc5151c892377a5d6017941.js",
+    "precache-manifest.788e3d761493201b5d7dd086aff3533c.js": "/hackathon2020/precache-manifest.788e3d761493201b5d7dd086aff3533c.js",
     "service-worker.js": "/hackathon2020/service-worker.js",
-    "static/css/main.aff3f2df.chunk.css.map": "/hackathon2020/static/css/main.aff3f2df.chunk.css.map",
-    "static/js/2.042d9852.chunk.js.LICENSE.txt": "/hackathon2020/static/js/2.042d9852.chunk.js.LICENSE.txt"
+    "static/css/main.f2cf4d10.chunk.css.map": "/hackathon2020/static/css/main.f2cf4d10.chunk.css.map",
+    "static/js/2.e5f3261e.chunk.js.LICENSE.txt": "/hackathon2020/static/js/2.e5f3261e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.114e5251.js",
-    "static/js/2.042d9852.chunk.js",
-    "static/css/main.aff3f2df.chunk.css",
-    "static/js/main.4b20cd32.chunk.js"
+    "static/js/2.e5f3261e.chunk.js",
+    "static/css/main.f2cf4d10.chunk.css",
+    "static/js/main.ad5d4d7e.chunk.js"
   ]
 }
