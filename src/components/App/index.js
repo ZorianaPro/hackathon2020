@@ -6,6 +6,7 @@ import LocationSVG from '../LocationSVG';
 import DateSVG from "../DateSVG";
 import Button from "../Button";
 import Ideas from "../Ideas";
+import Schedule from '../Schedule';
 
 const App = ({
 
@@ -34,6 +35,11 @@ const App = ({
               target='Registration' />
           </div>
         </div>
+      </section>
+      <hr />
+      <section id="schedule" className="Schedule-Section">
+        <h1 className="App-Section-Title">Schedule</h1>
+        <Schedule/>
       </section>
       <hr />
       <section id="registration" className="Registration">
