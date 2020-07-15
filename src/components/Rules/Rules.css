@@ -1,0 +1,19 @@
+.Rules {
+    margin: 0 auto;
+    padding: 0 10% 5% 10%;
+    background-color:  var(--salmon-pink-color);
+}
+
+.Rules-List {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.Rules-List .Rules-Item h2::before {
+    content: '\01F31F';
+    font-size: 1.25em;
+    display: inline;
+    font-weight: 100;
+    padding-right: 0.5em;
+  }

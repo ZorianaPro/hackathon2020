@@ -6,6 +6,7 @@ import LocationSVG from '../LocationSVG';
 import DateSVG from "../DateSVG";
 import Button from "../Button";
 import Ideas from "../Ideas";
+import Rules from "../Rules";
 
 const App = ({
 
@@ -48,6 +49,7 @@ const App = ({
       <hr />
       <section id="rules" className="Rules">
         <h1 className="App-Section-Title">Rules</h1>
+        <Rules/>
       </section>
       <hr />
       <hr />

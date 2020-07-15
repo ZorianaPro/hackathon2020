@@ -78,6 +78,7 @@ exports[`App renders as expected 1`] = `
     >
       Rules
     </h1>
+    <Rules />
   </section>
   <hr />
   <hr />
