@@ -6,6 +6,7 @@ import JoinIdeaOverlay from "../JoinIdeaOverlay";
 import AddNewIdea from "../AddNewIdea";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllIdeas } from './actions';
+import './Ideas.css'
 
 const Ideas = ({
   dispatch,
@@ -26,11 +27,12 @@ const Ideas = ({
     }, []);
 
     return (
-        <section id="ideas" className="App-Ideas-Section">
-            <div className="App-Ideas-Section-Container">
-                <div className="App-Section-Title">
+        <section id="ideas" className="Ideas">
+            <div className="Ideas-Container">
+                <div className="Ideas-Title">
                     Ideas
                 </div>
+              <div className="Ideas-Content">
                 {
                     loading && 'Loading...'
                 }
@@ -49,6 +51,7 @@ const Ideas = ({
                     })
                 }
                 <AddIdeaButton/>
+              </div>
             </div>
             <IdeaInfoOverlay/>
             <JoinIdeaOverlay/>
