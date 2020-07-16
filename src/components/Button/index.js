@@ -1,15 +1,17 @@
 import React from "react";
 import "./Button.css";
 
-const Button = ({ title, action = "overlay", target }) => {
+const Button = ({ title, action = "overlay", target, onClick }) => {
+
   const clickHandler = () => {
-    const targetEl = document.querySelector(`.${target}`);
-    if (targetEl) {
-      if (action === "scroll") {
-        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-      if (action === "overlay") {
-        //	open target overlay
+    if (typeof onClick === 'function') {
+      onClick();
+    } else {
+      const targetEl = document.querySelector(`.${target}`);
+      if (targetEl) {
+        if (action === "scroll") {
+          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       }
     }
   };
