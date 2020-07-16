@@ -71,7 +71,8 @@ exports[`App renders as expected 1`] = `
     </h1>
   </section>
   <hr />
-  <hr />
   <SVGSpriteSheet />
+  <Footer />
+  <hr />
 </div>
 `;

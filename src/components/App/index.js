@@ -6,6 +6,7 @@ import LocationSVG from '../LocationSVG';
 import DateSVG from "../DateSVG";
 import Button from "../Button";
 import Ideas from "../Ideas";
+import Footer from "../Footer";
 import Registration from "../Registration";
 
 const App = ({
@@ -13,7 +14,6 @@ const App = ({
 }) => {
 
   return (
-
     <div className="App">
       <Header />
       <section id="about" className="App-Main-Section">
@@ -49,8 +49,9 @@ const App = ({
         <h1 className="App-Section-Title">Rules</h1>
       </section>
       <hr />
-      <hr />
       <SVGSpriteSheet />
+      <Footer/>
+      <hr />
     </div >
   );
 };

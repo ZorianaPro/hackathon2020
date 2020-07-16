@@ -1,3 +1,6 @@
+## 2.6.0
+* [#11: Add Footer.](https://github.com/ZorianaPro/hackathon2020/issues/1)
+
 ## 2.5.0
 * [#9: registration section.](https://github.com/ZorianaPro/hackathon2020/issues/22)
 * Change some styles for Ideas section, to not have App classes there
