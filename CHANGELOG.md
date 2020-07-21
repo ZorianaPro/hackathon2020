@@ -1,3 +1,6 @@
+## 2.9.0
+* Add fake ideas for static application
+
 ## 2.8.0
 * [#11: Add schedule.](https://github.com/ZorianaPro/hackathon2020/issues/48)
 

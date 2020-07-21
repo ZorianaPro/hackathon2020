@@ -11,15 +11,30 @@ export const fetchIdeas = async () => {
     }
 };
 
+export const fetchFakeIdeas = async () => {
+    try {
+        const response = await ideaService.ideasMock();
+        return await response;
+    } catch (e) {
+        catchError(e)
+    }
+};
+
 export function* catchError(e) {
     yield put(error(e))
 }
 
-export function* getIdeas() {
+export function* getAllIdeas() {
     const ideasAll = yield call(fetchIdeas);
     yield put(result(ideasAll))
 }
 
+export function* getFakeIdeas() {
+    const ideasAll = yield call(fetchFakeIdeas);
+    yield put(result(ideasAll))
+}
+
 export function* ideasActionWatcher() {
-    yield takeLatest(actions.fetchAllIdeas, getIdeas)
+    yield takeLatest(actions.fetchAllIdeas, getAllIdeas)
+    yield takeLatest(actions.fetchFakeIdeas, getFakeIdeas)
 }

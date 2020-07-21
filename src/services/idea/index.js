@@ -2,6 +2,7 @@ import 'isomorphic-fetch';
 import config from '../config';
 import headers from '../../support/headers';
 import mimetypes from '../../support/mimetypes';
+import ideas from './ideas.json';
 
 const post = (data) =>
   fetch(`${config.api.base}${config.api.ideas}`, {
@@ -35,7 +36,12 @@ const get = () => {
   })
 };
 
+const ideasMock = () => {
+  return ideas;
+};
+
 export default {
   post,
-  get
+  get,
+  ideasMock
 };

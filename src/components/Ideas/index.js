@@ -5,7 +5,7 @@ import IdeaInfoOverlay from "../IdeaInfoOverlay";
 import JoinIdeaOverlay from "../JoinIdeaOverlay";
 import AddNewIdea from "../AddNewIdea";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllIdeas } from './actions';
+import { fetchAllIdeas, fetchFakeIdeas } from './actions';
 import './Ideas.css'
 
 const Ideas = ({
@@ -20,10 +20,11 @@ const Ideas = ({
         state.ideasReducer.loading,
         state.ideasReducer.error
     ]);
+
     dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchAllIdeas())
+        dispatch(fetchFakeIdeas())
     }, []);
 
     return (
