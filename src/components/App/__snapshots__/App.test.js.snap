@@ -61,7 +61,6 @@ exports[`App renders as expected 1`] = `
   <Ideas />
   <hr />
   <section
-    className="Rules"
     id="rules"
   >
     <h1
@@ -69,6 +68,7 @@ exports[`App renders as expected 1`] = `
     >
       Rules
     </h1>
+    <Rules />
   </section>
   <hr />
   <SVGSpriteSheet />

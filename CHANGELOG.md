@@ -1,3 +1,6 @@
+## 2.7.0
+* [#11: Add rules.](https://github.com/ZorianaPro/hackathon2020/issues/10)
+
 ## 2.6.0
 * [#11: Add Footer.](https://github.com/ZorianaPro/hackathon2020/issues/1)
 

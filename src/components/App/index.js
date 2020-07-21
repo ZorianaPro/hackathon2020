@@ -6,6 +6,7 @@ import LocationSVG from '../LocationSVG';
 import DateSVG from "../DateSVG";
 import Button from "../Button";
 import Ideas from "../Ideas";
+import Rules from "../Rules";
 import Footer from "../Footer";
 import Registration from "../Registration";
 
@@ -45,8 +46,9 @@ const App = ({
       <hr />
       <Ideas />
       <hr />
-      <section id="rules" className="Rules">
+      <section id="rules">
         <h1 className="App-Section-Title">Rules</h1>
+        <Rules/>
       </section>
       <hr />
       <SVGSpriteSheet />
