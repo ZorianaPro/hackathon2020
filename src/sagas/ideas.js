@@ -2,7 +2,7 @@ import { put, all, takeLatest, fork, call } from 'redux-saga/effects';
 import { actions, result, error } from '../components/Ideas/actions';
 import ideaService from '../services/idea';
 
-export const fetchIdeas = async () => {
+export const fetchAllIdeas = async () => {
     try {
         const response = await ideaService.get();
         return await response.json();
@@ -25,7 +25,7 @@ export function* catchError(e) {
 }
 
 export function* getAllIdeas() {
-    const ideasAll = yield call(fetchIdeas);
+    const ideasAll = yield call(fetchAllIdeas);
     yield put(result(ideasAll))
 }
 
@@ -35,6 +35,6 @@ export function* getFakeIdeas() {
 }
 
 export function* ideasActionWatcher() {
-    yield takeLatest(actions.fetchAllIdeas, getAllIdeas)
+    yield takeLatest(actions.fetchAllIdeas, getAllIdeas);
     yield takeLatest(actions.fetchFakeIdeas, getFakeIdeas)
 }
