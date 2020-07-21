@@ -1,3 +1,6 @@
+## 2.10.0
+* Add offset to scroll
+
 ## 2.9.0
 * Add fake ideas for static application
 

@@ -10,6 +10,26 @@ const blur = (input) => {
 	}
 };
 
+const scrollToCenter = (el) => {
+	el.scrollIntoView(
+		{
+			behavior: "smooth",
+			block: "center",
+			inline: "nearest"
+		})
+};
+
+export const scrollElToCenter = (el) => {
+	const headerHeight = document.querySelector('.Header').offsetHeight;
+
+	const elementPosition = el.offsetTop - headerHeight - 10;
+	window.scroll({
+		top: elementPosition,
+		left: 0,
+		behavior: "smooth"
+	});
+};
+
 export default {
 	focus,
 	blur
