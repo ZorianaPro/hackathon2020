@@ -6,6 +6,7 @@ import LocationSVG from '../LocationSVG';
 import DateSVG from "../DateSVG";
 import Button from "../Button";
 import Ideas from "../Ideas";
+import Schedule from '../Schedule';
 import Rules from "../Rules";
 import Footer from "../Footer";
 import Registration from "../Registration";
@@ -38,6 +39,14 @@ const App = ({
         </div>
       </section>
       <hr />
+      <section id="schedule" className="Schedule-Section">
+        <h1 className="App-Section-Title">Schedule</h1>
+        <Schedule/>
+      </section>
+      <hr />
+      <section id="registration" className="Registration">
+        <h1 className="App-Section-Title">Registration</h1>
+      </section>
       <Registration/>
       <hr />
       <section id="inspiration" className="Inspiration">

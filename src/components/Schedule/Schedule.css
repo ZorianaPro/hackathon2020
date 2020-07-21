@@ -1,0 +1,49 @@
+.Schedule {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: -system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    flex-wrap: wrap;
+}
+
+.Day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 0 1 400px;
+}
+
+.Schedule table tr:nth-child(even) th {
+    color: #ccc;
+    font-weight: normal;
+}
+.Schedule table th, .Schedule table td {
+    padding: 0.5rem 1rem;
+}
+.Schedule table th {
+    font-weight: normal;
+    border-top: thin dotted #ccc;
+}
+.Schedule table td {
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1.4;
+    border-radius: 0.2rem;
+    transition: opacity 0.3s ease;
+}
+.Schedule table td > span {
+    font-size: 0.8em;
+    font-weight: normal;
+    display: block;
+    width: 100%;
+}
+
+.is-hacking {
+ background-color: var(--periwinkie-crayola-color);
+}
+
+.is-official-program {
+background-color: var(--salmon-pink-color);
+}

@@ -1,3 +1,6 @@
+## 2.8.0
+* [#11: Add schedule.](https://github.com/ZorianaPro/hackathon2020/issues/48)
+
 ## 2.7.0
 * [#11: Add rules.](https://github.com/ZorianaPro/hackathon2020/issues/10)
 
