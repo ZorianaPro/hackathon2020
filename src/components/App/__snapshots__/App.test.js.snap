@@ -70,7 +70,6 @@ exports[`App renders as expected 1`] = `
   <Ideas />
   <hr />
   <section
-    className="Rules"
     id="rules"
   >
     <h1

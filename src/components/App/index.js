@@ -47,7 +47,7 @@ const App = ({
       <hr />
       <Ideas />
       <hr />
-      <section id="rules" className="Rules">
+      <section id="rules">
         <h1 className="App-Section-Title">Rules</h1>
         <Rules/>
       </section>
