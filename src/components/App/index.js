@@ -10,6 +10,9 @@ import Schedule from '../Schedule';
 import Rules from "../Rules";
 import Footer from "../Footer";
 import Registration from "../Registration";
+import {BrowserRouter as Router} from "react-router-dom";
+import { scrollElToCenter } from "../../support/handlers";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const App = ({
 
@@ -32,9 +35,15 @@ const App = ({
               <LocationSVG />
               <p> Online </p>
             </div>
-            <Button title='Go to registration'
-              action='scroll'
-              target='Registration' />
+            <NavLink
+              to="/#registration"
+              scroll={el => scrollElToCenter(el)}
+              smooth={true}
+            >
+              <Button
+                title='Registration'
+              />
+            </NavLink>
           </div>
         </div>
       </section>
