@@ -1,3 +1,6 @@
+## 2.7.0
+* [#35: Add Docker setup.](https://github.com/ZorianaPro/hackathon2020/issues/35)
+
 ## 2.6.0
 * [#11: Add Footer.](https://github.com/ZorianaPro/hackathon2020/issues/1)
 
