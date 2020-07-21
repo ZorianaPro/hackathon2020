@@ -48,6 +48,12 @@ exports[`Schedule renders as expected 1`] = `
             <th>
               11:00
             </th>
+            <td
+              className="is-hacking"
+              rowSpan="6"
+            >
+              Hack, hack, hack
+            </td>
           </tr>
           <tr>
             <th>
@@ -98,6 +104,12 @@ exports[`Schedule renders as expected 1`] = `
             <th>
               15:00
             </th>
+            <td
+              className="is-hacking"
+              rowSpan="2"
+            >
+              Hack, hack, hack
+            </td>
           </tr>
           <tr>
             <th>
@@ -191,6 +203,12 @@ exports[`Schedule renders as expected 1`] = `
             <th>
               10:00
             </th>
+            <td
+              className="is-hacking"
+              rowSpan="12"
+            >
+              Hack, hack, hack
+            </td>
           </tr>
           <tr>
             <th>

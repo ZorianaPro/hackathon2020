@@ -1,9 +1,8 @@
 .Schedule {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     min-height: 100vh;
-    /* padding: 4rem 0; */
     font-family: -system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     flex-wrap: wrap;
 }
@@ -14,14 +13,8 @@
     justify-content: center;
     flex-direction: column;
     flex: 0 1 400px;
-    /* padding: 4rem 2rem; */
 }
 
-
-.Schedule table {
-    /* width: 100%;
-    max-width: 50rem; */
-}
 .Schedule table tr:nth-child(even) th {
     color: #ccc;
     font-weight: normal;

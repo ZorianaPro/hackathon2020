@@ -26,6 +26,9 @@ const Schedule = ({}) => {
             </tr>
             <tr>
               <th>11:00</th>
+              <td rowSpan="6" className="is-hacking">
+                Hack, hack, hack
+              </td>
             </tr>
             <tr>
               <th>11:30</th>
@@ -53,6 +56,9 @@ const Schedule = ({}) => {
             </tr>
             <tr>
               <th>15:00</th>
+              <td rowSpan="2" className="is-hacking">
+                Hack, hack, hack
+              </td>
             </tr>
             <tr>
               <th>15:30</th>
@@ -102,6 +108,9 @@ const Schedule = ({}) => {
             </tr>
             <tr>
               <th>10:00</th>
+              <td rowSpan="12" className="is-hacking">
+                Hack, hack, hack
+              </td>
             </tr>
             <tr>
               <th>10:30</th>
