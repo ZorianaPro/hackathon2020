@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders as expected 1`] = `
+<div
+  className="Footer"
+>
+  2020 @ All right reserved
+</div>
+`;

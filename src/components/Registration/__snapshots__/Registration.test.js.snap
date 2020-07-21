@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Registration renders as expected 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Registration>
+    <BrowserRouter>
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <section
+          className="Registration"
+          id="registration"
+        >
+          <div
+            className="Registration-Container"
+          >
+            <h1
+              className="Registration-Title"
+            >
+              Registration
+            </h1>
+            <div
+              className="Registration-Content"
+            >
+              You can
+              <NavHashLink
+                smooth={true}
+                to="/#registration"
+              >
+                <NavLink
+                  onClick={[Function]}
+                  to="/#registration"
+                >
+                  <Link
+                    aria-current="page"
+                    className="active"
+                    onClick={[Function]}
+                    style={Object {}}
+                    to={
+                      Object {
+                        "hash": "#registration",
+                        "pathname": "/",
+                        "search": "",
+                        "state": null,
+                      }
+                    }
+                  >
+                    <LinkAnchor
+                      aria-current="page"
+                      className="active"
+                      href="/#registration"
+                      navigate={[Function]}
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      <a
+                        aria-current="page"
+                        className="active"
+                        href="/#registration"
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        <Button
+                          title="Join an existing idea"
+                        >
+                          <div
+                            className="Button"
+                            onClick={[Function]}
+                          >
+                            Join an existing idea
+                          </div>
+                        </Button>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </NavLink>
+              </NavHashLink>
+              or
+              <Button
+                onClick={[Function]}
+                title="Create your own idea"
+              >
+                <div
+                  className="Button"
+                  onClick={[Function]}
+                >
+                  Create your own idea
+                </div>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </Router>
+    </BrowserRouter>
+  </Registration>
+</Provider>
+`;

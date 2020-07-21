@@ -8,8 +8,7 @@
   position: relative;
 }
 
-.App .App-Main-Section-Container,
-.App .App-Ideas-Section-Container {
+.App .App-Main-Section-Container {
   margin: 0 auto;
   max-width: 1200px;
   height: 100%;
@@ -56,13 +55,6 @@
 
 .App .App-Main-Section-Info .Button {
   margin: 2em 0;
-}
-
-.App .App-Ideas-Section-Container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 1500px;
 }
 
 .App .App-Section-Title {
@@ -123,6 +115,10 @@ label.focus {
 form div {
   position: relative;
   margin-top: 2em;
+}
+
+h1 {
+  margin: 0
 }
 
 

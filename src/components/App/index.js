@@ -7,13 +7,14 @@ import DateSVG from "../DateSVG";
 import Button from "../Button";
 import Ideas from "../Ideas";
 import Rules from "../Rules";
+import Footer from "../Footer";
+import Registration from "../Registration";
 
 const App = ({
 
 }) => {
 
   return (
-
     <div className="App">
       <Header />
       <section id="about" className="App-Main-Section">
@@ -37,9 +38,7 @@ const App = ({
         </div>
       </section>
       <hr />
-      <section id="registration" className="Registration">
-        <h1 className="App-Section-Title">Registration</h1>
-      </section>
+      <Registration/>
       <hr />
       <section id="inspiration" className="Inspiration">
         <h1 className="App-Section-Title">Inspiration</h1>
@@ -52,8 +51,9 @@ const App = ({
         <Rules/>
       </section>
       <hr />
-      <hr />
       <SVGSpriteSheet />
+      <Footer/>
+      <hr />
     </div >
   );
 };
