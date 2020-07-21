@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import "./Registration.css";
 import Button from "../Button";
 import {BrowserRouter as Router} from "react-router-dom";
+import { scrollElToCenter } from "../../support/handlers"
 
 const Registration = ({ dispatch }) => {
 
@@ -25,6 +26,7 @@ const Registration = ({ dispatch }) => {
             You can
             <NavLink
               to="/#registration"
+              scroll={el => scrollElToCenter(el)}
               smooth={true}
             >
               <Button

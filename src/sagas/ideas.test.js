@@ -1,11 +1,10 @@
 import { put, takeLatest } from 'redux-saga/effects';
-import { fetchIdeas, catchError, getIdeas, ideasActionWatcher } from './ideas'
+import {fetchAllIdeas, catchError, getAllIdeas, ideasActionWatcher} from './ideas'
 
 describe('ideas saga', () => {
-    test('should dispatch action "FETCH:IDEAS" ', () => {
+    test('should dispatch action "FETCH:ALL:IDEAS" ', () => {
         const generator = ideasActionWatcher();
-        expect(generator.next().value).toEqual(takeLatest('FETCH:IDEAS', getIdeas));
-        expect(generator.next().done).toBeTruthy();
+        expect(generator.next().value).toEqual(takeLatest('FETCH:ALL:IDEAS', getAllIdeas));
     });
 
     test('should dispatch action "RESULT:IDEAS" with result from fetch API', () => {
@@ -25,10 +24,9 @@ describe('ideas saga', () => {
             "createdAt":"2020-07-01T14:58:57.947Z",
             "updatedAt":"2020-07-02T14:44:28.886Z","__v":0
         }];
-        const generator = getIdeas();
+        const generator = getAllIdeas();
         generator.next();
         expect(generator.next(mockData).value).toEqual(put({type:"RESULT:IDEAS", value: mockData}));
-        expect(generator.next().done).toBeTruthy();
     });
 
 });

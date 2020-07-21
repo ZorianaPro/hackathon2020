@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
+import { scrollElToCenter } from "../../support/handlers"
 
 const Header = ({}) => {
   const handleClick = (event) => {
@@ -19,6 +20,7 @@ const Header = ({}) => {
             <NavLink
               to="/#about"
               smooth={true}
+              scroll={el => scrollElToCenter(el)}
               isActive={() => {
                 return isNavLinkActive("/#about");
               }}
@@ -30,6 +32,7 @@ const Header = ({}) => {
           <li>
             <NavLink
               to="/#registration"
+              scroll={el => scrollElToCenter(el)}
               smooth={true}
               isActive={() => {
                 return isNavLinkActive("/#registration");
@@ -42,6 +45,7 @@ const Header = ({}) => {
           <li>
             <NavLink
               to="/#inspiration"
+              scroll={el => scrollElToCenter(el)}
               smooth={true}
               isActive={() => {
                 return isNavLinkActive("/#inspiration");
@@ -54,6 +58,7 @@ const Header = ({}) => {
           <li>
             <NavLink
               to="/#ideas"
+              scroll={el => scrollElToCenter(el)}
               smooth={true}
               isActive={() => {
                 return isNavLinkActive("/#ideas");
@@ -67,6 +72,7 @@ const Header = ({}) => {
             <NavLink
               to="/#rules"
               smooth={true}
+              scroll={el => scrollElToCenter(el)}
               isActive={() => {
                 return isNavLinkActive("/#rules");
               }}
