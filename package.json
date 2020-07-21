@@ -5,7 +5,7 @@
     "name": "ZorianaPro",
     "email": "zoryanalesyk@gmail.com"
   },
-  "homepage": "https://zorianapro.github.io/hackathon2020/",
+  "homepage": "https://hackremote.today/",
   "private": true,
   "dependencies": {
     "@koa/cors": "^3.1.0",
