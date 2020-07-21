@@ -44,9 +44,6 @@ const App = ({
         <Schedule/>
       </section>
       <hr />
-      <section id="registration" className="Registration">
-        <h1 className="App-Section-Title">Registration</h1>
-      </section>
       <Registration/>
       <hr />
       <section id="inspiration" className="Inspiration">
