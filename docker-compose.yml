@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     command: npm start
     image: zlesyk/hackathon:latest
-    container_name: hackathon
+    container_name: hackathon-frontend
     ports:
       - 3000:3000
     volumes:
@@ -16,7 +16,7 @@ services:
       - server
   server:
     image: zlesyk/hackathon:latest
-    container_name: hackathon
+    container_name: hackathon-server
     restart: unless-stopped
     env_file: .env
     environment:
