@@ -2,15 +2,12 @@ version: '3.4'
 
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
     environment:
-      NODE_ENV: 'development'
+      NODE_ENV: 'production'
     restart: unless-stopped
     command: npm start
-    image: zlesyk/hackathon-client:latest
-    container_name: hackathon-client
+    image: zlesyk/hackathon:latest
+    container_name: hackathon
     ports:
       - 3000:3000
     volumes:
@@ -18,15 +15,12 @@ services:
     depends_on:
       - server
   server:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: zlesyk/hackathon-server:latest
-    container_name: hackathon-server
+    image: zlesyk/hackathon:latest
+    container_name: hackathon
     restart: unless-stopped
     env_file: .env
     environment:
-      NODE_ENV: 'development'
+      NODE_ENV: 'production'
     ports:
       - "8082:8082"
     volumes:
