@@ -1,3 +1,6 @@
+## 2.11.0
+* [#35: Add Docker setup.](https://github.com/ZorianaPro/hackathon2020/issues/35)
+
 ## 2.10.0
 * Add offset to scroll
 
