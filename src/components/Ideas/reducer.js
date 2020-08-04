@@ -13,6 +13,11 @@ export default (state = initialState, action) => {
                 ...state,
                 loading: true,
             };
+        case actions.fetchFakeIdeas:
+            return {
+                ...state,
+                loading: true,
+            };
         case actions.result:
             return {
                 ...state,

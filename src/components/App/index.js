@@ -6,8 +6,13 @@ import LocationSVG from '../LocationSVG';
 import DateSVG from "../DateSVG";
 import Button from "../Button";
 import Ideas from "../Ideas";
+import Schedule from '../Schedule';
+import Rules from "../Rules";
 import Footer from "../Footer";
 import Registration from "../Registration";
+import {BrowserRouter as Router} from "react-router-dom";
+import { scrollElToCenter } from "../../support/handlers";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const App = ({
 
@@ -30,11 +35,22 @@ const App = ({
               <LocationSVG />
               <p> Online </p>
             </div>
-            <Button title='Go to registration'
-              action='scroll'
-              target='Registration' />
+            <NavLink
+              to="/#registration"
+              scroll={el => scrollElToCenter(el)}
+              smooth={true}
+            >
+              <Button
+                title='Registration'
+              />
+            </NavLink>
           </div>
         </div>
+      </section>
+      <hr />
+      <section id="schedule" className="Schedule-Section">
+        <h1 className="App-Section-Title">Schedule</h1>
+        <Schedule/>
       </section>
       <hr />
       <Registration/>
@@ -45,8 +61,9 @@ const App = ({
       <hr />
       <Ideas />
       <hr />
-      <section id="rules" className="Rules">
+      <section id="rules">
         <h1 className="App-Section-Title">Rules</h1>
+        <Rules/>
       </section>
       <hr />
       <SVGSpriteSheet />

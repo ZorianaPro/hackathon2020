@@ -1,5 +1,17 @@
-## 2.7.0
+## 2.11.0
 * [#35: Add Docker setup.](https://github.com/ZorianaPro/hackathon2020/issues/35)
+
+## 2.10.0
+* Add offset to scroll
+
+## 2.9.0
+* Add fake ideas for static application
+
+## 2.8.0
+* [#11: Add schedule.](https://github.com/ZorianaPro/hackathon2020/issues/48)
+
+## 2.7.0
+* [#11: Add rules.](https://github.com/ZorianaPro/hackathon2020/issues/10)
 
 ## 2.6.0
 * [#11: Add Footer.](https://github.com/ZorianaPro/hackathon2020/issues/1)

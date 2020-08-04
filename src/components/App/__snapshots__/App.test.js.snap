@@ -36,13 +36,29 @@ exports[`App renders as expected 1`] = `
              Online 
           </p>
         </div>
-        <Button
-          action="scroll"
-          target="Registration"
-          title="Go to registration"
-        />
+        <NavHashLink
+          scroll={[Function]}
+          smooth={true}
+          to="/#registration"
+        >
+          <Button
+            title="Registration"
+          />
+        </NavHashLink>
       </div>
     </div>
+  </section>
+  <hr />
+  <section
+    className="Schedule-Section"
+    id="schedule"
+  >
+    <h1
+      className="App-Section-Title"
+    >
+      Schedule
+    </h1>
+    <Schedule />
   </section>
   <hr />
   <Registration />
@@ -61,7 +77,6 @@ exports[`App renders as expected 1`] = `
   <Ideas />
   <hr />
   <section
-    className="Rules"
     id="rules"
   >
     <h1
@@ -69,6 +84,7 @@ exports[`App renders as expected 1`] = `
     >
       Rules
     </h1>
+    <Rules />
   </section>
   <hr />
   <SVGSpriteSheet />

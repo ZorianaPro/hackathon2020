@@ -54,6 +54,7 @@ exports[`Registration renders as expected 1`] = `
             >
               You can
               <NavHashLink
+                scroll={[Function]}
                 smooth={true}
                 to="/#registration"
               >
