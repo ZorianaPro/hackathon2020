@@ -2,9 +2,7 @@ export const isProduction = process.env.NODE_ENV === 'production';
 
 export default {
   api: {
-    base: isProduction
-    ? process.env.PUBLIC_URL
-    : 'https://localhost:8082',
+    base: process.env.PUBLIC_URL,
     ideas: '/ideas',
     members: '/members'
   }
