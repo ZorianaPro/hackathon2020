@@ -8,5 +8,7 @@ WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm ci --silent
+COPY . ./
+
 ENTRYPOINT ["npm"]
 CMD ["start"]
