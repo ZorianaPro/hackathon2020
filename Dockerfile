@@ -7,8 +7,9 @@ WORKDIR /app
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm ci --silent
-COPY . ./
+RUN npm ci
 
-ENTRYPOINT ["npm"]
-CMD ["start"]
+# add app
+COPY . ./
+# start app
+CMD ["npm", "start"]
