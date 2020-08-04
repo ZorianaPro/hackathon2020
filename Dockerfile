@@ -8,6 +8,6 @@ WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
 ENV NODE_ENV=production
-RUN npm ci --silent
+RUN npm install --silent
 ENTRYPOINT ["npm"]
 CMD ["start"]

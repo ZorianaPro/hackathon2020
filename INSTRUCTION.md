@@ -19,7 +19,6 @@ docker pull zlesyk/hackathon:latest
 docker-compose kill
 docker-compose up -d
 
-
 ToDO
 
 1. Production mode!
