@@ -24,7 +24,7 @@ const Ideas = ({
     dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchFakeIdeas())
+        dispatch(fetchAllIdeas())
     }, []);
 
     return (
