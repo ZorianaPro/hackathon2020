@@ -18,7 +18,7 @@ describe('Team', () => {
 			team = mount(<Team/>);
 		});
 		it('renders default message', () => {
-			expect(team.find('.Team--empty').text()).toBe('There are no members in this team yet');
+			expect(team.find('.Team--empty').text()).toBe('No members yet');
 		});
 	});
 

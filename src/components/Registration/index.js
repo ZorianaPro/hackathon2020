@@ -1,11 +1,9 @@
 import React, { useCallback } from "react";
-import { NavHashLink as NavLink } from "react-router-hash-link";
 import * as addNewIdea from "../AddNewIdea/actions";
 import { useDispatch } from "react-redux";
 import "./Registration.css";
 import Button from "../Button";
 import {BrowserRouter as Router} from "react-router-dom";
-import { scrollElToCenter } from "../../support/handlers"
 
 const Registration = ({ dispatch }) => {
 
@@ -19,25 +17,16 @@ const Registration = ({ dispatch }) => {
     <Router>
       <section id="registration" className="Registration">
         <div className="Registration-Container">
-          <h1 className="Registration-Title">
+          <p className="Registration-Title">
             Registration
-          </h1>
+          </p>
           <div className="Registration-Content">
-            You can
-            <NavLink
-              to="/#registration"
-              scroll={el => scrollElToCenter(el)}
-              smooth={true}
-            >
-              <Button
-                title='Join an existing idea'
-              />
-            </NavLink>
-            or
-            <Button
-              title='Create your own idea'
-              onClick={() => openAddNewIdeaOverlay()}
-            />
+            <Button label="Join an existing idea"
+                    type="isActionFilled"
+                    onClick={ openAddNewIdeaOverlay }/>
+            <Button label="Create your own idea"
+                    type="isActionFilled"
+                    onClick={ openAddNewIdeaOverlay }/>
           </div>
         </div>
       </section>

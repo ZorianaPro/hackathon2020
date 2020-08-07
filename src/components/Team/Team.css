@@ -3,27 +3,31 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 1em;
+    position: absolute;
+    right: 1em;
 }
 
 .Team.Team--short .Team-Member {
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    background-color: var(--white-color);
     display: inline-block;
     margin-right: -0.5em;
-    border: 1px solid;
     text-align: center;
     cursor: pointer;
+    border: solid 1px #ffffff;
+    background-color: var(--colorMesiumTorquoise);
+}
+.Team.Team--short .Team-Members {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-.Team.Team--short .Team-Member p {
-    margin: 0.4em 0 0 0;
+.Team.Team--short .Team-Member .Team-Member-Initials {
     line-height: 2em;
     vertical-align: center;
-    font-size: 0.8em;
+    font-size: var(--fontSize16);
+    font-weight: var(--fontWeightPoppinsBold);
 }
 
 .Team.Team--short .Team-Join {
@@ -72,4 +76,17 @@
 
 .Team.Team--full .Team-Member .Team-Member-Info-Position {
     margin-top: 1em;
+}
+
+.Team.Team--short .Team-Members .Team--empty {
+    font-size: var(--fontSize14);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: var(--colorSpaceCadet);
+}
+
+.Team.Team--full .Team-Members .Team--empty {
+
 }

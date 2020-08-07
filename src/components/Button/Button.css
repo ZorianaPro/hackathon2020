@@ -1,15 +1,68 @@
 .Button {
-  width: fit-content;
-  padding: 1em;
-  border: 1px solid var(--eerie-black-color);
-  border-radius: 0.25em;
-  background-color: var(--liberty-color);
-  color: var(--white-color);
   cursor: pointer;
-  transition: all ease-in 100ms;
 }
 
-.Button:hover {
-  color: var(--eerie-black-color);
-  background-color: var(--periwinkie-crayola-color);
+.Button .Button-Inside {
+
+}
+
+.Button p.Button-Label {
+  cursor: pointer;
+}
+
+.Button.Button--isActionFilled {
+  overflow:hidden;
+  position: relative;
+  width: 506px;
+  height: 64px;
+}
+
+.Button.Button--isActionFilled p.Button-Label {
+  color: white;
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+  margin: 0;
+  transform: translateX(-30%);
+  font-size: var(--fontSize18);
+  font-weight: var(--fontWeightPoppinsBold);
+  font-style: italic;
+  line-height: 64px;
+}
+
+.Button.Button--isActionFilled .Button-Inside {
+  cursor: pointer;
+  transform: rotate(115deg);
+  background-color: var(--colorRadicalRed);
+  height: 291px;
+}
+
+.Button.Button--isActionFilled .Button-Inside:hover {
+
+}
+
+.Button.Button--isActionTransparent {
+
+}
+
+.Button.Button--isActionTransparent .Button-Inside:hover {
+
+}
+
+.Button.Button--isSecondaryTransparent {
+  border: solid 1px var(--colorMesiumTorquoise);
+  padding: 10px;
+  text-align: center;
+}
+
+.Button.Button--isSecondaryTransparent .Button-Inside {
+  font-weight: var(--fontWeightPoppinsBold);
+  font-size: var(--fontSize20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Button .Button--isSecondaryTransparent .Button-Inside:hover {
+
 }

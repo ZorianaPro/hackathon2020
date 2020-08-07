@@ -10,7 +10,7 @@ exports[`Team renders as expected 1`] = `
     <div
       className="Team--empty"
     >
-      There are no members in this team yet
+      No members yet
     </div>
   </div>
 </div>

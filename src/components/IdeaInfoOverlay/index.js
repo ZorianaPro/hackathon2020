@@ -28,15 +28,15 @@ const IdeaInfoOverlay = ({
 				&& <div className="Overlay" key={`idea-${content.id}-overlay`}>
 					<div className="Overlay-Container">
 						<div className="Overlay-Box">
-							<div className="Overlay-Close" onClick={() => closeOverlay()}>
+							<div className="Overlay-Close" onClick={ closeOverlay }>
 								close
 							</div>
-							<div className="IdeaInfoOverlay-Title">
+							<p className="IdeaInfoOverlay-Title">
 								{content.name}
-							</div>
-							<div className="IdeaInfoOverlay-Description">
+							</p>
+							<p className="IdeaInfoOverlay-Description">
 								{content.description}
-							</div>
+							</p>
 							<div className="IdeaInfoOverlay-Team">
 								<div className="IdeaInfoOverlay-Team-Title">
 									{ content.team.length !== 0 ? "Team" : 'There is no one in a team yet'}

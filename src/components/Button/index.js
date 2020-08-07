@@ -1,24 +1,22 @@
-import React from "react";
+import React, { useCallback } from "react";
 import "./Button.css";
 
-const Button = ({ title, action = "overlay", target, onClick }) => {
+const Button = ({ children, label, onClick, type }) => {
 
-  const clickHandler = () => {
+  const _onClick = useCallback(() => {
     if (typeof onClick === 'function') {
       onClick();
-    } else {
-      const targetEl = document.querySelector(`.${target}`);
-      if (targetEl) {
-        if (action === "scroll") {
-          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }
     }
-  };
+  }, []);
 
   return (
-    <div className="Button" onClick={() => clickHandler()}>
-      {title}
+    <div className={ `Button ${type ? `Button--${type}` : ''}` }>
+      <p className="Button-Label" onClick={ _onClick }>
+        { label }
+      </p>
+      <div className="Button-Inside" onClick={ _onClick }>
+        { children }
+      </div>
     </div>
   );
 };

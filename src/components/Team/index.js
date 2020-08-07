@@ -13,7 +13,7 @@ const Team = ({
       <div className="Team-Members">
           { team.length > 0 ? team.map((member) => (
               <div className="Team-Member" key={member.id}>
-                  <p>
+                  <p className="Team-Member-Initials">
                       {initials(member.firstName, member.lastName)}
                   </p>
                   {full && <div className="Team-Member-Info">
@@ -29,7 +29,7 @@ const Team = ({
                   </div>
                   }
               </div>
-              )) : <div className="Team--empty">There are no members in this team yet</div>
+              )) : <div className="Team--empty">No members yet</div>
           }
       </div>
   </div>

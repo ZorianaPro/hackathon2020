@@ -1,16 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,700&display=swap');
+:root {
+  --fontFamilyPoppins: 'Poppins', sans-serif;
+  --fontWeightPoppinsBold: 700;
+
+  --maxWidth: 1170px;
+
+  --colorSpaceCadet: #31295c;
+  --colorRadicalRed: #ff406a;
+  --colorMesiumTorquoise: #50d3cd;
+  --colorSaffron: #f2c433;
+  --colorPortiandOrange: #f25cc33;
+  --colorPapayesWhip: #fff3db;
+  --colorAndroidGreen: #aecc32;
+
+  --lineHeight: 1.63;
+
+  --fontSize4: .125em;
+  --fontSize8: .25em;
+  --fontSize12: .75em;
+  --fontSize14: .875em;
+  --fontSize16: 1em;
+  --fontSize18: 1.125em;
+  --fontSize20: 1.25em;
+  --fontSize24: 1.5em;
+  --fontSize26: 1.62em;
+  --fontSize30: 1.875em;
+  --fontSize36: 2.25em;
+  --fontSize48: 3em;
+}
+
 .App {
-  font-family: "Lato";
+  font-family: var( --fontFamilyPoppins);
   font-style: normal;
   font-weight: 300;
   color: var(--eerie-black-color);
   font-size: 1em;
+  line-height: var(--lineHeight);
   letter-spacing: 0.125em;
   position: relative;
 }
 
 .App .App-Main-Section-Container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: var(--maxWidth);
   height: 100%;
   position: relative;
   padding: 0 2em;
@@ -18,55 +50,108 @@
 
 .App .App-Main-Section {
   height: 100vh;
+  background-image: url(/assets/bg.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App .App-Main-Section-Title {
-  font-size: 3em;
-  width: 70%;
-  margin: 1em 0;
-  font-weight: 300;
+@media (min-height: 960px or min-width: 2280px){
+  .App .App-Main-Section {
+    background-image: url(/assets/bg@2x.png);
+  }
 }
 
-.App .App-Main-Section-Info {
+@media (min-height: 2880px or min-width: 4800px) {
+  .App .App-Main-Section {
+    background-image: url(/assets/bg@3x.png);
+  }
+}
+
+.App .App-Main-Section-Left {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+}
+
+.App .App-Main-Section-Logo {
   position: absolute;
-  top: 50%;
+  top: 42%;
   left: 0;
   transform: translateY(-50%);
   padding: 0 2em;
+  width: 436px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-image: url(/assets/logo.png);
 }
 
-.App .App-Main-Section-Info svg {
+@media (min-height: 960px or min-width: 2280px){
+  .App .App-Main-Section-Logo {
+    background-image: url(/assets/logo@2x.png);
+  }
+}
+
+@media (min-height: 2880px or min-width: 4800px) {
+  .App .App-Main-Section-Logo {
+    background-image: url(/assets/logo@3x.png);
+  }
+}
+
+.App .App-Main-Section-Left svg {
   width: 2em;
   height: 2em;
 }
 
-.App .App-Main-Section-Info p {
+.App .App-Main-Section-Left-Container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 190%);
+}
+
+.App .App-Main-Section-Left .Button {
+  margin-left: -99px;
+}
+
+.App .App-Main-Section-Left p {
   margin: 0.5em;
   font-size: 1.5em;
 }
 
-.App .App-Main-Section-Info .App-Main-Section-Date,
-.App .App-Main-Section-Info .App-Main-Section-Location {
+.App .App-Main-Section-Left .App-Main-Section-Date,
+.App .App-Main-Section-Left .App-Main-Section-Location {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
 
-.App .App-Main-Section-Info .Button {
-  margin: 2em 0;
+.App .Hack-guy {
+  background-repeat: no-repeat;
+  background-image: url(/assets/hack-guy.png);
+  position: absolute;
+  display: inline-block;
+  height: 111vh;
+  width: 871px;
+  top: 0;
+  right: 0;
+  background-position: top right;
+  background-size: contain;
 }
 
-.App .App-Section-Title {
-  font-size: 4em;
-  font-style: italic;
-  width: 100%;
-  text-align: center;
-  font-weight: 300;
+@media (min-height: 960px or min-width: 2280px){
+  .App .Hack-guy {
+    background-image: url(/assets/hack-guy@2x.png);
+  }
 }
 
-.App hr {
-  opacity: 0.3;
+@media (min-height: 2880px or min-width: 4800px) {
+  .App .Hack-guy {
+    background-image: url(/assets/hack-guy@3x.png);
+  }
 }
 
 input, select, textarea {
@@ -119,6 +204,10 @@ form div {
 
 h1 {
   margin: 0
+}
+
+p {
+  margin: 0;
 }
 
 a {

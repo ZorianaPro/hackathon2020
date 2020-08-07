@@ -23,28 +23,63 @@ exports[`IdeaCard renders as expected 1`] = `
         <div
           className="IdeaCard-Info"
         >
-          <div
+          <p
             className="IdeaCard-Info-Name"
           />
-          <div
+          <p
             className="IdeaCard-Info-Description"
           />
         </div>
         <div
           className="IdeaCard-Actions"
         >
-          <div
-            className="Idea-Actions-Join"
+          <Button
             onClick={[Function]}
+            type="isSecondaryTransparent"
           >
-            + join
-          </div>
-          <div
-            className="IdeaCard-More"
+            <div
+              className="Button Button--isSecondaryTransparent"
+            >
+              <p
+                className="Button-Label"
+                onClick={[Function]}
+              />
+              <div
+                className="Button-Inside"
+                onClick={[Function]}
+              >
+                <AddPersonSVG>
+                  <svg
+                    className="AddPersonSVG"
+                  >
+                    <use
+                      xlinkHref="#AddPersonSymbol"
+                    />
+                  </svg>
+                </AddPersonSVG>
+                 join
+              </div>
+            </div>
+          </Button>
+          <Button
             onClick={[Function]}
+            type="isSecondaryTransparent"
           >
-            MORE
-          </div>
+            <div
+              className="Button Button--isSecondaryTransparent"
+            >
+              <p
+                className="Button-Label"
+                onClick={[Function]}
+              />
+              <div
+                className="Button-Inside"
+                onClick={[Function]}
+              >
+                More
+              </div>
+            </div>
+          </Button>
         </div>
       </div>
     </div>

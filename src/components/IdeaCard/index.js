@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { teams } from '../../server/mockServerData';
+import Button from '../Button';
 import Team from '../Team';
 import * as ideaOverlay from "../IdeaInfoOverlay/actions";
 import * as joinOverlay from "../JoinIdeaOverlay/actions";
 import  './IdeaCard.css';
 import { useDispatch } from "react-redux";
+import AddPersonSVG from "../AddPersonSVG";
 
 const IdeaCard = ({
   name,
@@ -35,28 +36,28 @@ const IdeaCard = ({
 	return (
 		<div className="IdeaCard" key={id}>
 			<div className="IdeaCard-Container">
+				{
+					team
+					&& <Team full={false}
+									 team={team}/>
+				}
 				<div className="IdeaCard-Info">
-					<div className="IdeaCard-Info-Name">
+					<p className="IdeaCard-Info-Name">
 						{name}
-					</div>
-					<div className="IdeaCard-Info-Description">
+					</p>
+					<p className="IdeaCard-Info-Description">
 						{description}
-					</div>
+					</p>
 				</div>
 				<div className="IdeaCard-Actions">
-					{
-						team
-						&& <Team full={false}
-						         team={team}/>
-					}
-					<div className="Idea-Actions-Join"
-					     onClick={() => joinIdeaOverlay()}>
-						+ join
-					</div>
-					<div className="IdeaCard-More"
-					     onClick={() => openIdeaOverlay()}>
-						MORE
-					</div>
+					<Button type="isSecondaryTransparent"
+									onClick={() => joinIdeaOverlay()}>
+						<AddPersonSVG /> join
+					</Button>
+					<Button type="isSecondaryTransparent"
+									onClick={() => openIdeaOverlay()}>
+						More
+					</Button>
 				</div>
 			</div>
 		</div>

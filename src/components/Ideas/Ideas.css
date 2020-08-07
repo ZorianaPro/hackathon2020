@@ -1,5 +1,68 @@
 .Ideas {
+    position: relative;
+    background-image: url(/assets/bg-ideas.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+}
 
+@media (min-height: 960px or min-width: 2280px){
+    .Ideas  {
+        background-image: url(/assets/bg-ideas@3x.png);
+    }
+}
+
+@media (min-height: 2880px or min-width: 4800px) {
+    .Ideas {
+        background-image: url(/assets/bg-ideas@3x.png);
+    }
+}
+
+.Ideas .Lightning-Left {
+    background-image: url(/assets/lightning-left.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 40%;
+    height: 45%;
+    top: -170px;
+}
+
+@media (min-height: 960px or min-width: 2280px){
+    .Ideas .Lightning-Left {
+        background-image: url(/assets/lightning-left@2x.png);
+    }
+}
+
+@media (min-height: 2880px or min-width: 4800px) {
+    .Ideas .Lightning-Left {
+        background-image: url(/assets/lightning-left@3x.png);
+    }
+}
+
+.Ideas .Lightning-Right {
+    background-image: url(/assets/lightning-right.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 45%;
+    top: -170px;
+}
+
+@media (min-height: 960px or min-width: 2280px){
+    .Ideas .Lightning-Right {
+        background-image: url(/assets/lightning-right@2x.png);
+    }
+}
+
+@media (min-height: 2880px or min-width: 4800px) {
+    .Ideas .Lightning-Right {
+        background-image: url(/assets/lightning-right@3x.png);
+    }
 }
 
 .Ideas .Ideas-Container {
@@ -7,20 +70,23 @@
     height: 100%;
     position: relative;
     padding: 0 2em;
-    max-width: 1500px;
+    max-width: calc(var(--maxWidth) + 5em);
 }
 
 .Ideas .Ideas-Title {
-    font-size: 4em;
+    font-size: var(--fontSize48);
+    font-weight: var(--fontWeightPoppinsBold);
+    font-stretch: normal;
     font-style: italic;
-    width: 100%;
+    line-height: var(--lineHeight);
+    letter-spacing: normal;
     text-align: center;
-    font-weight: 300;
-    margin-bottom: 1em
+    color: var(--colorSpaceCadet);
 }
 
 .Ideas .Ideas-Content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 6em;
 }

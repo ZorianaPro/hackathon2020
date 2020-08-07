@@ -1,3 +1,6 @@
+## 3.0.0
+* [Implement design](https://app.zeplin.io/project/5b3640b6d713efa348d964d6/screen/5f2d253b4b239d27b509be83)
+
 ## 2.11.0
 * [#35: Add Docker setup.](https://github.com/ZorianaPro/hackathon2020/issues/35)
 
