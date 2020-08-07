@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddPersonSVG renders as expected 1`] = `
+<svg
+  className="AddPersonSVG"
+>
+  <use
+    xlinkHref="#AddPersonSymbol"
+  />
+</svg>
+`;

@@ -10,65 +10,62 @@ import Schedule from '../Schedule';
 import Rules from "../Rules";
 import Footer from "../Footer";
 import Registration from "../Registration";
-import {BrowserRouter as Router} from "react-router-dom";
 import { scrollElToCenter } from "../../support/handlers";
-import { NavHashLink as NavLink } from "react-router-hash-link";
+import IdeaInfoOverlay from "../IdeaInfoOverlay";
+import JoinIdeaOverlay from "../JoinIdeaOverlay";
+import AddNewIdea from "../AddNewIdea";
 
 const App = ({
 
 }) => {
 
+  const scrollTo = useCallback((event) => {
+    scrollElToCenter('registration')
+  }, []);
+
   return (
     <div className="App">
-      <Header />
+      <div className="Hack-guy"/>
       <section id="about" className="App-Main-Section">
         <div className="App-Main-Section-Container">
-          <div className="App-Main-Section-Info">
-            <div className="App-Main-Section-Title">
-              Cool name for our cool hackathon
-           </div>
-            <div className="App-Main-Section-Date">
-              <DateSVG />
-              <p> 12-15 December 2020 </p>
+          <Header />
+          <div className="App-Main-Section-Left">
+            <div className="App-Main-Section-Logo">
+              {/*<div className="App-Main-Section-Date">*/}
+              {/*<DateSVG />*/}
+              {/*<p> 3-4 September 2020 </p>*/}
+              {/*</div>*/}
+              {/*<div className="App-Main-Section-Location">*/}
+              {/*<LocationSVG />*/}
+              {/*<p> Office </p>*/}
+              {/*</div>*/}
+              <div className="App-Main-Section-Left-Container">
+                <Button label="Go to registration"
+                        type="isActionFilled"
+                onClick={ scrollTo }/>
+              </div>
             </div>
-            <div className="App-Main-Section-Location">
-              <LocationSVG />
-              <p> Online </p>
-            </div>
-            <NavLink
-              to="/#registration"
-              scroll={el => scrollElToCenter(el)}
-              smooth={true}
-            >
-              <Button
-                title='Registration'
-              />
-            </NavLink>
           </div>
         </div>
       </section>
-      <hr />
+      <Registration/>
+      <Ideas />
       <section id="schedule" className="Schedule-Section">
         <h1 className="App-Section-Title">Schedule</h1>
         <Schedule/>
       </section>
-      <hr />
-      <Registration/>
-      <hr />
       <section id="inspiration" className="Inspiration">
         <h1 className="App-Section-Title">Inspiration</h1>
       </section>
-      <hr />
-      <Ideas />
-      <hr />
       <section id="rules">
         <h1 className="App-Section-Title">Rules</h1>
         <Rules/>
       </section>
-      <hr />
       <SVGSpriteSheet />
       <Footer/>
-      <hr />
+      <IdeaInfoOverlay/>
+      <JoinIdeaOverlay/>
+      <AddNewIdea/>
     </div >
   );
 };

@@ -20,7 +20,6 @@ const Header = ({}) => {
             <NavLink
               to="/#about"
               smooth={true}
-              scroll={el => scrollElToCenter(el)}
               isActive={() => {
                 return isNavLinkActive("/#about");
               }}
@@ -28,11 +27,9 @@ const Header = ({}) => {
               About
             </NavLink>
           </li>
-          <li>|</li>
           <li>
             <NavLink
               to="/#registration"
-              scroll={el => scrollElToCenter(el)}
               smooth={true}
               isActive={() => {
                 return isNavLinkActive("/#registration");
@@ -41,11 +38,9 @@ const Header = ({}) => {
               Registration
             </NavLink>
           </li>
-          <li>|</li>
           <li>
             <NavLink
               to="/#inspiration"
-              scroll={el => scrollElToCenter(el)}
               smooth={true}
               isActive={() => {
                 return isNavLinkActive("/#inspiration");
@@ -54,11 +49,9 @@ const Header = ({}) => {
               Inspiration
             </NavLink>
           </li>
-          <li>|</li>
           <li>
             <NavLink
               to="/#ideas"
-              scroll={el => scrollElToCenter(el)}
               smooth={true}
               isActive={() => {
                 return isNavLinkActive("/#ideas");
@@ -67,12 +60,10 @@ const Header = ({}) => {
               Ideas
             </NavLink>
           </li>
-          <li>|</li>
           <li>
             <NavLink
               to="/#rules"
               smooth={true}
-              scroll={el => scrollElToCenter(el)}
               isActive={() => {
                 return isNavLinkActive("/#rules");
               }}

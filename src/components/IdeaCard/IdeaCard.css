@@ -1,12 +1,17 @@
 .IdeaCard {
-    width: 25%;
-    padding: 1em;
+    background: rgba(255,255,255,0.7);
+    padding: 0.5em;
     display: inline-block;
-    margin: 2em;
-    border-radius: 4px;
-    box-shadow: 0px 12px 37px -18px rgba(0,0,0,0.3);
-    min-height: 20em;
-    min-width: 20em;
+    margin: 1.5em;
+    border-radius: 9px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    height: 22em;
+    width: 22em;
+    transition: box-shadow 200ms ease-in;
+}
+
+.IdeaCard:hover {
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
 }
 
 .IdeaCard .IdeaCard-Container {
@@ -15,27 +20,57 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .IdeaCard .IdeaCard-Info {
     display: flex;
     flex-direction: column;
+    padding: var(--fontSize36) 1em 1em 1em;
 }
 
 .IdeaCard .IdeaCard-Info .IdeaCard-Info-Name {
-    padding: 1.5em 0;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.IdeaCard .IdeaCard-Info .IdeaCard-Info-Description {
-    text-align: center;
+    position: relative;
+    font-size: var(--fontSize24);
+    font-weight: var(--fontWeightPoppinsBold);
+    font-stretch: normal;
+    font-style: italic;
+    line-height: var(--lineHeight);
+    letter-spacing: normal;
+    color: var(--colorSpaceCadet);
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 2;
+}
+
+.IdeaCard .IdeaCard-Info .IdeaCard-Info-Name:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--colorRadicalRed);
+}
+
+.IdeaCard .IdeaCard-Info .IdeaCard-Info-Description {
+    font-size: var(--fontSize16);
+    font-stretch: normal;
+    padding-top: 1em;
+    line-height: var(--lineHeight);
+    letter-spacing: normal;
+    color: var(--colorSpaceCadet);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+.IdeaCard hr {
+    height: 1px;
+    width: 100%;
+    background-color: #ecf0f3;
 }
 
 .IdeaCard .IdeaCard-Actions {
@@ -44,6 +79,8 @@
     justify-content: space-between;
     margin-top: 2em;
     align-items: center;
+    border-top: 1px solid #ecf0f3;
+    padding-top: 0.5em;
 }
 
 .IdeaCard .IdeaCard-Actions .IdeaCard-More {
@@ -63,4 +100,21 @@
     cursor: pointer;
     text-decoration: none;
     transition: all ease-in 100ms;
+}
+
+.IdeaCard-Actions .Button--isSecondaryTransparent:nth-child(1) {
+    width: 60%;
+    border-bottom-left-radius: 9px;
+    margin-right: 0.5em;
+}
+
+.IdeaCard-Actions .Button--isSecondaryTransparent:nth-child(2) {
+    border-bottom-right-radius: 9px;
+    width: 37%;
+}
+
+.IdeaCard-Actions svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 1em;
 }

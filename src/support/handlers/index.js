@@ -19,8 +19,9 @@ const scrollToCenter = (el) => {
 		})
 };
 
-export const scrollElToCenter = (el) => {
+export const scrollElToCenter = (id) => {
 	const headerHeight = document.querySelector('.Header').offsetHeight;
+const el =document.getElementById(id);
 
 	const elementPosition = el.offsetTop - headerHeight - 10;
 	window.scroll({

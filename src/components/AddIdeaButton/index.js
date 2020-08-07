@@ -16,7 +16,7 @@ const AddIdeaButton = ({
     return (
         <div className="AddIdeaButton"
              onClick={() => openAddNewIdeaOverlay()}>
-            + add Idea
+            <div className="AddIdeaButton-Background"/>
         </div>
     )
 };

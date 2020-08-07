@@ -29,10 +29,12 @@ const Ideas = ({
 
     return (
         <section id="ideas" className="Ideas">
+          <div className="Lightning-Left"/>
+          <div className="Lightning-Right"/>
             <div className="Ideas-Container">
-                <div className="Ideas-Title">
-                    Ideas
-                </div>
+                <p className="Ideas-Title">
+                  Ideas &amp; Lightning
+                </p>
               <div className="Ideas-Content">
                 {
                     loading && 'Loading...'

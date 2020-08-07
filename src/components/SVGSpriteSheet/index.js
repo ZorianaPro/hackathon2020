@@ -1,6 +1,7 @@
 import React from "react";
 import LocationSymbol from "../LocationSymbol";
 import DateSymbol from "../DateSymbol";
+import AddPersonSymbol from "../AddPersonSymbol";
 
 import "./SVGSpriteSheet.css";
 
@@ -16,6 +17,7 @@ const SVGSpriteSheet = (props) => (
   >
     <LocationSymbol />
     <DateSymbol />
+    <AddPersonSymbol />
   </svg>
 );
 

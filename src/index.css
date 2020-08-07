@@ -1,30 +1,4 @@
 body {
+  font-size: 16px;
   margin: 0;
-  font-family: "Lato", Sans-Serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: var(--eerie-black-color);
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-:root {
-  --baby-pink-color: #f3bdc2;
-  --banana-mania-color: #fce9b7;
-  --periwinkie-crayola-color: #cedafd;
-  --powder-blue-color: #c5e7e6;
-  --eerie-black-color: #1f1f1f;
-
-  --maize-crayola-color: #ecbf3f;
-  --middle-blue-green-color: #94d0c7;
-  --salmon-pink-color: #ff8793;
-  --liberty-color: #5559bd;
-  --white-color: #fff;
-}
-
-/*Rules*/
-/* - all units should be ems*/
-/* - lets use 8px grid, 4,8,16,24,32 ets */

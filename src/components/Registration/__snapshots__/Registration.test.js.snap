@@ -44,78 +44,52 @@ exports[`Registration renders as expected 1`] = `
           <div
             className="Registration-Container"
           >
-            <h1
+            <p
               className="Registration-Title"
             >
               Registration
-            </h1>
+            </p>
             <div
               className="Registration-Content"
             >
-              You can
-              <NavHashLink
-                scroll={[Function]}
-                smooth={true}
-                to="/#registration"
-              >
-                <NavLink
-                  onClick={[Function]}
-                  to="/#registration"
-                >
-                  <Link
-                    aria-current="page"
-                    className="active"
-                    onClick={[Function]}
-                    style={Object {}}
-                    to={
-                      Object {
-                        "hash": "#registration",
-                        "pathname": "/",
-                        "search": "",
-                        "state": null,
-                      }
-                    }
-                  >
-                    <LinkAnchor
-                      aria-current="page"
-                      className="active"
-                      href="/#registration"
-                      navigate={[Function]}
-                      onClick={[Function]}
-                      style={Object {}}
-                    >
-                      <a
-                        aria-current="page"
-                        className="active"
-                        href="/#registration"
-                        onClick={[Function]}
-                        style={Object {}}
-                      >
-                        <Button
-                          title="Join an existing idea"
-                        >
-                          <div
-                            className="Button"
-                            onClick={[Function]}
-                          >
-                            Join an existing idea
-                          </div>
-                        </Button>
-                      </a>
-                    </LinkAnchor>
-                  </Link>
-                </NavLink>
-              </NavHashLink>
-              or
               <Button
+                label="Join an existing idea"
                 onClick={[Function]}
-                title="Create your own idea"
+                type="isActionFilled"
               >
                 <div
-                  className="Button"
-                  onClick={[Function]}
+                  className="Button Button--isActionFilled"
                 >
-                  Create your own idea
+                  <p
+                    className="Button-Label"
+                    onClick={[Function]}
+                  >
+                    Join an existing idea
+                  </p>
+                  <div
+                    className="Button-Inside"
+                    onClick={[Function]}
+                  />
+                </div>
+              </Button>
+              <Button
+                label="Create your own idea"
+                onClick={[Function]}
+                type="isActionFilled"
+              >
+                <div
+                  className="Button Button--isActionFilled"
+                >
+                  <p
+                    className="Button-Label"
+                    onClick={[Function]}
+                  >
+                    Create your own idea
+                  </p>
+                  <div
+                    className="Button-Inside"
+                    onClick={[Function]}
+                  />
                 </div>
               </Button>
             </div>

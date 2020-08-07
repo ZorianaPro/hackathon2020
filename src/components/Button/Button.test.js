@@ -16,7 +16,7 @@ describe("Button", () => {
 
     beforeEach(() => {
       props = {
-        title: "Any title",
+        label: "Any title",
         target: "Some target",
         action: "scroll",
       };
@@ -24,7 +24,7 @@ describe("Button", () => {
     });
 
     it("display title", () => {
-      expect(button.text()).toEqual(props.title);
+      expect(button.exists('.Button-Label')).toBe(true);
     });
   });
 
