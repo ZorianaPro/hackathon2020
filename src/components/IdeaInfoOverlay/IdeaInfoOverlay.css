@@ -18,7 +18,9 @@
 .IdeaInfoOverlay .IdeaInfoOverlay-Team .IdeaInfoOverlay-Team-Title {
     text-align: center;
     font-size: 1.5em;
-    padding-top: 1em;
+    padding: 1.5em;
+    color: var(--colorSpaceCadet);
+    font-weight: var(--fontWeightPoppinsBold);
 }
 
 .IdeaInfoOverlay .IdeaInfoOverlay-Description {

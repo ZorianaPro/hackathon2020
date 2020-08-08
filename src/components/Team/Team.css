@@ -18,6 +18,7 @@
     border: solid 1px #ffffff;
     background-color: var(--colorMesiumTorquoise);
 }
+
 .Team.Team--short .Team-Members {
     display: flex;
     flex-direction: row-reverse;
@@ -44,18 +45,25 @@
 
 .Team.Team--full .Team-Members {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
 .Team.Team--full .Team-Member {
     display: flex;
     min-width: 10em;
-    margin: 2em 2em 0 0;
+    width: 50%;
+    flex-wrap: wrap;
+    padding: 1em 0;
 }
-.Team.Team--full .Team-Member p {
+
+.Team.Team--full .Team-Member .Team-Member-Initials {
+    vertical-align: center;
+    font-size: var(--fontSize20);
+    font-weight: var(--fontWeightPoppinsBold);
     border-radius: 50%;
-    background-color: var(--white-color);
+    background-color: var(--colorMesiumTorquoise);
+    color: white;
     border: 1px solid;
     text-align: center;
     width: 3em;
@@ -64,18 +72,42 @@
     line-height: 3em;
 }
 
+.Team.Team--full .Team-Member-Info {
+    width: 72%;
+}
+
 .Team.Team--full .Team-Member .Team-Member-Info-Name {
-    font-weight: 700;
     margin-bottom: 0.125em;
+    font-size: var(--fontSize20);
+    font-weight: var(--fontWeightPoppinsBold);
+    font-style: italic;
+    color: var(--colorSpaceCadet);
+    position: relative;
+    display: block;
+}
+
+.Team.Team--full .Team-Member .Team-Member-Info-Name:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background-color: var(--colorRadicalRed);
 }
 
 .Team.Team--full .Team-Member .Team-Member-Info-Email {
     font-size: 0.8em;
     text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
 }
 
 .Team.Team--full .Team-Member .Team-Member-Info-Position {
     margin-top: 1em;
+    color: var(--colorSpaceCadet);
 }
 
 .Team.Team--short .Team-Members .Team--empty {

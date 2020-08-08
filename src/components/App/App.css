@@ -33,7 +33,7 @@
   font-family: var( --fontFamilyPoppins);
   font-style: normal;
   font-weight: 300;
-  color: var(--eerie-black-color);
+  color: var(--colorSpaceCadet);
   font-size: 1em;
   line-height: var(--lineHeight);
   letter-spacing: 0.125em;
@@ -156,36 +156,46 @@
 
 input, select, textarea {
   display: block;
-  height: 2.5em;
-  border-bottom: 1px solid;
+  height: 3em;
+  border-bottom: 1px solid var(--colorMesiumTorquoise);
   margin-bottom: 1em;
   width: 100%;
   border-top: none;
   border-left: none;
   border-right: none;
-  outline: none;
-  background-color: transparent
+  background-color: transparent;
+  color: var(--colorSpaceCadet);
+  font-size: var(--fontSize16);
 }
 
-input:focus {
+textarea {
+  height: 11em;
+
+}
+
+input:focus,
+textarea:focus {
   outline: none;
-  border-bottom: 1px solid var(--liberty-color);
+  border-bottom: 1px solid var(--colorMesiumTorquoise);
 }
 
 form button {
   width: fit-content;
   padding: 1em;
-  border: 1px solid var(--eerie-black-color);
+  border: 1px solid var(--colorMesiumTorquoise);
   border-radius: 0.25em;
-  background-color: var(--liberty-color);
-  color: var(--white-color);
+  background-color: transparent;
+  color: var(--colorSpaceCadet);
   cursor: pointer;
   transition: all ease-in 100ms;
   margin-top: 1em;
   float: right;
+  font-size: var(--fontSize20);
+  font-weight: var(--fontWeightPoppinsBold);
 }
 
 label {
+  font-size: var(--fontSize20);
   display: block;
   transition: all ease-in 300ms;
   position: absolute;
@@ -194,12 +204,21 @@ label {
 }
 
 label.focus {
-  bottom: 40px;
+  bottom: 2.5em;
+}
+
+label.align-top {
+  top: 3em;
+}
+
+label.focus.align-top {
+  top: -2.3em;
+  bottom: unset;
 }
 
 form div {
   position: relative;
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 h1 {
@@ -212,5 +231,17 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.App .Success-Message {
+  color: var(--colorSpaceCadet);
+  font-size: var(--fontSize48);
+  margin-top: 1em;
+  text-align: center;
+}
+
+.App .Error-Message {
+  color: var(--colorRadicalRed);
+  text-align: center;
 }
 

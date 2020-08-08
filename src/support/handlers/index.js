@@ -10,28 +10,19 @@ const blur = (input) => {
 	}
 };
 
-const scrollToCenter = (el) => {
-	el.scrollIntoView(
-		{
-			behavior: "smooth",
-			block: "center",
-			inline: "nearest"
-		})
-};
-
-export const scrollElToCenter = (id) => {
-	const headerHeight = document.querySelector('.Header').offsetHeight;
-const el =document.getElementById(id);
-
-	const elementPosition = el.offsetTop - headerHeight - 10;
-	window.scroll({
-		top: elementPosition,
-		left: 0,
-		behavior: "smooth"
-	});
+export const scrollElToCenter = () => {
+	const el = document.querySelector('.Overlay-Box')
+	if (el) {
+		const elementPosition = el.offsetTop - 40;
+		window.scroll({
+			top: elementPosition,
+			behavior: "smooth"
+		});
+	}
 };
 
 export default {
 	focus,
-	blur
+	blur,
+	scrollElToCenter
 }

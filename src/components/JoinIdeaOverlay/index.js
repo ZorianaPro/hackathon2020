@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import './JoinIdeaOverlay.css';
 import '../Overlay/Overlay.css';
 import { close, submit, error, clean } from './actions';
-import handle from '../../support/handlers'
+import handle from '../../support/handlers';
 import { fetchAllIdeas } from "../Ideas/actions";
 import memberService from "../../services/member";
 
@@ -103,6 +103,10 @@ const JoinIdeaOverlay = ({
 		}
 	}, [submitFrom]);
 
+	useEffect(() => {
+		handle.scrollElToCenter()
+	},[isOpen]);
+
 	return (
 		<div className="JoinIdeaOverlay">
 			{ isOpen
@@ -118,6 +122,9 @@ const JoinIdeaOverlay = ({
 							</div>
 							{
 								errorMessage
+								&& <div className="Error-Message">{
+									errorMessage
+								}</div>
 							}
 							<form  action="" onSubmit={(e) => joinIdea(e)} method="POST">
 								<div>
@@ -148,7 +155,10 @@ const JoinIdeaOverlay = ({
 									       onBlur={(e) => handle.blur(e.currentTarget)}
 									       onChange={(e) => handleChange(e.target)}/>
 								</div>
-								<button type="submit">Submit</button>
+								<button type="submit" className="Button Button--isSecondaryTransparent">
+									<p className="Button-Inside">
+									Submit
+								</p></button>
 							</form>
 						</div>
 						}
@@ -157,7 +167,7 @@ const JoinIdeaOverlay = ({
 							<div className="Overlay-Close" onClick={() => closeOverlay()}>
 								close
 							</div>
-							<div>Thank you</div>
+							<div className="Success-Message">Woohoo.. It was successful!</div>
 						</div>
 						}
 						</div>
