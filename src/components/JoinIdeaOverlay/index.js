@@ -40,7 +40,7 @@ const JoinIdeaOverlay = ({
 		state.joinIdeaOverlayReducer.open,
 		state.joinIdeaOverlayReducer.content.id,
 		state.joinIdeaOverlayReducer.error,
-		state.ideasReducer.ideas
+		state.ideasReducer
 	]);
 
 	useEffect(() => {
@@ -148,7 +148,7 @@ const JoinIdeaOverlay = ({
 									  required>
 										<option disabled selected value>Please choose the idea</option>
 											{
-												ideasList.map(idea =>
+												ideasList.ideas.map(idea =>
 													<option value={ idea._id } >{ idea.name }</option>
 												)
 											}
