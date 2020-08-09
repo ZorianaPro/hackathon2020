@@ -6,13 +6,15 @@ import { close, submit, error, clean } from './actions';
 import handle from '../../support/handlers';
 import { fetchAllIdeas } from "../Ideas/actions";
 import memberService from "../../services/member";
+import * as joinOverlay from "./actions";
 
 const JoinIdeaOverlay = ({
 	team,
   dispatch,
 	isOpen,
-	id,
-	errorMessage
+	selectedIdeaId,
+	errorMessage,
+	ideasList
 }) => {
 
 	dispatch = useDispatch();
@@ -23,6 +25,7 @@ const JoinIdeaOverlay = ({
 	const [position, setPosition] = useState('');
 	const [submitFrom, setSubmitForm] = useState(false);
 	const [showThankYou, setShowThankYou] = useState(false);
+	const [_selectedIdeaId, setSelectedIdeaId] = useState(selectedIdeaId);
 
 	const cleanState = () => {
 		setFirstName('');
@@ -33,12 +36,16 @@ const JoinIdeaOverlay = ({
 		dispatch(clean());
 	};
 
-
-	[isOpen, id, errorMessage] = useSelector(state => [
+	[isOpen, selectedIdeaId, errorMessage, ideasList] = useSelector(state => [
 		state.joinIdeaOverlayReducer.open,
 		state.joinIdeaOverlayReducer.content.id,
-		state.joinIdeaOverlayReducer.error
+		state.joinIdeaOverlayReducer.error,
+		state.ideasReducer.ideas
 	]);
+
+	useEffect(() => {
+		setSelectedIdeaId(selectedIdeaId);
+	},[selectedIdeaId])
 
 	const handleChange = useCallback(
 		(target) => {
@@ -75,7 +82,7 @@ const JoinIdeaOverlay = ({
 	useEffect(() => {
 		if (submitFrom) {
 			const data = {
-				id: id,
+				id: _selectedIdeaId,
 				member: {
 					firstName: firstName,
 					lastName: lastName,
@@ -107,6 +114,11 @@ const JoinIdeaOverlay = ({
 		handle.scrollElToCenter()
 	},[isOpen]);
 
+	const onSelectChange = (el) => {
+		const selectedValue = el.value;
+		setSelectedIdeaId(selectedValue);
+	};
+
 	return (
 		<div className="JoinIdeaOverlay">
 			{ isOpen
@@ -127,6 +139,22 @@ const JoinIdeaOverlay = ({
 								}</div>
 							}
 							<form  action="" onSubmit={(e) => joinIdea(e)} method="POST">
+								{
+									ideasList
+									&& <select name="selectedIdea"
+									  id="selectedIdea"
+									  value={ _selectedIdeaId }
+									  onChange={ (e) => onSelectChange(e.currentTarget) }
+									  required>
+										<option disabled selected value>Please choose the idea</option>
+											{
+												ideasList.map(idea =>
+													<option value={ idea._id } >{ idea.name }</option>
+												)
+											}
+									</select>
+								}
+
 								<div>
 									<label htmlFor="firstName" className={`${firstName !== '' ? 'focus' : ''}`}>First Name*</label>
 									<input type="text" name="firstName" required value={firstName}

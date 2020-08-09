@@ -34,3 +34,9 @@
     display: inline-block;
     margin-left: -140px;
 }
+
+@media screen and (max-width: 894px) {
+    .Registration .Button {
+        margin: 0 0 1em -89px;
+    }
+}
