@@ -1,3 +1,10 @@
+## 3.1.0
+* [Implement design](https://app.zeplin.io/project/5b3640b6d713efa348d964d6/screen/5f2d253b4b239d27b509be83)
+*  Favicon
+*  Meta tags
+*  Overlays
+*  Error messages styles
+
 ## 3.0.0
 * [Implement design](https://app.zeplin.io/project/5b3640b6d713efa348d964d6/screen/5f2d253b4b239d27b509be83)
 

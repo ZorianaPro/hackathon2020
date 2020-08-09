@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import Team from '../Team';
+import handle from '../../support/handlers';
 import './IdeaInfoOverlay.css';
 import '../Overlay/Overlay.css';
 import { close } from './actions';
@@ -21,6 +22,10 @@ const IdeaInfoOverlay = ({
 	const closeOverlay = useCallback(() => {
 		dispatch(close())
 	}, [dispatch]);
+
+	useEffect(() => {
+		handle.scrollElToCenter()
+	},[isOpen]);
 
 	return (
 		<div className="IdeaInfoOverlay">

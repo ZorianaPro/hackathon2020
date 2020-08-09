@@ -56,9 +56,6 @@ const Ideas = ({
                 <AddIdeaButton/>
               </div>
             </div>
-            <IdeaInfoOverlay/>
-            <JoinIdeaOverlay/>
-            <AddNewIdea/>
         </section>
     )
 };

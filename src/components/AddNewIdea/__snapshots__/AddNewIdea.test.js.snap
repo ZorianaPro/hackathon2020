@@ -61,7 +61,7 @@ exports[`AddNewIdea renders as expected 1`] = `
               </div>
               <div>
                 <label
-                  className=""
+                  className="align-top "
                   htmlFor="description"
                 >
                   Idea Description*
@@ -72,6 +72,7 @@ exports[`AddNewIdea renders as expected 1`] = `
                   onChange={[Function]}
                   onFocus={[Function]}
                   required={true}
+                  rows="5"
                   value=""
                 />
               </div>

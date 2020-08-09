@@ -1,7 +1,7 @@
 .Overlay {
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
@@ -21,7 +21,7 @@
 
 .Overlay .Overlay-Box {
     position: absolute;
-    top: 5%;
+    top: 4em;
     left: 50%;
     transform: translateX(-50%);
     width: 70%;

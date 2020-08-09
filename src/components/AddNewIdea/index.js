@@ -88,6 +88,10 @@ const AddNewIdea = ({
 		}
 	}, [submitFrom]);
 
+	useEffect(() => {
+		handle.scrollElToCenter()
+	},[isOpen]);
+
 	return (
 		<div className="AddNewIdea">
 			{ isOpen
@@ -103,6 +107,9 @@ const AddNewIdea = ({
 							</div>
 							{
 								errorMessage
+								&& <div className="Error-Message">{
+									errorMessage
+								}</div>
 							}
 							<form action="" onSubmit={(e) => addNewIdea(e)} method="POST">
 								<div>
@@ -113,8 +120,8 @@ const AddNewIdea = ({
 									       onChange={(e) => handleChange(e.target)}/>
 								</div>
 								<div>
-									<label htmlFor="description" className={`${description !== '' ? 'focus' : ''}`}>Idea Description*</label>
-									<textarea name="description" required value={description}
+									<label htmlFor="description" className={`align-top ${description !== '' ? 'focus' : ''}`}>Idea Description*</label>
+									<textarea rows="5" name="description" required value={description}
 									       onFocus={(e) => handle.focus(e.currentTarget)}
 									       onBlur={(e) => handle.blur(e.currentTarget)}
 									       onChange={(e) => handleChange(e.target)}/>
@@ -128,7 +135,7 @@ const AddNewIdea = ({
 							<div className="Overlay-Close" onClick={() => closeOverlay()}>
 								close
 							</div>
-							<div>Thank you</div>
+							<div className="Success-Message">Woohoo.. It was successful!</div>
 						</div>
 						}
 						</div>
