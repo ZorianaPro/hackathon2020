@@ -4,6 +4,7 @@ import DateSymbol from "../DateSymbol";
 import AddPersonSymbol from "../AddPersonSymbol";
 
 import "./SVGSpriteSheet.css";
+import LightningSymbol from "../LightningSymbol";
 
 export const defaults = {
   className: "SVGSpriteSheet",
@@ -18,6 +19,7 @@ const SVGSpriteSheet = (props) => (
     <LocationSymbol />
     <DateSymbol />
     <AddPersonSymbol />
+    <LightningSymbol />
   </svg>
 );
 

@@ -11,6 +11,55 @@ exports[`Schedule renders as expected 1`] = `
       Schedule
     </p>
     <div
+      className="Lightnings-Left"
+    >
+      <LightningSVG>
+        <svg
+          className="LightningSVG"
+        >
+          <use
+            xlinkHref="#LightningSymbol"
+          />
+        </svg>
+      </LightningSVG>
+      <LightningSVG>
+        <svg
+          className="LightningSVG"
+        >
+          <use
+            xlinkHref="#LightningSymbol"
+          />
+        </svg>
+      </LightningSVG>
+      <LightningSVG>
+        <svg
+          className="LightningSVG"
+        >
+          <use
+            xlinkHref="#LightningSymbol"
+          />
+        </svg>
+      </LightningSVG>
+      <LightningSVG>
+        <svg
+          className="LightningSVG"
+        >
+          <use
+            xlinkHref="#LightningSymbol"
+          />
+        </svg>
+      </LightningSVG>
+      <LightningSVG>
+        <svg
+          className="LightningSVG"
+        >
+          <use
+            xlinkHref="#LightningSymbol"
+          />
+        </svg>
+      </LightningSVG>
+    </div>
+    <div
       className="Schedule-Wrapper"
     >
       <div
@@ -377,6 +426,55 @@ exports[`Schedule renders as expected 1`] = `
           </tbody>
         </table>
       </div>
+    </div>
+    <div
+      className="Lightnings-Right"
+    >
+      <LightningSVG>
+        <svg
+          className="LightningSVG"
+        >
+          <use
+            xlinkHref="#LightningSymbol"
+          />
+        </svg>
+      </LightningSVG>
+      <LightningSVG>
+        <svg
+          className="LightningSVG"
+        >
+          <use
+            xlinkHref="#LightningSymbol"
+          />
+        </svg>
+      </LightningSVG>
+      <LightningSVG>
+        <svg
+          className="LightningSVG"
+        >
+          <use
+            xlinkHref="#LightningSymbol"
+          />
+        </svg>
+      </LightningSVG>
+      <LightningSVG>
+        <svg
+          className="LightningSVG"
+        >
+          <use
+            xlinkHref="#LightningSymbol"
+          />
+        </svg>
+      </LightningSVG>
+      <LightningSVG>
+        <svg
+          className="LightningSVG"
+        >
+          <use
+            xlinkHref="#LightningSymbol"
+          />
+        </svg>
+      </LightningSVG>
     </div>
   </div>
 </Schedule>

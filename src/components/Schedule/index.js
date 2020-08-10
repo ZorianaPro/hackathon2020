@@ -1,10 +1,18 @@
 import React from "react";
 import "./Schedule.css";
+import LightningSVG from "../LightningSVG";
 
 const Schedule = ({ }) => {
   return (
     <div className="Schedule">
       <p className="Schedule-Title">Schedule</p>
+      <div className="Lightnings-Left">
+        <LightningSVG />
+        <LightningSVG />
+        <LightningSVG />
+        <LightningSVG />
+        <LightningSVG />
+      </div>
       <div className="Schedule-Wrapper">
         <div className="Day">
           <h2>Day 1</h2>
@@ -201,7 +209,13 @@ const Schedule = ({ }) => {
           </table>
         </div>
       </div>
-
+      <div className="Lightnings-Right">
+        <LightningSVG />
+        <LightningSVG />
+        <LightningSVG />
+        <LightningSVG />
+        <LightningSVG />
+      </div>
     </div>
   );
 };
