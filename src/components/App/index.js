@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import Header from "../Header";
 import SVGSpriteSheet from '../SVGSpriteSheet';
@@ -25,7 +25,7 @@ const App = ({
 
   return (
     <div className="App">
-      <div className="Hack-guy"/>
+      <div className="Hack-guy" />
       <section id="about" className="App-Main-Section">
         <div className="App-Main-Section-Container">
           <Header />
@@ -41,31 +41,30 @@ const App = ({
               {/*</div>*/}
               <div className="App-Main-Section-Left-Container">
                 <Button label="Go to registration"
-                        type="isActionFilled"
-                onClick={ scrollTo }/>
+                  type="isActionFilled"
+                  onClick={scrollTo} />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <Registration/>
+      <Registration />
       <Ideas />
       <section id="schedule" className="Schedule-Section">
-        <h1 className="App-Section-Title">Schedule</h1>
-        <Schedule/>
+        <Schedule />
       </section>
       <section id="inspiration" className="Inspiration">
         <h1 className="App-Section-Title">Inspiration</h1>
       </section>
       <section id="rules">
         <h1 className="App-Section-Title">Rules</h1>
-        <Rules/>
+        <Rules />
       </section>
       <SVGSpriteSheet />
-      <Footer/>
-      <IdeaInfoOverlay/>
-      <JoinIdeaOverlay/>
-      <AddNewIdea/>
+      <Footer />
+      <IdeaInfoOverlay />
+      <JoinIdeaOverlay />
+      <AddNewIdea />
     </div >
   );
 };

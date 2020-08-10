@@ -40,11 +40,6 @@ exports[`App renders as expected 1`] = `
     className="Schedule-Section"
     id="schedule"
   >
-    <h1
-      className="App-Section-Title"
-    >
-      Schedule
-    </h1>
     <Schedule />
   </section>
   <section
