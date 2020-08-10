@@ -14,89 +14,64 @@ exports[`Registration renders as expected 1`] = `
   }
 >
   <Registration>
-    <BrowserRouter>
-      <Router
-        history={
-          Object {
-            "action": "POP",
-            "block": [Function],
-            "createHref": [Function],
-            "go": [Function],
-            "goBack": [Function],
-            "goForward": [Function],
-            "length": 1,
-            "listen": [Function],
-            "location": Object {
-              "hash": "",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            },
-            "push": [Function],
-            "replace": [Function],
-          }
-        }
+    <section
+      className="Registration"
+      id="registration"
+    >
+      <div
+        className="Registration-Container"
       >
-        <section
-          className="Registration"
-          id="registration"
+        <p
+          className="Registration-Title"
         >
-          <div
-            className="Registration-Container"
+          Registration
+        </p>
+        <div
+          className="Registration-Content"
+        >
+          <Button
+            label="Join an existing idea"
+            onClick={[Function]}
+            type="isActionFilled"
           >
-            <p
-              className="Registration-Title"
-            >
-              Registration
-            </p>
             <div
-              className="Registration-Content"
+              className="Button Button--isActionFilled"
             >
-              <Button
-                label="Join an existing idea"
+              <p
+                className="Button-Label"
                 onClick={[Function]}
-                type="isActionFilled"
               >
-                <div
-                  className="Button Button--isActionFilled"
-                >
-                  <p
-                    className="Button-Label"
-                    onClick={[Function]}
-                  >
-                    Join an existing idea
-                  </p>
-                  <div
-                    className="Button-Inside"
-                    onClick={[Function]}
-                  />
-                </div>
-              </Button>
-              <Button
-                label="Create your own idea"
+                Join an existing idea
+              </p>
+              <div
+                className="Button-Inside"
                 onClick={[Function]}
-                type="isActionFilled"
-              >
-                <div
-                  className="Button Button--isActionFilled"
-                >
-                  <p
-                    className="Button-Label"
-                    onClick={[Function]}
-                  >
-                    Create your own idea
-                  </p>
-                  <div
-                    className="Button-Inside"
-                    onClick={[Function]}
-                  />
-                </div>
-              </Button>
+              />
             </div>
-          </div>
-        </section>
-      </Router>
-    </BrowserRouter>
+          </Button>
+          <Button
+            label="Create your own idea"
+            onClick={[Function]}
+            type="isActionFilled"
+          >
+            <div
+              className="Button Button--isActionFilled"
+            >
+              <p
+                className="Button-Label"
+                onClick={[Function]}
+              >
+                Create your own idea
+              </p>
+              <div
+                className="Button-Inside"
+                onClick={[Function]}
+              />
+            </div>
+          </Button>
+        </div>
+      </div>
+    </section>
   </Registration>
 </Provider>
 `;

@@ -4,21 +4,20 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './rootReducer';
 import rootSaga from './sagas';
 
-let devAdditions;
 if (module.hot) {
-    module.hot.accept();
+  module.hot.accept();
 }
 
-if ("__REDUX_DEVTOOLS_EXTENSION__" in window) {
-    devAdditions = window.__REDUX_DEVTOOLS_EXTENSION__();
+if ('__REDUX_DEVTOOLS_EXTENSION__' in window) {
+  window.__REDUX_DEVTOOLS_EXTENSION__();
 }
 
 const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
-    rootReducer, composeWithDevTools(
-        applyMiddleware(sagaMiddleware)
-    )
+  rootReducer, composeWithDevTools(
+    applyMiddleware(sagaMiddleware)
+  )
 );
 
 sagaMiddleware.run(rootSaga);

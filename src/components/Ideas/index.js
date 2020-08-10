@@ -1,63 +1,77 @@
-import React, { useEffect } from 'react';
-import IdeaCard from "../IdeaCard";
-import AddIdeaButton from "../AddIdeaButton";
-import IdeaInfoOverlay from "../IdeaInfoOverlay";
-import JoinIdeaOverlay from "../JoinIdeaOverlay";
-import AddNewIdea from "../AddNewIdea";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchAllIdeas, fetchFakeIdeas } from './actions';
-import './Ideas.css'
+import React, { useCallback } from 'react';
+import IdeaCard from '../IdeaCard';
+import AddIdeaButton from '../AddIdeaButton';
+import './Ideas.css';
 
 const Ideas = ({
   dispatch,
   ideas,
   loading,
-  error
+  error,
+  onOpenJoinIdeaOverlay,
+  onOpenIdeaInfoOverlay,
+  onClickAddIdeaBtn
 }) => {
+  const _onOpenJoinIdeaOverlay = useCallback((idea) => {
+    if (typeof onOpenJoinIdeaOverlay === 'function') {
+      onOpenJoinIdeaOverlay(idea);
+    }
+  }, [onOpenJoinIdeaOverlay]);
 
-    [ideas, loading, error] = useSelector(state => [
-        state.ideasReducer.ideas,
-        state.ideasReducer.loading,
-        state.ideasReducer.error
-    ]);
+  const _onOpenIdeaInfoOverlay = useCallback((idea) => {
+    if (typeof onOpenIdeaInfoOverlay === 'function') {
+      onOpenIdeaInfoOverlay(idea);
+    }
+  }, [onOpenIdeaInfoOverlay]);
 
-    dispatch = useDispatch();
+  const _onClickAddIdeaBtn = useCallback(() => {
+    if (typeof onClickAddIdeaBtn === 'function') {
+      onClickAddIdeaBtn();
+    }
+  }, [onClickAddIdeaBtn]);
 
-    useEffect(() => {
-        dispatch(fetchAllIdeas())
-    }, []);
-
-    return (
-        <section id="ideas" className="Ideas">
-          <div className="Lightning-Left"/>
-          <div className="Lightning-Right"/>
-            <div className="Ideas-Container">
-                <p className="Ideas-Title">
-                  Ideas &amp; Lightning
-                </p>
-              <div className="Ideas-Content">
-                {
-                    loading && 'Loading...'
-                }
-                {
-                    error
-                    && <div>{error}</div>
-                }
-                { ideas
-                    && ideas.map((idea) => {
-                        return (
-                            <IdeaCard id={idea._id}
-                                      name={idea.name}
-                                      description={idea.description}
-                                      team={idea.team}/>
-                        )
-                    })
-                }
-                <AddIdeaButton/>
-              </div>
-            </div>
-        </section>
-    )
+  return (
+    <section id="ideas" className="Ideas">
+      <div className="Lightning-Left"/>
+      <div className="Lightning-Right"/>
+      <div className="Ideas-Container">
+        <p className="Ideas-Title">
+          Ideas &amp; Lightning
+        </p>
+        <div className="Ideas-Content">
+          {
+            loading && 'Loading...'
+          }
+          {
+            error
+            && <div>{error}</div>
+          }
+          {
+            ideas
+            && ideas.map((idea) => {
+              return (
+                <IdeaCard
+                  idea={
+                    idea
+                  }
+                  onOpenJoinIdeaOverlay={
+                    _onOpenJoinIdeaOverlay
+                  }
+                  onOpenIdeaInfoOverlay={
+                    _onOpenIdeaInfoOverlay
+                  }/>
+              );
+            })
+          }
+          <AddIdeaButton
+            onClick={
+              _onClickAddIdeaBtn
+            }
+          />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Ideas;

@@ -33,7 +33,7 @@ const get = () => {
       return res;
     }
     throw res.json();
-  })
+  });
 };
 
 const ideasMock = () => {

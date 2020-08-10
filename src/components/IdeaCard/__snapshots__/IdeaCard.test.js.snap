@@ -1,88 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IdeaCard renders as expected 1`] = `
-<Provider
-  store={
+<IdeaCard
+  idea={
     Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
+      "description": "fddf gfdg",
+      "id": 12,
+      "name": "Name",
+      "teamId": 1,
     }
   }
 >
-  <IdeaCard>
+  <div
+    className="IdeaCard"
+  >
     <div
-      className="IdeaCard"
+      className="IdeaCard-Container"
     >
       <div
-        className="IdeaCard-Container"
+        className="IdeaCard-Info"
       >
-        <div
-          className="IdeaCard-Info"
+        <p
+          className="IdeaCard-Info-Name"
         >
-          <p
-            className="IdeaCard-Info-Name"
-          />
-          <p
-            className="IdeaCard-Info-Description"
-          />
-        </div>
-        <div
-          className="IdeaCard-Actions"
+          Name
+        </p>
+        <p
+          className="IdeaCard-Info-Description"
         >
-          <Button
-            onClick={[Function]}
-            type="isSecondaryTransparent"
+          fddf gfdg
+        </p>
+      </div>
+      <div
+        className="IdeaCard-Actions"
+      >
+        <Button
+          onClick={[Function]}
+          type="isSecondaryTransparent"
+        >
+          <div
+            className="Button Button--isSecondaryTransparent"
           >
+            <p
+              className="Button-Label"
+              onClick={[Function]}
+            />
             <div
-              className="Button Button--isSecondaryTransparent"
+              className="Button-Inside"
+              onClick={[Function]}
             >
-              <p
-                className="Button-Label"
-                onClick={[Function]}
-              />
-              <div
-                className="Button-Inside"
-                onClick={[Function]}
-              >
-                <AddPersonSVG>
-                  <svg
-                    className="AddPersonSVG"
-                  >
-                    <use
-                      xlinkHref="#AddPersonSymbol"
-                    />
-                  </svg>
-                </AddPersonSVG>
-                 join
-              </div>
+              <AddPersonSVG>
+                <svg
+                  className="AddPersonSVG"
+                >
+                  <use
+                    xlinkHref="#AddPersonSymbol"
+                  />
+                </svg>
+              </AddPersonSVG>
+               join
             </div>
-          </Button>
-          <Button
-            onClick={[Function]}
-            type="isSecondaryTransparent"
+          </div>
+        </Button>
+        <Button
+          onClick={[Function]}
+          type="isSecondaryTransparent"
+        >
+          <div
+            className="Button Button--isSecondaryTransparent"
           >
+            <p
+              className="Button-Label"
+              onClick={[Function]}
+            />
             <div
-              className="Button Button--isSecondaryTransparent"
+              className="Button-Inside"
+              onClick={[Function]}
             >
-              <p
-                className="Button-Label"
-                onClick={[Function]}
-              />
-              <div
-                className="Button-Inside"
-                onClick={[Function]}
-              >
-                More
-              </div>
+              More
             </div>
-          </Button>
-        </div>
+          </div>
+        </Button>
       </div>
     </div>
-  </IdeaCard>
-</Provider>
+  </div>
+</IdeaCard>
 `;

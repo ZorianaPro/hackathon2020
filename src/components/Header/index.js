@@ -1,12 +1,11 @@
-import React from "react";
-import "./Header.css";
-import { NavHashLink as NavLink } from "react-router-hash-link";
-import { BrowserRouter as Router } from "react-router-dom";
-import { scrollElToCenter } from "../../support/handlers"
+import React from 'react';
+import './Header.css';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-const Header = ({}) => {
+const Header = () => {
   const handleClick = (event) => {
-    event.target.classList.toggle("active");
+    event.target.classList.toggle('active');
   };
 
   const isNavLinkActive = (path) =>
@@ -15,13 +14,13 @@ const Header = ({}) => {
   return (
     <Router>
       <div className="Header">
-        <ul className="Header-Navigation" onClick={handleClick}>
+        <ul className="Header-Navigation" onClick={ handleClick }>
           <li>
             <NavLink
-              to="/#about"
+              to='/#about'
               smooth={true}
               isActive={() => {
-                return isNavLinkActive("/#about");
+                return isNavLinkActive('/#about');
               }}
             >
               About
@@ -29,10 +28,10 @@ const Header = ({}) => {
           </li>
           <li>
             <NavLink
-              to="/#registration"
+              to='/#registration'
               smooth={true}
               isActive={() => {
-                return isNavLinkActive("/#registration");
+                return isNavLinkActive('/#registration');
               }}
             >
               Registration
@@ -40,10 +39,10 @@ const Header = ({}) => {
           </li>
           <li>
             <NavLink
-              to="/#inspiration"
+              to='/#inspiration'
               smooth={true}
               isActive={() => {
-                return isNavLinkActive("/#inspiration");
+                return isNavLinkActive('/#inspiration');
               }}
             >
               Inspiration
@@ -51,10 +50,10 @@ const Header = ({}) => {
           </li>
           <li>
             <NavLink
-              to="/#ideas"
+              to='/#ideas'
               smooth={true}
               isActive={() => {
-                return isNavLinkActive("/#ideas");
+                return isNavLinkActive('/#ideas');
               }}
             >
               Ideas
@@ -62,10 +61,10 @@ const Header = ({}) => {
           </li>
           <li>
             <NavLink
-              to="/#rules"
+              to='/#rules'
               smooth={true}
               isActive={() => {
-                return isNavLinkActive("/#rules");
+                return isNavLinkActive('/#rules');
               }}
             >
               Rules
