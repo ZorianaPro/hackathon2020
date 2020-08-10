@@ -1,208 +1,170 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState, useCallback } from 'react';
+import Overlay from '../Overlay';
 import './JoinIdeaOverlay.css';
 import '../Overlay/Overlay.css';
-import { close, submit, error, clean } from './actions';
-import handle from '../../support/handlers';
-import { fetchAllIdeas } from "../Ideas/actions";
-import memberService from "../../services/member";
-import * as joinOverlay from "./actions";
 
 const JoinIdeaOverlay = ({
-	team,
+  onClose,
+  shouldClose,
   dispatch,
-	isOpen,
-	selectedIdeaId,
-	errorMessage,
-	ideasList
+  ideas,
+  selectedIdea,
+  error,
+  onSubmit
 }) => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [position, setPosition] = useState('');
 
-	dispatch = useDispatch();
+  const _onClose = useCallback((event) => {
+    if (typeof onClose === 'function') {
+      onClose(event);
+    }
+  }, [onClose]);
 
-	const [firstName, setFirstName] = useState('');
-	const [lastName, setLastName] = useState('');
-	const [email, setEmail] = useState('');
-	const [position, setPosition] = useState('');
-	const [submitFrom, setSubmitForm] = useState(false);
-	const [showThankYou, setShowThankYou] = useState(false);
-	const [_selectedIdeaId, setSelectedIdeaId] = useState(selectedIdeaId);
+  const onChange = useCallback((event) => {
+    const field = event.target.name;
+    const value = event.target.value;
+    switch (field) {
+      case 'firstName':
+        return setFirstName(value);
+      case 'lastName':
+        return setLastName(value);
+      case 'email':
+        return setEmail(value);
+      case 'position':
+        return setPosition(value);
+    }
+  }, []);
 
-	const cleanState = () => {
-		setFirstName('');
-		setLastName('');
-		setEmail('');
-		setPosition('');
-		setSubmitForm(false);
-		dispatch(clean());
-	};
+  const _onSubmit = useCallback((event) => {
+    event.preventDefault();
+    if (typeof onSubmit === 'function') {
+      onSubmit(event);
+    }
+    return false;
+  }, [onSubmit]);
 
-	[isOpen, selectedIdeaId, errorMessage, ideasList] = useSelector(state => [
-		state.joinIdeaOverlayReducer.open,
-		state.joinIdeaOverlayReducer.content.id,
-		state.joinIdeaOverlayReducer.error,
-		state.ideasReducer
-	]);
+  const onFocus = useCallback((event) => {
+    const input = event.target;
+    const label = input.parentElement.querySelector('label');
+    label && label.classList.add('focus');
+  }, []);
 
-	useEffect(() => {
-		setSelectedIdeaId(selectedIdeaId);
-	},[selectedIdeaId])
+  const onBlur = useCallback((event) => {
+    const input = event.target;
+    const label = input.parentElement.querySelector('label');
+    if (input.value === '') {
+      label && label.classList.remove('focus');
+    }
+  }, []);
 
-	const handleChange = useCallback(
-		(target) => {
-			const field = target.name;
-			const value = target.value;
-			switch (field) {
-				case 'firstName':
-					return setFirstName(value);
-				case 'lastName':
-					return setLastName(value);
-				case 'email':
-					return setEmail(value);
-				case 'position':
-					return setPosition(value);
-			}
-
-		}, []
-	);
-
-	const closeOverlay = useCallback(
-		() => {
-			dispatch(close())
-		}, []
-	);
-
-	const joinIdea = useCallback(
-		(e) => {
-			e.preventDefault();
-			setSubmitForm(true);
-			return false
-		}, []
-	);
-
-	useEffect(() => {
-		if (submitFrom) {
-			const data = {
-				id: _selectedIdeaId,
-				member: {
-					firstName: firstName,
-					lastName: lastName,
-					email: email,
-					position: position
-				}
-			};
-
-			memberService.post(data)
-				.then(() => {
-					dispatch(fetchAllIdeas());
-					setShowThankYou(true);
-					cleanState();
-					setTimeout(() => {
-						dispatch(close());
-						setShowThankYou(false);
-					}, 2000)
-				})
-				.catch((errorResponse) => {
-					errorResponse.then(err => {
-						dispatch(error(err.message));
-						setSubmitForm(false);
-					})
-				})
-		}
-	}, [submitFrom]);
-
-	useEffect(() => {
-		handle.scrollElToCenter()
-	},[isOpen]);
-
-	const onSelectChange = (el) => {
-		const selectedValue = el.value;
-		setSelectedIdeaId(selectedValue);
-	};
-
-	return (
-		<div className="JoinIdeaOverlay">
-			{ isOpen
-				&& <div className="Overlay">
-					<div className="Overlay-Container">
-						{ !showThankYou
-							&& <div className="Overlay-Box">
-							<div className="Overlay-Close" onClick={() => closeOverlay()}>
-								close
-							</div>
-							<div className="JoinIdeaOverlay-Title">
-								Join the idea
-							</div>
-							{
-								errorMessage
-								&& <div className="Error-Message">{
-									errorMessage
-								}</div>
-							}
-							<form  action="" onSubmit={(e) => joinIdea(e)} method="POST">
-								{
-									ideasList
-									&& <select name="selectedIdea"
-									  id="selectedIdea"
-									  value={ _selectedIdeaId }
-									  onChange={ (e) => onSelectChange(e.currentTarget) }
-									  required>
-										<option disabled selected value>Please choose the idea</option>
-											{
-												ideasList.ideas.map(idea =>
-													<option value={ idea._id } >{ idea.name }</option>
-												)
-											}
-									</select>
-								}
-
-								<div>
-									<label htmlFor="firstName" className={`${firstName !== '' ? 'focus' : ''}`}>First Name*</label>
-									<input type="text" name="firstName" required value={firstName}
-									       onFocus={(e) => handle.focus(e.currentTarget)}
-									       onBlur={(e) => handle.blur(e.currentTarget)}
-									       onChange={(e) => handleChange(e.target)}/>
-								</div>
-								<div>
-									<label htmlFor="lastName" className={`${lastName !== '' ? 'focus' : ''}`}>Last Name*</label>
-									<input type="text" name="lastName" required value={lastName}
-									       onFocus={(e) => handle.focus(e.currentTarget)}
-									       onBlur={(e) => handle.blur(e.currentTarget)}
-									       onChange={(e) => handleChange(e.target)}/>
-								</div>
-								<div>
-									<label htmlFor="email" className={`${email !== '' ? 'focus' : ''}`}>Your email*</label>
-									<input type="email" name="email" required value={email}
-									       onFocus={(e) => handle.focus(e.currentTarget)}
-									       onBlur={(e) => handle.blur(e.currentTarget)}
-									       onChange={(e) => handleChange(e.target)}/>
-								</div>
-								<div>
-									<label htmlFor="position" className={`${position !== '' ? 'focus' : ''}`}>Position*</label>
-									<input type="text" name="position" required value={position}
-									       onFocus={(e) => handle.focus(e.currentTarget)}
-									       onBlur={(e) => handle.blur(e.currentTarget)}
-									       onChange={(e) => handleChange(e.target)}/>
-								</div>
-								<button type="submit" className="Button Button--isSecondaryTransparent">
-									<p className="Button-Inside">
-									Submit
-								</p></button>
-							</form>
-						</div>
-						}
-						{	showThankYou
-							&& <div className="Overlay-Box">
-							<div className="Overlay-Close" onClick={() => closeOverlay()}>
-								close
-							</div>
-							<div className="Success-Message">Woohoo.. It was successful!</div>
-						</div>
-						}
-						</div>
-					</div>
-			}
-		</div>
-	);
+  return (
+    <Overlay
+      onClose={
+        _onClose
+      }
+      shouldClose={
+        shouldClose
+      }>
+      <div className="JoinIdeaOverlay">
+        <div className="JoinIdeaOverlay-Title">
+          Join the idea
+        </div>
+        {
+          error
+          && <div className="Error-Message">
+            { error }
+          </div>
+        }
+        <form
+          onSubmit={
+            _onSubmit
+          }
+          method="POST">
+          {
+            ideas
+            && <select name="id"
+              value={ selectedIdea ? selectedIdea._id : '' }
+              required>
+              <option disabled selected value>
+                Please choose the idea
+              </option>
+              {
+                ideas.map((idea) =>
+                  <option value={ idea._id } >{ idea.name }</option>
+                )
+              }
+            </select>
+          }
+          <div>
+            <label htmlFor="firstName"
+              className={ `${firstName !== '' ? 'focus' : ''}` }
+            >
+              First Name*
+            </label>
+            <input type="text"
+              name="firstName"
+              onFocus={ onFocus }
+              onBlur={ onBlur }
+              onChange={ onChange }
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="lastName"
+              className={ `${lastName !== '' ? 'focus' : ''}` }
+            >
+              ast Name*
+            </label>
+            <input type="text"
+              name="lastName"
+              value={lastName}
+              onFocus={ onFocus }
+              onBlur={ onBlur }
+              onChange={ onChange }
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="email"
+              className={ `${email !== '' ? 'focus' : ''}` }
+            >
+              Your email*
+            </label>
+            <input type="email"
+              name="email"
+              onFocus={ onFocus }
+              onBlur={ onBlur }
+              onChange={ onChange }
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="position"
+              className={ `${position !== '' ? 'focus' : ''}` }
+            >
+              Position*
+            </label>
+            <input
+              type="text"
+              name="position"
+              onFocus={ onFocus }
+              onBlur={ onBlur }
+              onChange={ onChange }
+              required
+            />
+          </div>
+          <button type="submit" className="Button Button--isSecondaryTransparent">
+            <p className="Button-Inside">
+             Submit
+            </p>
+          </button>
+        </form>
+      </div>
+    </Overlay>
+  );
 };
 
 export default JoinIdeaOverlay;

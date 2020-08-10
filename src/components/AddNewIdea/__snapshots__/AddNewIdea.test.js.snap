@@ -14,15 +14,24 @@ exports[`AddNewIdea renders as expected 1`] = `
   }
 >
   <AddNewIdea>
-    <div
-      className="AddNewIdea"
+    <Overlay
+      onClose={[Function]}
     >
       <div
-        className="Overlay"
+        className="Overlay Overlay--isOpening"
       >
         <div
-          className="Overlay-Container"
+          className="Overlay-Content"
+          style={
+            Object {
+              "animationDuration": "200ms",
+            }
+          }
         >
+          <div
+            className="Overlay-Mask"
+            onClick={[Function]}
+          />
           <div
             className="Overlay-Box"
           >
@@ -33,59 +42,61 @@ exports[`AddNewIdea renders as expected 1`] = `
               close
             </div>
             <div
-              className="AddNewIdea-Title"
+              className="AddNewIdea"
             >
-              Add new idea
-            </div>
-            <form
-              action=""
-              method="POST"
-              onSubmit={[Function]}
-            >
-              <div>
-                <label
-                  className=""
-                  htmlFor="ideaName"
-                >
-                  Idea Name*
-                </label>
-                <input
-                  name="ideaName"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  required={true}
-                  type="text"
-                  value=""
-                />
-              </div>
-              <div>
-                <label
-                  className="align-top "
-                  htmlFor="description"
-                >
-                  Idea Description*
-                </label>
-                <textarea
-                  name="description"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  required={true}
-                  rows="5"
-                  value=""
-                />
-              </div>
-              <button
-                type="submit"
+              <div
+                className="AddNewIdea-Title"
               >
-                Submit
-              </button>
-            </form>
+                Add new idea
+              </div>
+              <form
+                action=""
+                method="POST"
+                onSubmit={[Function]}
+              >
+                <div>
+                  <label
+                    className=""
+                    htmlFor="ideaName"
+                  >
+                    Idea Name*
+                  </label>
+                  <input
+                    name="name"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={true}
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <label
+                    className="align-top "
+                    htmlFor="description"
+                  >
+                    Idea Description*
+                  </label>
+                  <textarea
+                    name="description"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={true}
+                    rows="5"
+                  />
+                </div>
+                <button
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Overlay>
   </AddNewIdea>
 </Provider>
 `;

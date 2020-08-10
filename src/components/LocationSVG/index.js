@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const LocationSVG = (props) => (
   <svg className="LocationSVG" {...props}>

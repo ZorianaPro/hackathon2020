@@ -259,13 +259,6 @@ a {
   text-decoration: none;
 }
 
-.App .Success-Message {
-  color: var(--colorSpaceCadet);
-  font-size: var(--fontSize48);
-  margin-top: 1em;
-  text-align: center;
-}
-
 .App .Error-Message {
   color: var(--colorRadicalRed);
   text-align: center;

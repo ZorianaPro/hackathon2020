@@ -5,8 +5,6 @@ import memberService from './';
 describe('memberService', () => {
   describe('post()', () => {
     describe('and the API call succeeds', () => {
-      let members;
-
       beforeEach((done) => {
         fetchMock.post(
           `${config.api.base}${config.api.members}`,
@@ -20,7 +18,6 @@ describe('memberService', () => {
           ]
         );
         return memberService.post().then((_members) => {
-          members = _members;
           done();
         });
       });
@@ -32,7 +29,6 @@ describe('memberService', () => {
       it('calls the API', () => {
         expect(fetchMock.called()).toBe(true);
       });
-
     });
 
     describe('and the API call fails', () => {

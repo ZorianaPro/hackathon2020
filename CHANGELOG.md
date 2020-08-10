@@ -1,3 +1,8 @@
+## 3.3.0
+* Credits section
+* Fixes after Sebastian's check
+* Fix linting
+
 ## 3.2.0
 * General join idea overlay with selector
 * Responsive

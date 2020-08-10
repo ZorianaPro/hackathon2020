@@ -1,46 +1,44 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import IdeaCard from './';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store'
 
 describe('IdeaCard', () => {
-	const initialState = {
-		open: false,
-		ideaContent: {
-			id: '',
-			name: '',
-			description: '',
-			team: {}
-		}
-	};
-	const mockStore = configureStore();
-	let store = mockStore(initialState);
+  const props = {
+    idea: {
+      id: 12,
+      name: 'Name',
+      description: 'fddf gfdg',
+      teamId: 1
+    }
+  };
 
-	it('renders without crashing', () => {
-		expect(mount.bind(shallow, <Provider store={store}><IdeaCard /></Provider>)).not.toThrow();
-	});
+  it('renders without crashing', () => {
+    expect(mount.bind(shallow, <IdeaCard { ...props } />)).not.toThrow();
+  });
 
-	it('renders as expected', () => {
-		expect(mount(<Provider store={store}><IdeaCard /></Provider>)).toMatchSnapshot();
-	});
+  it('renders as expected', () => {
+    expect(mount(<IdeaCard { ...props } />)).toMatchSnapshot();
+  });
 
-	describe('given props', () => {
-		let card;
-		const props = {
-			id: 12,
-			name: 'Name',
-			description: 'fddf gfdg',
-			teamId: 1
-		};
+  describe('given props', () => {
+    let card;
+    const props = {
+      idea: {
+        id: 12,
+        name: 'Name',
+        description: 'fddf gfdg',
+        teamId: 1
+      }
+    };
 
-		beforeEach(() => {
-			store = mockStore(initialState);
-			card = mount(<Provider store={store}><IdeaCard { ...props }/></Provider>);
-		});
-		it('renders content', () => {
-			expect(card.find('.IdeaCard-Info-Name').text()).toBe(props.name);
-			expect(card.find('.IdeaCard-Info-Description').text()).toBe(props.description);
-		});
-	});
+    beforeEach(() => {
+      card = mount(<IdeaCard { ...props }/>);
+    });
+    it('renders name', () => {
+      expect(card.find('.IdeaCard-Info-Name').text()).toBe(props.idea.name);
+    });
+    it('renders description', () => {
+      expect(card.find('.IdeaCard-Info-Description').text()).toBe(props.idea.description);
+    });
+  });
 });

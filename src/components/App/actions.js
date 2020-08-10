@@ -1,17 +1,11 @@
 export const actions = {
     fetchAllIdeas: 'FETCH:ALL:IDEAS',
-    fetchFakeIdeas: 'FETCH:FAKE:IDEAS',
     result: 'RESULT:IDEAS',
     error: 'ERROR:IDEAS'
 };
 
 export const fetchAllIdeas = (credentials='') => ({
     type: actions.fetchAllIdeas,
-    value: credentials
-});
-
-export const fetchFakeIdeas = (credentials='') => ({
-    type: actions.fetchFakeIdeas,
     value: credentials
 });
 
@@ -27,7 +21,6 @@ export const error = (err) => ({
 
 export default {
     fetchAllIdeas,
-    fetchFakeIdeas,
     result,
     error
 };

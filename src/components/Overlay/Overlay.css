@@ -1,23 +1,117 @@
 .Overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    display: none;
+    opacity: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(31, 31, 31, 0.8);
-    opacity: 1;
-    display: block;
-    transition: all ease-in 100ms;
-    z-index: 3
+    z-index: 3;
 }
 
-.Overlay .Overlay-Container {
+.Overlay.Overlay--isOpen {
+    display: block;
+    opacity: 1;
+}
+
+.Overlay .Overlay-Mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(59, 65, 74, 0.5);
+    display: block;
+    position: absolute;
+}
+
+.Overlay .Overlay-Content {
+    display: flex;
     position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    z-index: 1;
     width: 100%;
     height: 100%;
 }
+
+.Overlay .Overlay-Close {
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    cursor: pointer;
+    color: var(--colorSpaceCadet);
+    font-size: var(--fontSize16);
+    z-index: 11;
+}
+
+
+.Overlay .Overlay-Content > * {
+    margin: auto;
+    z-index: 1;
+}
+
+.Overlay .Overlay-Content .OverlayMask {
+    z-index: 0;
+}
+
+.Overlay.Overlay--isOpening .Overlay-Content {
+    animation-name: scaleIn;
+    animation-timing-function: ease-in;
+}
+
+.Overlay.Overlay--isClosing .Overlay-Content {
+    animation-name: scaleOut;
+    animation-timing-function: ease-in;
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scaleX(1.25) scaleY(1.25);
+    }
+    25% {
+        opacity: 0.25;
+        transform: scaleX(1.2) scaleY(1.2);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scaleX(1.15) scaleY(1.15);
+    }
+    75% {
+        opacity: 0.75;
+        transform: scaleX(1.1) scaleY(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1) scaleY(1);
+    }
+}
+
+@keyframes scaleOut {
+    0% {
+        opacity: 1;
+        transform: scaleX(1) scaleY(1);
+    }
+    25% {
+        opacity: 0.75;
+        transform: scaleX(1.1) scaleY(1.1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scaleX(1.15) scaleY(1.15);
+    }
+    75% {
+        opacity: 0.25;
+        transform: scaleX(1.2) scaleY(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scaleX(1.25) scaleY(1.25);
+    }
+}
+
+
 
 .Overlay .Overlay-Box {
     position: absolute;
@@ -43,14 +137,4 @@
     .Overlay .Overlay-Box {
         background-image: url(/assets/bg-ideas@3x.png);
     }
-}
-
-.Overlay .Overlay-Close {
-  position: absolute;
-  right: 2em;
-  top: 2em;
-  cursor: pointer;
-  color: var(--colorSpaceCadet);
-  font-size: var(--fontSize16);
-  z-index: 11;
 }

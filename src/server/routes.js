@@ -1,11 +1,11 @@
-const Router = require("koa-router");
-const HttpStatus = require("http-status");
-const Idea = require("./controllers/idea");
-const Member = require("./controllers/member");
+const Router = require('koa-router');
+const HttpStatus = require('http-status');
+const Idea = require('./controllers/idea');
+const Member = require('./controllers/member');
 
 const router = new Router();
 
-router.get("/ideas", async (ctx, next) => {
+router.get('/ideas', async (ctx, next) => {
   try {
     const ideas = await Idea.showAll();
     ctx.response.status = HttpStatus.OK;
@@ -14,13 +14,13 @@ router.get("/ideas", async (ctx, next) => {
     ctx.status = err.status || 500;
     ctx.body = {
       error: true,
-      message: err.message,
+      message: err.message
     };
-    ctx.app.emit("error", err, ctx);
+    ctx.app.emit('error', err, ctx);
   }
 });
 
-router.get("/members", async (ctx, next) => {
+router.get('/members', async (ctx, next) => {
   try {
     const ideas = await Member.showAll();
     ctx.response.status = HttpStatus.CREATED;
@@ -29,13 +29,13 @@ router.get("/members", async (ctx, next) => {
     ctx.status = err.status || 500;
     ctx.body = {
       error: true,
-      message: err.message,
+      message: err.message
     };
-    ctx.app.emit("error", err, ctx);
+    ctx.app.emit('error', err, ctx);
   }
 });
 
-router.post("/ideas", async (ctx, next) => {
+router.post('/ideas', async (ctx, next) => {
   try {
     const content = ctx.request.body;
     const idea = await Idea.create(content);
@@ -45,13 +45,13 @@ router.post("/ideas", async (ctx, next) => {
     ctx.status = err.status || 500;
     ctx.body = {
       error: true,
-      message: err.message,
+      message: err.message
     };
-    ctx.app.emit("error", err, ctx);
+    ctx.app.emit('error', err, ctx);
   }
 });
 
-router.post("/members", async (ctx, next) => {
+router.post('/members', async (ctx, next) => {
   try {
     const content = ctx.request.body;
     const idea = await Member.addNewMember(content.id, content.member);
@@ -61,13 +61,13 @@ router.post("/members", async (ctx, next) => {
     ctx.status = err.status || 500;
     ctx.body = {
       error: true,
-      message: err.message,
+      message: err.message
     };
-    ctx.app.emit("error", err, ctx);
+    ctx.app.emit('error', err, ctx);
   }
 });
 
-router.delete("/ideas", async (ctx, next) => {
+router.delete('/ideas', async (ctx, next) => {
   try {
     await Idea.deleteAll();
     ctx.status = HttpStatus.OK;
@@ -75,9 +75,9 @@ router.delete("/ideas", async (ctx, next) => {
     ctx.status = err.status || 500;
     ctx.body = {
       error: true,
-      message: err.message,
+      message: err.message
     };
-    ctx.app.emit("error", err, ctx);
+    ctx.app.emit('error', err, ctx);
   }
 });
 
