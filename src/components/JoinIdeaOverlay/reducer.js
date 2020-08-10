@@ -17,7 +17,7 @@ export default (state = initialState, action) => {
 			};
 		case actions.close:
 			return {
-				...state,
+				...initialState,
 				open: false
 			};
 		case actions.submit:

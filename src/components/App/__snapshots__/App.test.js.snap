@@ -5,7 +5,7 @@ exports[`App renders as expected 1`] = `
   className="App"
 >
   <div
-    className="Hack-guy"
+    className="Hack-guy animate"
   />
   <section
     className="App-Main-Section"
@@ -19,7 +19,7 @@ exports[`App renders as expected 1`] = `
         className="App-Main-Section-Left"
       >
         <div
-          className="App-Main-Section-Logo"
+          className="App-Main-Section-Logo animate"
         >
           <div
             className="App-Main-Section-Left-Container"
@@ -36,27 +36,6 @@ exports[`App renders as expected 1`] = `
   </section>
   <Registration />
   <Ideas />
-  <section
-    className="Schedule-Section"
-    id="schedule"
-  >
-    <h1
-      className="App-Section-Title"
-    >
-      Schedule
-    </h1>
-    <Schedule />
-  </section>
-  <section
-    className="Inspiration"
-    id="inspiration"
-  >
-    <h1
-      className="App-Section-Title"
-    >
-      Inspiration
-    </h1>
-  </section>
   <Rules />
   <SVGSpriteSheet />
   <Footer />
