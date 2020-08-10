@@ -5,6 +5,11 @@ exports[`Rules renders as expected 1`] = `
   <div
     className="Rules"
   >
+    <p
+      className="Rules-Title"
+    >
+      Rules
+    </p>
     <ul
       className="Rules-List"
     >

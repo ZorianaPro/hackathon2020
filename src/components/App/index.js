@@ -41,31 +41,28 @@ const App = ({
               {/*</div>*/}
               <div className="App-Main-Section-Left-Container">
                 <Button label="Go to registration"
-                        type="isActionFilled"
-                onClick={ scrollTo }/>
+                  type="isActionFilled"
+                  onClick={scrollTo} />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <Registration/>
+      <Registration />
       <Ideas />
       <section id="schedule" className="Schedule-Section">
         <h1 className="App-Section-Title">Schedule</h1>
-        <Schedule/>
+        <Schedule />
       </section>
       <section id="inspiration" className="Inspiration">
         <h1 className="App-Section-Title">Inspiration</h1>
       </section>
-      <section id="rules">
-        <h1 className="App-Section-Title">Rules</h1>
-        <Rules/>
-      </section>
+      <Rules />
       <SVGSpriteSheet />
-      <Footer/>
-      <IdeaInfoOverlay/>
-      <JoinIdeaOverlay/>
-      <AddNewIdea/>
+      <Footer />
+      <IdeaInfoOverlay />
+      <JoinIdeaOverlay />
+      <AddNewIdea />
     </div >
   );
 };
