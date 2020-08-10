@@ -23,14 +23,24 @@ const App = ({
     scrollElToCenter('registration')
   }, []);
 
+  useEffect(() => {
+   setInterval(() => {
+    document.querySelector('.Hack-guy').classList.remove('animate');
+   }, 1800);
+
+   setInterval(() => {
+    document.querySelector('.App-Main-Section-Logo').classList.remove('animate');
+   }, 1000)
+  }, []);
+
   return (
     <div className="App">
-      <div className="Hack-guy"/>
+      <div className="Hack-guy animate"/>
       <section id="about" className="App-Main-Section">
         <div className="App-Main-Section-Container">
           <Header />
           <div className="App-Main-Section-Left">
-            <div className="App-Main-Section-Logo">
+            <div className="App-Main-Section-Logo animate">
               {/*<div className="App-Main-Section-Date">*/}
               {/*<DateSVG />*/}
               {/*<p> 3-4 September 2020 </p>*/}
@@ -50,17 +60,17 @@ const App = ({
       </section>
       <Registration/>
       <Ideas />
-      <section id="schedule" className="Schedule-Section">
-        <h1 className="App-Section-Title">Schedule</h1>
-        <Schedule/>
-      </section>
-      <section id="inspiration" className="Inspiration">
-        <h1 className="App-Section-Title">Inspiration</h1>
-      </section>
-      <section id="rules">
-        <h1 className="App-Section-Title">Rules</h1>
-        <Rules/>
-      </section>
+      {/*<section id="schedule" className="Schedule-Section">*/}
+        {/*<h1 className="App-Section-Title">Schedule</h1>*/}
+        {/*<Schedule/>*/}
+      {/*</section>*/}
+      {/*<section id="inspiration" className="Inspiration">*/}
+        {/*<h1 className="App-Section-Title">Inspiration</h1>*/}
+      {/*</section>*/}
+      {/*<section id="rules">*/}
+        {/*<h1 className="App-Section-Title">Rules</h1>*/}
+        {/*<Rules/>*/}
+      {/*</section>*/}
       <SVGSpriteSheet />
       <Footer/>
       <IdeaInfoOverlay/>

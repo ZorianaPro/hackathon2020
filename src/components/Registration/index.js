@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import "./Registration.css";
 import Button from "../Button";
 import {BrowserRouter as Router} from "react-router-dom";
+import * as joinOverlay from "../JoinIdeaOverlay/actions";
 
 const Registration = ({ dispatch }) => {
 
@@ -11,6 +12,12 @@ const Registration = ({ dispatch }) => {
 
   const openAddNewIdeaOverlay = useCallback(() => {
     dispatch(addNewIdea.open())
+  }, [dispatch]);
+
+  const joinIdeaOverlay = useCallback(() => {
+    dispatch(joinOverlay.open({
+      id: null
+    }))
   }, [dispatch]);
 
   return (
@@ -23,7 +30,7 @@ const Registration = ({ dispatch }) => {
           <div className="Registration-Content">
             <Button label="Join an existing idea"
                     type="isActionFilled"
-                    onClick={ openAddNewIdeaOverlay }/>
+                    onClick={ joinIdeaOverlay }/>
             <Button label="Create your own idea"
                     type="isActionFilled"
                     onClick={ openAddNewIdeaOverlay }/>
