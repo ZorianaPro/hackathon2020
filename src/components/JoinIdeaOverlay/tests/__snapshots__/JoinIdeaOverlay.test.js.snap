@@ -74,7 +74,7 @@ exports[`JoinIdeaOverlay renders as expected 1`] = `
                     className=""
                     htmlFor="lastName"
                   >
-                    Last Name*
+                    ast Name*
                   </label>
                   <input
                     name="lastName"

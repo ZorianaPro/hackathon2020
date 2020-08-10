@@ -52,6 +52,7 @@ exports[`AddNewIdea renders as expected 1`] = `
               <form
                 action=""
                 method="POST"
+                onSubmit={[Function]}
               >
                 <div>
                   <label

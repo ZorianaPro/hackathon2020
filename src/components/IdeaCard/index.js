@@ -2,7 +2,7 @@ import React, {  useCallback } from 'react';
 import Button from '../Button';
 import Team from '../Team';
 import  './IdeaCard.css';
-import AddPersonSVG from '../AddPersonSVG"';
+import AddPersonSVG from '../AddPersonSVG';
 
 const IdeaCard = ({
   idea,
