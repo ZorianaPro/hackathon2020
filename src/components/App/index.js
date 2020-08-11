@@ -82,6 +82,7 @@ const App = () => {
       setLoading(false);
     }
   });
+
   useEffect(() => {
     fetchIdeas();
     document.querySelector('.Hack-guy')
