@@ -1,7 +1,12 @@
 .Rules {
-    margin: 0 auto;
-    padding: 0 10% 5% 10%;
+    padding: 4em 0;
     background-color:  var(--colorPapayesWhip);
+    width: 100%;
+}
+
+.Rules .Rules-Container {
+    max-width: var(--maxWidth);
+    margin: 0 auto;
 }
 
 .Rules .Rules-Title {

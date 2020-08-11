@@ -87,7 +87,16 @@
 
 .Ideas .Ideas-Content {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     margin-top: 6em;
+}
+
+@media screen and (max-width: 1328px) {
+    .Ideas .Ideas-Content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 6em;
+    }
 }

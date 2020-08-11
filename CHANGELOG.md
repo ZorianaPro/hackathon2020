@@ -1,3 +1,6 @@
+## 4.2.0
+* Inspiration section
+
 ## 4.1.0
 * Update Rules section to new design
 

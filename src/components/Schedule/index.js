@@ -3,7 +3,7 @@ import './Schedule.css';
 import LightningSVG from '../LightningSVG';
 
 const Schedule = () => (
-  <div className="Schedule">
+  <div id="schedule" className="Schedule">
     <p className="Schedule-Title">Schedule</p>
     <div className="Lightnings-Left">
       <LightningSVG />

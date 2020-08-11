@@ -1,0 +1,77 @@
+.Inspiration {
+    padding: 4em 0;
+    background-color:  #5f4b8b;
+}
+
+.Inspiration .Inspiration-Container {
+    margin: 0 auto;
+    max-width: var(--maxWidth);
+}
+
+.Inspiration .Inspiration-Title {
+     color: white;
+     font-size: var(--fontSize48);
+     font-weight: var(--fontWeightPoppinsBold);
+     font-stretch: normal;
+     font-style: italic;
+     line-height: var(--lineHeight);
+     letter-spacing: normal;
+     text-align: center;
+     padding-top: 1em;
+ }
+
+.Inspiration .Inspiration-Description {
+    color: white;
+    font-size: var(--fontSize24);
+    font-stretch: normal;
+    font-weight: normal;
+    line-height: var(--lineHeight);
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.Inspiration .Inspiration-Posts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 1em;
+}
+
+.Inspiration .Inspiration-Post {
+    position: relative;
+    padding-right: 74px;
+    padding-top: 64px;
+    width: 40%;
+}
+
+@media screen and (max-width: 800px) {
+    .Inspiration .Inspiration-Posts {
+        justify-content: center;
+    }
+    .Inspiration .Inspiration-Post {
+        width: 100%;
+    }
+}
+
+.Inspiration .Inspiration-Post .Inspiration-Post-Quote {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.Inspiration .Inspiration-Post .Inspiration-Post-Msg {
+    color: var(--colorPapayesWhip);
+}
+
+.Inspiration .Inspiration-Post .Inspiration-Post-Tags {
+    color: var(--colorMesiumTorquoise);
+    text-align: right;
+    text-decoration: overline;
+}
+
+.Inspiration svg {
+    width: 100px;
+    height: 100px;
+}
