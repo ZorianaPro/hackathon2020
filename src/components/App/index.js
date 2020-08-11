@@ -188,10 +188,7 @@ const App = () => {
       <section id="inspiration" className="Inspiration">
         <h1 className="App-Section-Title">Inspiration</h1>
       </section>
-      <section id="rules">
-        <h1 className="App-Section-Title">Rules</h1>
-        <Rules />
-      </section>
+      <Rules />
       <SVGSpriteSheet />
       <Footer/>
       { showIdeaInfoOverlay

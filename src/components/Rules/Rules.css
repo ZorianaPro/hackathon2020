@@ -1,7 +1,18 @@
 .Rules {
     margin: 0 auto;
     padding: 0 10% 5% 10%;
-    background-color:  var(--salmon-pink-color);
+    background-color:  var(--colorPapayesWhip);
+}
+
+.Rules .Rules-Title {
+    font-size: var(--fontSize48);
+    font-weight: var(--fontWeightPoppinsBold);
+    font-stretch: normal;
+    font-style: italic;
+    line-height: var(--lineHeight);
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--colorSpaceCadet);
 }
 
 .Rules-List {

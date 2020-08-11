@@ -1,3 +1,6 @@
+## 4.1.0
+* Update Rules section to new design
+
 ## 4.0.0
 * Get rid of REDUX
 

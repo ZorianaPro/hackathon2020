@@ -59,16 +59,7 @@ exports[`App renders as expected 1`] = `
       Inspiration
     </h1>
   </section>
-  <section
-    id="rules"
-  >
-    <h1
-      className="App-Section-Title"
-    >
-      Rules
-    </h1>
-    <Rules />
-  </section>
+  <Rules />
   <SVGSpriteSheet />
   <Footer />
 </div>
