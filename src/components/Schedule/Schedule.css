@@ -10,18 +10,13 @@
 }
 
 .Schedule-Wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+
 }
 
 .Day {
-    flex: 0 1 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 2em 0;
+  display: inline-block;
+  margin: 0 2em 0;
+  width: 40%;
 }
 
 .Lightnings-Left,
@@ -64,7 +59,10 @@
 }
 
 .Schedule table {
-    width: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  float: left;
 }
 
 .Schedule table tr:nth-child(even) th {
@@ -79,9 +77,10 @@
     border-top: thin dotted #ccc;
 }
 .Schedule table td {
-    font-size: var(--fontSize16);
-    border-radius: 9px;
-    transition: opacity 0.3s ease;
+  font-size: var(--fontSize16);
+  border-radius: 9px;
+  transition: opacity 0.3s ease;
+  width: 268px;
 }
 .Schedule table td > span {
     display: block;

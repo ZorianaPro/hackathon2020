@@ -30,7 +30,7 @@ const get = () => {
     }
   }).then((res) => {
     if (res.ok) {
-      return res;
+      return res.json();
     }
     throw res.json();
   });

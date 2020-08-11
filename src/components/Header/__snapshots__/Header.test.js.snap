@@ -61,6 +61,7 @@ exports[`Header 'renders as expected 1`] = `
               <li>
                 <NavHashLink
                   isActive={[Function]}
+                  onClick={[Function]}
                   smooth={true}
                   to="/#about"
                 >
@@ -102,6 +103,7 @@ exports[`Header 'renders as expected 1`] = `
               <li>
                 <NavHashLink
                   isActive={[Function]}
+                  onClick={[Function]}
                   smooth={true}
                   to="/#registration"
                 >
@@ -143,6 +145,7 @@ exports[`Header 'renders as expected 1`] = `
               <li>
                 <NavHashLink
                   isActive={[Function]}
+                  onClick={[Function]}
                   smooth={true}
                   to="/#inspiration"
                 >
@@ -184,6 +187,7 @@ exports[`Header 'renders as expected 1`] = `
               <li>
                 <NavHashLink
                   isActive={[Function]}
+                  onClick={[Function]}
                   smooth={true}
                   to="/#ideas"
                 >
@@ -225,6 +229,7 @@ exports[`Header 'renders as expected 1`] = `
               <li>
                 <NavHashLink
                   isActive={[Function]}
+                  onClick={[Function]}
                   smooth={true}
                   to="/#rules"
                 >

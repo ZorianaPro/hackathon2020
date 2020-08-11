@@ -53,6 +53,7 @@ const Header = () => {
                 <NavLink
                   to='/#about'
                   smooth={true}
+                  onClick={ onBurgerClick }
                   isActive={() => {
                     return isNavLinkActive('/#about');
                   }}
@@ -64,6 +65,7 @@ const Header = () => {
                 <NavLink
                   to='/#registration'
                   smooth={true}
+                  onClick={ onBurgerClick }
                   isActive={() => {
                     return isNavLinkActive('/#registration');
                   }}
@@ -75,6 +77,7 @@ const Header = () => {
                 <NavLink
                   to='/#inspiration'
                   smooth={true}
+                  onClick={ onBurgerClick }
                   isActive={() => {
                     return isNavLinkActive('/#inspiration');
                   }}
@@ -86,6 +89,7 @@ const Header = () => {
                 <NavLink
                   to='/#ideas'
                   smooth={true}
+                  onClick={ onBurgerClick }
                   isActive={() => {
                     return isNavLinkActive('/#ideas');
                   }}
@@ -97,6 +101,7 @@ const Header = () => {
                 <NavLink
                   to='/#rules'
                   smooth={true}
+                  onClick={ onBurgerClick }
                   isActive={() => {
                     return isNavLinkActive('/#rules');
                   }}

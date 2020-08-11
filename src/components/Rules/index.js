@@ -2,7 +2,7 @@ import React from 'react';
 import './Rules.css';
 
 const Rules = () => (
-  <div className="Rules" id="inspiration">
+  <div className="Rules" id="rules">
     <div className="Rules-Container">
       <h1 className="Rules-Title">Rules</h1>
       <ul className="Rules-List">

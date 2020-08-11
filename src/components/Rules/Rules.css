@@ -4,7 +4,7 @@
 }
 
 .Rules .Rules-Container {
-    padding: 4.5em 0;
+    padding: 4.5em 1em;
     max-width: var(--maxWidth);
     margin: 0 auto;
 }
