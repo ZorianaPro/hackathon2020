@@ -36,7 +36,15 @@ exports[`IdeaInfoOverlay renders as expected 1`] = `
             className="Overlay-Close"
             onClick={[Function]}
           >
-            close
+            <XCloseSVG>
+              <svg
+                className="XCloseSVG"
+              >
+                <use
+                  xlinkHref="#XCloseSymbol"
+                />
+              </svg>
+            </XCloseSVG>
           </div>
           <div
             className="IdeaInfoOverlay"

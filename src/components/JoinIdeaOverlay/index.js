@@ -115,7 +115,7 @@ const JoinIdeaOverlay = ({
             <label htmlFor="lastName"
               className={ `${lastName !== '' ? 'focus' : ''}` }
             >
-              ast Name*
+              Last Name*
             </label>
             <input type="text"
               name="lastName"

@@ -1,6 +1,8 @@
 .IdeaInfoOverlay .IdeaInfoOverlay-Title {
     text-align: left;
     padding-top: 1em;
+    font-weight: var(--fontWeightPoppinsBold);
+    font-style: italic;
     color: var(--colorSpaceCadet);
     font-size: var(--fontSize48);
     position: relative;
@@ -29,6 +31,5 @@
     font-stretch: normal;
     padding-top: 1em;
     line-height: var(--lineHeight);
-    letter-spacing: normal;
     color: var(--colorSpaceCadet);
 }

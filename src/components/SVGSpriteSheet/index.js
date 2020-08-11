@@ -4,6 +4,7 @@ import DateSymbol from '../DateSymbol';
 import AddPersonSymbol from '../AddPersonSymbol';
 import LightningSymbol from '../LightningSymbol';
 import QuoteSymbol from '../QuoteSymbol';
+import XCloseSymbol from '../XCloseSymbol';
 import './SVGSpriteSheet.css';
 
 export const defaults = {
@@ -21,6 +22,7 @@ const SVGSpriteSheet = (props) => (
     <AddPersonSymbol />
     <LightningSymbol />
     <QuoteSymbol />
+    <XCloseSymbol />
   </svg>
 );
 

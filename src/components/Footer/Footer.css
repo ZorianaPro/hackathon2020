@@ -3,16 +3,19 @@
     position: relative;
 }
 
+.Footer .Footer-Container {
+    padding: 4.5em 0;
+    margin: 0 auto;
+}
+
 .Footer .Footer-Title {
-    font-size: var(--fontSize48);
+    font-size: var(--fontSize56);
     font-weight: var(--fontWeightPoppinsBold);
     font-stretch: normal;
     font-style: italic;
     line-height: var(--lineHeight);
-    letter-spacing: normal;
     text-align: center;
     color: var(--colorSpaceCadet);
-    padding-top: 2em;
 }
 
 .Footer .Credits {
@@ -27,6 +30,12 @@
 .Footer .Credits-Person {
     padding: 1em;
     width: 250px;
+}
+
+@media screen and (max-width: 543px) {
+    .Footer .Credits-Person {
+        text-align: center;
+    }
 }
 
 .Footer .Credits-Person .Credits-Person-Name {
@@ -47,6 +56,17 @@
     width: 80px;
     height: 2px;
     background-color: var(--colorRadicalRed);
+}
+
+@media screen and (max-width: 543px) {
+    .Footer .Credits-Person {
+        text-align: center;
+    }
+
+    .Footer .Credits-Person .Credits-Person-Name:after {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
 }
 
 .Footer .Credits-Person .Credits-Person-Position {

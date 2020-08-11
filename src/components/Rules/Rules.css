@@ -1,21 +1,19 @@
 .Rules {
-    padding: 4em 0;
     background-color:  var(--colorPapayesWhip);
     width: 100%;
 }
 
 .Rules .Rules-Container {
+    padding: 4.5em 0;
     max-width: var(--maxWidth);
     margin: 0 auto;
 }
 
 .Rules .Rules-Title {
-    font-size: var(--fontSize48);
+    font-size: var(--fontSize56);
     font-weight: var(--fontWeightPoppinsBold);
-    font-stretch: normal;
     font-style: italic;
     line-height: var(--lineHeight);
-    letter-spacing: normal;
     text-align: center;
     color: var(--colorSpaceCadet);
 }

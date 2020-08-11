@@ -63,8 +63,7 @@
     font-weight: var(--fontWeightPoppinsBold);
     border-radius: 50%;
     background-color: var(--colorMesiumTorquoise);
-    color: white;
-    border: 1px solid;
+    color: var(--colorSpaceCadet);
     text-align: center;
     width: 3em;
     height: 3em;
@@ -115,7 +114,6 @@
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    letter-spacing: normal;
     color: var(--colorSpaceCadet);
 }
 

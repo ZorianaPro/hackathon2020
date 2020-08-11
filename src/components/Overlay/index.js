@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { component } from '@haensl/services';
+import XCloseSVG from '../XCloseSVG';
 import './Overlay.css';
 
 const Overlay = ({
@@ -91,7 +92,7 @@ const Overlay = ({
             onClick={
               closeOverlay
             }>
-            close
+            <XCloseSVG/>
           </div>
           {
             children

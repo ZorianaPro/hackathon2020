@@ -31,19 +31,27 @@ const Ideas = ({
 
   return (
     <section id="ideas" className="Ideas">
-      <div className="Lightning-Left"/>
-      <div className="Lightning-Right"/>
+      <div className="Lightning-Left"
+        data-aos-delay="50"
+        data-aos-duration="200"
+        data-aos="fade-down-right"/>
+      <div className="Lightning-Right"
+        data-aos="fade-down-left"
+        data-aos-delay="50"
+        data-aos-duration="200"/>
       <div className="Ideas-Container">
         <p className="Ideas-Title">
           Ideas &amp; Lightning
         </p>
         <div className="Ideas-Content">
           {
-            loading && 'Loading...'
+            loading && <div className="is-loading">
+              Loading...
+            </div>
           }
           {
             error
-            && <div>{error}</div>
+            && <div className="is-error">{error}</div>
           }
           {
             ideas
