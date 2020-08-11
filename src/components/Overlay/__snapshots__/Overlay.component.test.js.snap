@@ -23,7 +23,7 @@ exports[`Overlay renders as expected 1`] = `
         className="Overlay-Close"
         onClick={[Function]}
       >
-        close
+        <XCloseSVG />
       </div>
     </div>
   </div>

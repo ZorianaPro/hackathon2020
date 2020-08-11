@@ -1,3 +1,7 @@
+## 4.3.0
+* Animations
+* All fixes
+
 ## 4.2.0
 * Inspiration section
 

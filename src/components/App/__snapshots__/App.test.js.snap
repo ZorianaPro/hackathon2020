@@ -4,36 +4,45 @@ exports[`App renders as expected 1`] = `
 <div
   className="App"
 >
-  <div
-    className="Hack-guy animate"
-  />
   <section
     className="App-Main-Section"
     id="about"
   >
     <div
-      className="App-Main-Section-Container"
+      className="App-Background animate"
+    />
+    <div
+      className="App-Curtain"
+    />
+    <div
+      className="App-Left"
+      data-aos="show-scale"
+      data-aos-delay="1000"
+      data-aos-duration="1000"
     >
-      <Header />
       <div
-        className="App-Main-Section-Left"
+        className="App-Main-Section-Logo"
       >
         <div
-          className="App-Main-Section-Logo animate"
+          className="Logo-Container"
         >
-          <div
-            className="App-Main-Section-Left-Container"
-          >
-            <Button
-              label="Go to registration"
-              onClick={[Function]}
-              type="isActionFilled"
-            />
-          </div>
+          <Button
+            label="Go to registration"
+            onClick={[Function]}
+            type="isActionFilled"
+          />
         </div>
       </div>
     </div>
+    <div
+      className="App-Main-Section-Container"
+    >
+      <Header />
+    </div>
   </section>
+  <div
+    className="Hack-guy animate"
+  />
   <Registration
     onOpenAddIdeaOverlay={[Function]}
     onOpenJoinIdeaOverlay={[Function]}

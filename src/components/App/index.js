@@ -18,7 +18,7 @@ import memberService from '../../services/member';
 import ideaService from '../../services/idea';
 
 const App = () => {
-  const [showSuccessOverlay, setShowContactOverlay] = useState(false);
+  const [showSuccessOverlay, setShowSuccessOverlay] = useState(false);
   const [showJoinIdeaOverlay, setShowJoinIdeaOverlay] = useState(false);
   const [showAddIdeaOverlay, setShowAddIdeaOverlay] = useState(false);
   const [showIdeaInfoOverlay, setShowIdeaInfoOverlay] = useState(false);
@@ -29,7 +29,7 @@ const App = () => {
   const [loading, setLoading] = useState();
 
   const onCloseSuccessOverlay = useCallback(() => {
-    onCloseSuccessOverlay(false);
+    setShowSuccessOverlay(false);
   }, []);
 
   const onCloseJoinIdeaOverlay = useCallback(() => {
@@ -48,7 +48,7 @@ const App = () => {
     setShowAddIdeaOverlay(false);
     setShowIdeaInfoOverlay(false);
     setShowJoinIdeaOverlay(false);
-    setShowContactOverlay(true);
+    setShowSuccessOverlay(true);
   }, []);
 
   const shouldOpenAddIdeaOverlay = useCallback(() => {
@@ -82,13 +82,14 @@ const App = () => {
   });
   useEffect(() => {
     fetchIdeas();
-    setInterval(() => {
-      document.querySelector('.Hack-guy').classList.remove('animate');
-    }, 1800);
+    document.querySelector('.Hack-guy')
+      .classList.remove('animate');
 
-    setInterval(() => {
-      document.querySelector('.App-Main-Section-Logo').classList.remove('animate');
-    }, 1000);
+    document.querySelector('.App-Main-Section-Logo')
+      .classList.remove('animate');
+
+    document.querySelector('.App-Background')
+      .classList.remove('animate');
   }, []);
 
   const onSubmitJoinIdeaForm = useCallback(
@@ -142,21 +143,26 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="Hack-guy animate"/>
       <section id="about" className="App-Main-Section">
-        <div className="App-Main-Section-Container">
-          <Header />
-          <div className="App-Main-Section-Left">
-            <div className="App-Main-Section-Logo animate">
-              <div className="App-Main-Section-Left-Container">
-                <Button label="Go to registration"
-                  type="isActionFilled"
-                  onClick={ scrollTo }/>
-              </div>
+        <div className="App-Background animate"/>
+        <div className="App-Curtain"/>
+        <div className="App-Left"
+          data-aos-delay="1000"
+          data-aos-duration="1000"
+          data-aos="show-scale">
+          <div className="App-Main-Section-Logo">
+            <div className="Logo-Container">
+              <Button label="Go to registration"
+                type="isActionFilled"
+                onClick={ scrollTo }/>
             </div>
           </div>
         </div>
+        <div className="App-Main-Section-Container">
+          <Header />
+        </div>
       </section>
+      <div className="Hack-guy animate"/>
       <Registration
         onOpenAddIdeaOverlay={
           shouldOpenAddIdeaOverlay

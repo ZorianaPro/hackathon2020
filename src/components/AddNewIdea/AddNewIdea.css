@@ -1,5 +1,8 @@
 .AddNewIdea .AddNewIdea-Title {
+    font-size: var(--fontSize56);
+    font-weight: var(--fontWeightPoppinsBold);
+    font-style: italic;
+    line-height: var(--lineHeight);
     text-align: center;
-    font-size: 2.2em;
-    padding-top: 1em;
+    color: var(--colorSpaceCadet);
 }

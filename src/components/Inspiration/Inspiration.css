@@ -1,21 +1,19 @@
 .Inspiration {
-    padding: 4em 0;
     background-color:  #5f4b8b;
 }
 
 .Inspiration .Inspiration-Container {
+    padding: 4.5em 0;
     margin: 0 auto;
     max-width: var(--maxWidth);
 }
 
 .Inspiration .Inspiration-Title {
      color: white;
-     font-size: var(--fontSize48);
+     font-size: var(--fontSize56);
      font-weight: var(--fontWeightPoppinsBold);
-     font-stretch: normal;
      font-style: italic;
      line-height: var(--lineHeight);
-     letter-spacing: normal;
      text-align: center;
      padding-top: 1em;
  }
@@ -26,7 +24,6 @@
     font-stretch: normal;
     font-weight: normal;
     line-height: var(--lineHeight);
-    letter-spacing: normal;
     text-align: center;
 }
 

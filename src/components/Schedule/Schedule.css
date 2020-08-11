@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     position: relative;
     flex-direction: column;
-    padding: 4em 0;
+    padding: 4.5em 0;
 }
 
 .Schedule-Wrapper {
@@ -79,15 +79,11 @@
     border-top: thin dotted #ccc;
 }
 .Schedule table td {
-    font-size: 0.8em;
-    font-weight: bold;
-    line-height: 1.4;
-    border-radius: 0.2rem;
+    font-size: var(--fontSize16);
+    border-radius: 9px;
     transition: opacity 0.3s ease;
 }
 .Schedule table td > span {
-    font-size: 0.8em;
-    font-weight: normal;
     display: block;
     width: 100%;
 }
@@ -98,17 +94,15 @@
 }
 
 .is-official-program {
- background-color: var(--colorSpaceCadet);
-color: white;
+  background-color: var(--colorSpaceCadet);
+  color: white;
 }
 
 .Schedule-Title {
-    font-size: var(--fontSize48);
+    font-size: var(--fontSize56);
     font-weight: var(--fontWeightPoppinsBold);
-    font-stretch: normal;
     font-style: italic;
     line-height: var(--lineHeight);
-    letter-spacing: normal;
     text-align: center;
     color: var(--colorSpaceCadet);
 }

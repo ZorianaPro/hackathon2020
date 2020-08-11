@@ -10,5 +10,6 @@ exports[`SVGSpriteSheet renders as expected 1`] = `
   <AddPersonSymbol />
   <LightningSymbol />
   <QuoteSymbol />
+  <XCloseSymbol />
 </svg>
 `;

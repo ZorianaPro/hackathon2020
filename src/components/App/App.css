@@ -27,6 +27,7 @@
   --fontSize30: 1.875em;
   --fontSize36: 2.25em;
   --fontSize48: 3em;
+  --fontSize56: 3.5em
 }
 
 .App {
@@ -36,8 +37,8 @@
   color: var(--colorSpaceCadet);
   font-size: 1em;
   line-height: var(--lineHeight);
-  letter-spacing: 0.125em;
   position: relative;
+  overflow-x: hidden;
 }
 
 .App .App-Main-Section-Container {
@@ -46,55 +47,83 @@
   height: 100%;
   position: relative;
   padding: 0 2em;
+  overflow-x: hidden;
 }
 
 .App .App-Main-Section {
+  position: relative;
   height: 100vh;
+}
+
+.App .App-Background.animate {
+  opacity: 0;
+  transform: scale(2);
+  z-index: -1;
+}
+
+.App .App-Background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transform: scale(1);
   background-image: url(/assets/bg.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 1300ms ease-in-out;
 }
 
 @media (min-height: 960px or min-width: 2280px){
-  .App .App-Main-Section {
+  .App .App-Background {
     background-image: url(/assets/bg@2x.png);
   }
 }
 
 @media (min-height: 2880px or min-width: 4800px) {
-  .App .App-Main-Section {
+  .App .App-Background {
     background-image: url(/assets/bg@3x.png);
   }
 }
 
-.App .App-Main-Section-Left {
+.App .App-Left {
   position: relative;
-  display: inline-block;
   height: 100%;
-  width: 50%;
+  z-index: 5;
 }
 
-.App .App-Main-Section-Logo.animate {
-  left: -1000%;
+[data-aos="show-scale"] {
+  transform: translate(-100%, 0) scale(0);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos="show-scale"].aos-animate {
+   transform: translate(0, 0) scale(1);
+   opacity: 1;
 }
 
 .App .App-Main-Section-Logo {
+  opacity: 1;
   position: absolute;
-  top: 42%;
-  left: 0;
-  transform: translateY(-50%);
+  top: 55%;
+  left: 30%;
+  transform: translate(-50%,-50%);
   padding: 0 2em;
   width: 468px;
   height: 500px;
   background-repeat: no-repeat;
   background-image: url(/assets/logo.png);
   background-size: cover;
-  animation-delay: 300ms;
-  animation-duration: 800ms;
-  animation-name: from-l-to-r;
-  animation-timing-function: ease-in-out;
+  z-index: 5;
+}
+
+.App .Logo-Container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-height: 960px or min-width: 2280px){
@@ -109,40 +138,13 @@
   }
 }
 
-.App .App-Main-Section-Left svg {
-  width: 2em;
-  height: 2em;
-}
-
-.App .App-Main-Section-Left-Container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 190%);
-}
-
-.App .App-Main-Section-Left .Button {
-  margin-left: -99px;
-}
-
-.App .App-Main-Section-Left p {
-  margin: 0.5em;
-  font-size: 1.5em;
-}
-
-.App .App-Main-Section-Left .App-Main-Section-Date,
-.App .App-Main-Section-Left .App-Main-Section-Location {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 .App .Hack-guy.animate {
-  right: -1000%;
+  opacity: 0;
+  transform: scale(2);
 }
 
 .App .Hack-guy {
+  opacity: 1;
   background-repeat: no-repeat;
   background-image: url(/assets/hack-guy.png);
   position: absolute;
@@ -153,10 +155,9 @@
   right: 0;
   background-position: top right;
   background-size: contain;
-  animation-delay: 1000ms;
-  animation-duration: 800ms;
-  animation-name: from-r-to-l;
-  animation-timing-function: ease-in-out;
+  transition: all 1300ms ease-in-out;
+  z-index: 4;
+  transform: scale(1);
 }
 
 @media (min-height: 960px or min-width: 2280px){
@@ -183,6 +184,7 @@ input, select, textarea {
   background-color: transparent;
   color: var(--colorSpaceCadet);
   font-size: var(--fontSize16);
+  font-family: var(--fontFamilyPoppins);
 }
 
 select {
@@ -275,10 +277,6 @@ select {
     width: 500px;
   }
 
-  .App .App-Main-Section-Left {
-    width: 100%;
-  }
-
   .App .App-Main-Section-Logo {
     top: 60%;
     left: 50%;
@@ -301,105 +299,32 @@ select {
     transform: translate(-50%,-50%);
   }
 
-  .App .Header {
-    font-size: var(--fontSize20);
+  .App .App-Main-Section {
+    margin-top: 56px;
   }
+}
+
+.App .Logo-Container .Button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-62%, 200%);
 }
 
 @media screen and (max-width: 543px) {
   .App .Hack-guy {
     width: 321px;
+    top: 56px;
   }
 
   .App .App-Main-Section-Logo {
-    top: 45%;
+    top: 55%;
     width: 300px;
     height: 300px;
   }
-}
 
-@keyframes from-l-to-r {
-  0% {
-    left: -100%;
-  }
-  10% {
-    left: -50%;
-  }
-  15% {
-    left: -25%;
-  }
-  25% {
-    left: -10%;
-  }
-  30% {
-    left: 0;
-  }
-  40% {
-    left: 20%;
-  }
-  50% {
-    left: 30%;
-  }
-  55% {
-    left: 40%;
-  }
-  67% {
-    left: 30%;
-  }
-  75% {
-    left: 20%;
-  }
-  83% {
-    left: 10%;
-  }
-  90% {
-    left: 5%;
-  }
-  100% {
-    left: 0;
+  .App .Logo-Container .Button.Button--isActionFilled {
+    top: 40%;
+    left: 54%;
   }
 }
-
-@keyframes from-r-to-l {
-  0% {
-    right: -100%;
-  }
-  10% {
-    right: -50%;
-  }
-  15% {
-    right: -25%;
-  }
-  25% {
-    right: -10%;
-  }
-  30% {
-    right: 0;
-  }
-  40% {
-    right: 20%;
-  }
-  50% {
-    right: 30%;
-  }
-  55% {
-    right: 40%;
-  }
-  67% {
-    right: 30%;
-  }
-  75% {
-    right: 20%;
-  }
-  83% {
-    right: 10%;
-  }
-  90% {
-    right: 5%;
-  }
-  100% {
-    right: 0;
-  }
-}
-
-

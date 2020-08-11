@@ -1,9 +1,10 @@
 .Registration {
     background-color: #5f4b8b;
+    position: relative;
 }
 
 .Registration .Registration-Container {
-    padding: 4em 0;
+    padding: 4.5em 0;
     margin: 0 auto;
     height: 100%;
     position: relative;
@@ -14,11 +15,10 @@
 }
 
 .Registration .Registration-Title {
-    font-size: var(--fontSize48);
+    font-size: var(--fontSize56);
     font-weight: bold;
     font-style: italic;
     line-height: var(--lineHeight);
-    letter-spacing: normal;
     text-align: center;
     color: white;
 }
@@ -32,11 +32,11 @@
 
 .Registration .Button {
     display: inline-block;
-    margin-left: -140px;
+    margin-left: -65px;
 }
 
 @media screen and (max-width: 894px) {
     .Registration .Button {
-        margin: 0 0 1em -89px;
+        margin: 0 0 1em -65px;
     }
 }

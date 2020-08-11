@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`XCloseSVG renders as expected 1`] = `
+<svg
+  className="XCloseSVG"
+>
+  <use
+    xlinkHref="#XCloseSymbol"
+  />
+</svg>
+`;

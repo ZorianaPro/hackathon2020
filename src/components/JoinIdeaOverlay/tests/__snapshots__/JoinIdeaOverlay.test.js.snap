@@ -27,7 +27,15 @@ exports[`JoinIdeaOverlay renders as expected 1`] = `
             className="Overlay-Close"
             onClick={[Function]}
           >
-            close
+            <XCloseSVG>
+              <svg
+                className="XCloseSVG"
+              >
+                <use
+                  xlinkHref="#XCloseSymbol"
+                />
+              </svg>
+            </XCloseSVG>
           </div>
           <div
             className="JoinIdeaOverlay"
@@ -62,7 +70,7 @@ exports[`JoinIdeaOverlay renders as expected 1`] = `
                   className=""
                   htmlFor="lastName"
                 >
-                  ast Name*
+                  Last Name*
                 </label>
                 <input
                   name="lastName"

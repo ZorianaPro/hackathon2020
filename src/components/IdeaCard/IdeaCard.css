@@ -36,7 +36,6 @@
     font-stretch: normal;
     font-style: italic;
     line-height: var(--lineHeight);
-    letter-spacing: normal;
     color: var(--colorSpaceCadet);
     overflow: hidden;
     display: -webkit-box;
@@ -59,7 +58,6 @@
     font-stretch: normal;
     padding-top: 1em;
     line-height: var(--lineHeight);
-    letter-spacing: normal;
     color: var(--colorSpaceCadet);
     overflow: hidden;
     display: -webkit-box;
