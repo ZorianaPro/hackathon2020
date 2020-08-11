@@ -11,7 +11,7 @@ import IdeaInfoOverlay from '../IdeaInfoOverlay';
 import JoinIdeaOverlay from '../JoinIdeaOverlay';
 import AddNewIdea from '../AddNewIdea';
 import Schedule from '../Schedule';
-import Rules from "../Rules";
+import Rules from '../Rules';
 import SuccessOveray from '../SuccessOverlay';
 import memberService from '../../services/member';
 import ideaService from '../../services/idea';
@@ -57,37 +57,37 @@ const App = () => {
   const _onOpenJoinIdeaOverlay = useCallback((idea) => {
     setSelectedIdea(idea);
     setShowJoinIdeaOverlay(true);
-  },[]);
+  }, []);
 
   const _onOpenIdeaInfoOverlay = useCallback((idea) => {
     setSelectedIdea(idea);
     setShowIdeaInfoOverlay(true);
-  },[]);
+  }, []);
 
   const scrollTo = useCallback(() => {
-    scrollElToCenter('registration')
+    scrollElToCenter('registration');
   }, []);
 
   const fetchIdeas = useCallback(async () => {
     try {
       setLoading(true);
       const ideas = await ideaService.get();
-      setIdeas(await ideas.json())
+      setIdeas(await ideas.json());
     } catch (e) {
-      setError(e.message)
+      setError(e.message);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   });
   useEffect(() => {
     fetchIdeas();
-   setInterval(() => {
-    document.querySelector('.Hack-guy').classList.remove('animate');
-   }, 1800);
+    setInterval(() => {
+      document.querySelector('.Hack-guy').classList.remove('animate');
+    }, 1800);
 
-   setInterval(() => {
-    document.querySelector('.App-Main-Section-Logo').classList.remove('animate');
-   }, 1000)
+    setInterval(() => {
+      document.querySelector('.App-Main-Section-Logo').classList.remove('animate');
+    }, 1000);
   }, []);
 
   const onSubmitJoinIdeaForm = useCallback(
@@ -109,16 +109,14 @@ const App = () => {
           shouldOpenSuccessOverlay();
           setTimeout(() => {
             onCloseSuccessOverlay();
-          }, 2000)
+          }, 2000);
         })
         .catch((errorResponse) => {
-          errorResponse.then(err => {
-            setErrorMessage(err.message)
-          })
-      	})
-
-    }, []
-  );
+          errorResponse.then((err) => {
+            setErrorMessage(err.message);
+          });
+        });
+    }, []);
 
   const onSubmitAddIdeaForm = useCallback((event) => {
     const formData = new FormData(event.target);
@@ -132,13 +130,13 @@ const App = () => {
         shouldOpenSuccessOverlay();
         setTimeout(() => {
           onCloseSuccessOverlay();
-        }, 2000)
+        }, 2000);
       })
       .catch((errorResponse) => {
-        errorResponse.then(err => {
-          setErrorMessage(err.message)
-        })
-      })
+        errorResponse.then((err) => {
+          setErrorMessage(err.message);
+        });
+      });
   }, []);
 
   return (

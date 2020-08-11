@@ -3,7 +3,6 @@ import { shallow, mount } from 'enzyme';
 import JoinIdeaOverlay from '../';
 
 describe('JoinIdeaOverlay', () => {
-
   it('renders without crashing', () => {
     expect(shallow.bind(shallow, <JoinIdeaOverlay />)).not.toThrow();
   });

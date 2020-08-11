@@ -3,7 +3,6 @@ import { shallow, mount } from 'enzyme';
 import AddNewIdea from './';
 
 describe('AddNewIdea', () => {
-
   it('renders without crashing', () => {
     expect(shallow.bind(shallow, <AddNewIdea />)).not.toThrow();
   });

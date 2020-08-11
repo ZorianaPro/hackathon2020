@@ -1,13 +1,13 @@
-import React from "react";
-import { shallow } from "enzyme";
-import LightningSymbol from ".";
+import React from 'react';
+import { shallow } from 'enzyme';
+import LightningSymbol from '.';
 
-describe("LightningSymbol", () => {
-  it("renders without crashing", () => {
+describe('LightningSymbol', () => {
+  it('renders without crashing', () => {
     expect(shallow.bind(shallow, <LightningSymbol />)).not.toThrow();
   });
 
-  it("renders as expected", () => {
+  it('renders as expected', () => {
     expect(shallow(<LightningSymbol />)).toMatchSnapshot();
   });
 });

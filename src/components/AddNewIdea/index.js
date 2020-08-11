@@ -27,16 +27,16 @@ const AddNewIdea = ({
       case 'ideaName':
         return setIdeaName(value);
       case 'description':
-       return setDescription(value);
+        return setDescription(value);
     }
-  }, []	);
+  }, []);
 
   const _onSubmit = useCallback((event) => {
     event.preventDefault();
-      if (typeof onSubmit === 'function') {
-        onSubmit(event);
-      }
-      return false;
+    if (typeof onSubmit === 'function') {
+      onSubmit(event);
+    }
+    return false;
   }, []);
 
   const onFocus = useCallback((event) => {
@@ -65,46 +65,47 @@ const AddNewIdea = ({
         <div className="AddNewIdea-Title">
           Add new idea
         </div>
-			  {
-				  errorMessage
-				  && <div className="Error-Message">
-					  { errorMessage }
-				  </div>
-			  }
-			  <form action="" onSubmit={ _onSubmit } method="POST">
-				  <div>
-					  <label htmlFor="ideaName"
-						  className={ `${ideaName !== '' ? 'focus' : ''}` }
-					  >
-						  Idea Name*
-						</label>
-					  <input type="text"
-					    name="name"
-						  onFocus={ onFocus }
-						  onBlur={ onBlur }
-						  onChange={ onChange }
+        {
+          errorMessage
+          && <div className="Error-Message">
+            { errorMessage }
+          </div>
+        }
+        <form onSubmit={ _onSubmit }
+          method="POST">
+          <div>
+            <label htmlFor="ideaName"
+              className={ `${ideaName !== '' ? 'focus' : ''}` }
+            >
+              Idea Name*
+            </label>
+            <input type="text"
+              name="name"
+              onFocus={ onFocus }
+              onBlur={ onBlur }
+              onChange={ onChange }
               required
-					  />
-					</div>
-					<div>
-					  <label htmlFor="description"
-						  className={ `align-top ${description !== '' ? 'focus' : ''}` }
-					  >
-						  Idea Description*
-						</label>
-						<textarea rows="5"
-						  name="description"
-						  onFocus={ onFocus }
-						  onBlur={ onBlur }
-						  onChange={ onChange }
+            />
+          </div>
+          <div>
+            <label htmlFor="description"
+              className={ `align-top ${description !== '' ? 'focus' : ''}` }
+            >
+              Idea Description*
+            </label>
+            <textarea rows="5"
+              name="description"
+              onFocus={ onFocus }
+              onBlur={ onBlur }
+              onChange={ onChange }
               required
-						/>
-					</div>
-					<button type="submit">Submit</button>
-				</form>
-			</div>
-		</Overlay>
-	);
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </Overlay>
+  );
 };
 
 export default AddNewIdea;

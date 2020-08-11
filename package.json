@@ -98,7 +98,11 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app"
-    ]
+      "react-app",
+      "@haensl/eslint-config"
+    ],
+    "rules": {
+      "no-param-reassign": "off"
+    }
   }
 }
