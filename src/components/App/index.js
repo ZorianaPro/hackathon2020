@@ -6,7 +6,6 @@ import Button from '../Button';
 import Ideas from '../Ideas';
 import Footer from '../Footer';
 import Registration from '../Registration';
-import { scrollElToCenter } from '../../support/handlers';
 import IdeaInfoOverlay from '../IdeaInfoOverlay';
 import JoinIdeaOverlay from '../JoinIdeaOverlay';
 import AddNewIdea from '../AddNewIdea';
@@ -66,7 +65,10 @@ const App = () => {
   }, []);
 
   const scrollTo = useCallback(() => {
-    scrollElToCenter('registration');
+    const elmnt = document.getElementById('registration');
+    elmnt && elmnt.scrollIntoView({
+      behavior: 'smooth'
+    });
   }, []);
 
   const fetchIdeas = useCallback(async () => {
