@@ -13,31 +13,19 @@ import AddNewIdea from '../AddNewIdea';
 import Schedule from '../Schedule';
 import Rules from "../Rules";
 import SuccessOveray from '../SuccessOverlay';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllIdeas } from './actions';
 import memberService from '../../services/member';
 import ideaService from '../../services/idea';
 
-const App = ({
-  ideas,
-  dispatch,
-  loading,
-  error
-}) => {
+const App = () => {
   const [showSuccessOverlay, setShowContactOverlay] = useState(false);
   const [showJoinIdeaOverlay, setShowJoinIdeaOverlay] = useState(false);
   const [showAddIdeaOverlay, setShowAddIdeaOverlay] = useState(false);
   const [showIdeaInfoOverlay, setShowIdeaInfoOverlay] = useState(false);
   const [selectedIdea, setSelectedIdea] = useState();
   const [errorMessage, setErrorMessage] = useState();
-
-  [ideas, loading, error] = useSelector(state => [
-    state.appReducer.ideas,
-    state.appReducer.loading,
-    state.appReducer.error
-  ]);
-
-  dispatch = useDispatch;
+  const [ideas, setIdeas] = useState();
+  const [error, setError] = useState();
+  const [loading, setLoading] = useState();
 
   const onCloseSuccessOverlay = useCallback(() => {
     onCloseSuccessOverlay(false);
@@ -80,8 +68,19 @@ const App = ({
     scrollElToCenter('registration')
   }, []);
 
+  const fetchIdeas = useCallback(async () => {
+    try {
+      setLoading(true);
+      const ideas = await ideaService.get();
+      setIdeas(await ideas.json())
+    } catch (e) {
+      setError(e.message)
+    } finally {
+      setLoading(false)
+    }
+  });
   useEffect(() => {
-    dispatch(fetchAllIdeas());
+    fetchIdeas();
    setInterval(() => {
     document.querySelector('.Hack-guy').classList.remove('animate');
    }, 1800);
@@ -106,7 +105,7 @@ const App = ({
 
       memberService.post(data)
         .then(() => {
-          dispatch(fetchAllIdeas());
+          fetchIdeas();
           shouldOpenSuccessOverlay();
           setTimeout(() => {
             onCloseSuccessOverlay();
@@ -129,7 +128,7 @@ const App = ({
     };
     ideaService.post(data)
       .then(() => {
-        dispatch(fetchAllIdeas());
+        fetchIdeas();
         shouldOpenSuccessOverlay();
         setTimeout(() => {
           onCloseSuccessOverlay();

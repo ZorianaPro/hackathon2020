@@ -4,7 +4,6 @@ import './AddNewIdea.css';
 import '../Overlay/Overlay.css';
 
 const AddNewIdea = ({
-  dispatch,
   isOpen,
   errorMessage,
   shouldClose,

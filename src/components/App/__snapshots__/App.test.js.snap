@@ -1,37 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders as expected 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "store": Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      },
-      "subscription": Subscription {
-        "handleChangeWrapper": [Function],
-        "listeners": Object {
-          "notify": [Function],
-        },
-        "onStateChange": [Function],
-        "parentSub": undefined,
-        "store": Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        },
-        "unsubscribe": null,
-      },
-    }
-  }
+<div
+  className="App"
 >
-  <App />
-</ContextProvider>
+  <div
+    className="Hack-guy animate"
+  />
+  <section
+    className="App-Main-Section"
+    id="about"
+  >
+    <div
+      className="App-Main-Section-Container"
+    >
+      <Header />
+      <div
+        className="App-Main-Section-Left"
+      >
+        <div
+          className="App-Main-Section-Logo animate"
+        >
+          <div
+            className="App-Main-Section-Left-Container"
+          >
+            <Button
+              label="Go to registration"
+              onClick={[Function]}
+              type="isActionFilled"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Registration
+    onOpenAddIdeaOverlay={[Function]}
+    onOpenJoinIdeaOverlay={[Function]}
+  />
+  <Ideas
+    onClickAddIdeaBtn={[Function]}
+    onOpenIdeaInfoOverlay={[Function]}
+    onOpenJoinIdeaOverlay={[Function]}
+  />
+  <section
+    className="Schedule-Section"
+    id="schedule"
+  >
+    <Schedule />
+  </section>
+  <section
+    className="Inspiration"
+    id="inspiration"
+  >
+    <h1
+      className="App-Section-Title"
+    >
+      Inspiration
+    </h1>
+  </section>
+  <section
+    id="rules"
+  >
+    <h1
+      className="App-Section-Title"
+    >
+      Rules
+    </h1>
+    <Rules />
+  </section>
+  <SVGSpriteSheet />
+  <Footer />
+</div>
 `;

@@ -4,7 +4,6 @@ import AddIdeaButton from '../AddIdeaButton';
 import './Ideas.css';
 
 const Ideas = ({
-  dispatch,
   ideas,
   loading,
   error,

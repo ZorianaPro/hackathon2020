@@ -1,102 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddNewIdea renders as expected 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <AddNewIdea>
-    <Overlay
-      onClose={[Function]}
+<AddNewIdea>
+  <Overlay
+    onClose={[Function]}
+  >
+    <div
+      className="Overlay Overlay--isOpening"
     >
       <div
-        className="Overlay Overlay--isOpening"
+        className="Overlay-Content"
+        style={
+          Object {
+            "animationDuration": "200ms",
+          }
+        }
       >
         <div
-          className="Overlay-Content"
-          style={
-            Object {
-              "animationDuration": "200ms",
-            }
-          }
+          className="Overlay-Mask"
+          onClick={[Function]}
+        />
+        <div
+          className="Overlay-Box"
         >
           <div
-            className="Overlay-Mask"
+            className="Overlay-Close"
             onClick={[Function]}
-          />
+          >
+            close
+          </div>
           <div
-            className="Overlay-Box"
+            className="AddNewIdea"
           >
             <div
-              className="Overlay-Close"
-              onClick={[Function]}
+              className="AddNewIdea-Title"
             >
-              close
+              Add new idea
             </div>
-            <div
-              className="AddNewIdea"
+            <form
+              action=""
+              method="POST"
+              onSubmit={[Function]}
             >
-              <div
-                className="AddNewIdea-Title"
-              >
-                Add new idea
-              </div>
-              <form
-                action=""
-                method="POST"
-                onSubmit={[Function]}
-              >
-                <div>
-                  <label
-                    className=""
-                    htmlFor="ideaName"
-                  >
-                    Idea Name*
-                  </label>
-                  <input
-                    name="name"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    required={true}
-                    type="text"
-                  />
-                </div>
-                <div>
-                  <label
-                    className="align-top "
-                    htmlFor="description"
-                  >
-                    Idea Description*
-                  </label>
-                  <textarea
-                    name="description"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    required={true}
-                    rows="5"
-                  />
-                </div>
-                <button
-                  type="submit"
+              <div>
+                <label
+                  className=""
+                  htmlFor="ideaName"
                 >
-                  Submit
-                </button>
-              </form>
-            </div>
+                  Idea Name*
+                </label>
+                <input
+                  name="name"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={true}
+                  type="text"
+                />
+              </div>
+              <div>
+                <label
+                  className="align-top "
+                  htmlFor="description"
+                >
+                  Idea Description*
+                </label>
+                <textarea
+                  name="description"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={true}
+                  rows="5"
+                />
+              </div>
+              <button
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </div>
-    </Overlay>
-  </AddNewIdea>
-</Provider>
+    </div>
+  </Overlay>
+</AddNewIdea>
 `;

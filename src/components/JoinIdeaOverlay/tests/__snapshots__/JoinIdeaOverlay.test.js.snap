@@ -1,139 +1,126 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`JoinIdeaOverlay renders as expected 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <JoinIdeaOverlay>
-    <Overlay
-      onClose={[Function]}
+<JoinIdeaOverlay>
+  <Overlay
+    onClose={[Function]}
+  >
+    <div
+      className="Overlay Overlay--isOpening"
     >
       <div
-        className="Overlay Overlay--isOpening"
+        className="Overlay-Content"
+        style={
+          Object {
+            "animationDuration": "200ms",
+          }
+        }
       >
         <div
-          className="Overlay-Content"
-          style={
-            Object {
-              "animationDuration": "200ms",
-            }
-          }
+          className="Overlay-Mask"
+          onClick={[Function]}
+        />
+        <div
+          className="Overlay-Box"
         >
           <div
-            className="Overlay-Mask"
+            className="Overlay-Close"
             onClick={[Function]}
-          />
+          >
+            close
+          </div>
           <div
-            className="Overlay-Box"
+            className="JoinIdeaOverlay"
           >
             <div
-              className="Overlay-Close"
-              onClick={[Function]}
+              className="JoinIdeaOverlay-Title"
             >
-              close
+              Join the idea
             </div>
-            <div
-              className="JoinIdeaOverlay"
+            <form
+              method="POST"
+              onSubmit={[Function]}
             >
-              <div
-                className="JoinIdeaOverlay-Title"
-              >
-                Join the idea
-              </div>
-              <form
-                method="POST"
-                onSubmit={[Function]}
-              >
-                <div>
-                  <label
-                    className=""
-                    htmlFor="firstName"
-                  >
-                    First Name*
-                  </label>
-                  <input
-                    name="firstName"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    required={true}
-                    type="text"
-                  />
-                </div>
-                <div>
-                  <label
-                    className=""
-                    htmlFor="lastName"
-                  >
-                    ast Name*
-                  </label>
-                  <input
-                    name="lastName"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    required={true}
-                    type="text"
-                    value=""
-                  />
-                </div>
-                <div>
-                  <label
-                    className=""
-                    htmlFor="email"
-                  >
-                    Your email*
-                  </label>
-                  <input
-                    name="email"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    required={true}
-                    type="email"
-                  />
-                </div>
-                <div>
-                  <label
-                    className=""
-                    htmlFor="position"
-                  >
-                    Position*
-                  </label>
-                  <input
-                    name="position"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    required={true}
-                    type="text"
-                  />
-                </div>
-                <button
-                  className="Button Button--isSecondaryTransparent"
-                  type="submit"
+              <div>
+                <label
+                  className=""
+                  htmlFor="firstName"
                 >
-                  <p
-                    className="Button-Inside"
-                  >
-                    Submit
-                  </p>
-                </button>
-              </form>
-            </div>
+                  First Name*
+                </label>
+                <input
+                  name="firstName"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={true}
+                  type="text"
+                />
+              </div>
+              <div>
+                <label
+                  className=""
+                  htmlFor="lastName"
+                >
+                  ast Name*
+                </label>
+                <input
+                  name="lastName"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={true}
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div>
+                <label
+                  className=""
+                  htmlFor="email"
+                >
+                  Your email*
+                </label>
+                <input
+                  name="email"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={true}
+                  type="email"
+                />
+              </div>
+              <div>
+                <label
+                  className=""
+                  htmlFor="position"
+                >
+                  Position*
+                </label>
+                <input
+                  name="position"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  required={true}
+                  type="text"
+                />
+              </div>
+              <button
+                className="Button Button--isSecondaryTransparent"
+                type="submit"
+              >
+                <p
+                  className="Button-Inside"
+                >
+                  Submit
+                </p>
+              </button>
+            </form>
           </div>
         </div>
       </div>
-    </Overlay>
-  </JoinIdeaOverlay>
-</Provider>
+    </div>
+  </Overlay>
+</JoinIdeaOverlay>
 `;

@@ -6,7 +6,6 @@ import '../Overlay/Overlay.css';
 const JoinIdeaOverlay = ({
   onClose,
   shouldClose,
-  dispatch,
   ideas,
   selectedIdea,
   error,

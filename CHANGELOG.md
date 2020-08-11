@@ -1,3 +1,6 @@
+## 4.0.0
+* Get rid of REDUX
+
 ## 3.4.0
 * Update Rules section
 * Update Schedule section
