@@ -183,7 +183,7 @@ const Schedule = () => (
             </tr>
             <tr>
               <th>17:15</th>
-              <td colSpan="4" rowSpan="2" className="is-official-program">
+              <td colSpan="4" rowSpan="4" className="is-official-program">
                 Announce winners & ending ceremony{' '}
                 <span>online (link tba)</span>
               </td>
