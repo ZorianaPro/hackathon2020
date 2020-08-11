@@ -1,5 +1,5 @@
 .Registration {
-    background-color: var(--colorSpaceCadet);
+    background-color: #5f4b8b;
 }
 
 .Registration .Registration-Container {
@@ -33,4 +33,10 @@
 .Registration .Button {
     display: inline-block;
     margin-left: -140px;
+}
+
+@media screen and (max-width: 894px) {
+    .Registration .Button {
+        margin: 0 0 1em -89px;
+    }
 }

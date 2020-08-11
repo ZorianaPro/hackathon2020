@@ -76,16 +76,25 @@
   width: 50%;
 }
 
+.App .App-Main-Section-Logo.animate {
+  left: -1000%;
+}
+
 .App .App-Main-Section-Logo {
   position: absolute;
   top: 42%;
   left: 0;
   transform: translateY(-50%);
   padding: 0 2em;
-  width: 436px;
+  width: 468px;
   height: 500px;
   background-repeat: no-repeat;
   background-image: url(/assets/logo.png);
+  background-size: cover;
+  animation-delay: 300ms;
+  animation-duration: 800ms;
+  animation-name: from-l-to-r;
+  animation-timing-function: ease-in-out;
 }
 
 @media (min-height: 960px or min-width: 2280px){
@@ -129,6 +138,10 @@
   align-items: center;
 }
 
+.App .Hack-guy.animate {
+  right: -1000%;
+}
+
 .App .Hack-guy {
   background-repeat: no-repeat;
   background-image: url(/assets/hack-guy.png);
@@ -140,6 +153,10 @@
   right: 0;
   background-position: top right;
   background-size: contain;
+  animation-delay: 1000ms;
+  animation-duration: 800ms;
+  animation-name: from-r-to-l;
+  animation-timing-function: ease-in-out;
 }
 
 @media (min-height: 960px or min-width: 2280px){
@@ -168,13 +185,22 @@ input, select, textarea {
   font-size: var(--fontSize16);
 }
 
+select {
+  position: relative;
+  display: block;
+}
+
+option {
+  width: 100%;
+}
+
 textarea {
   height: 11em;
-
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none;
   border-bottom: 1px solid var(--colorMesiumTorquoise);
 }
@@ -233,15 +259,147 @@ a {
   text-decoration: none;
 }
 
-.App .Success-Message {
-  color: var(--colorSpaceCadet);
-  font-size: var(--fontSize48);
-  margin-top: 1em;
-  text-align: center;
-}
-
 .App .Error-Message {
   color: var(--colorRadicalRed);
   text-align: center;
 }
+
+select {
+  font-size: var(--fontSize20);
+  color: var(--colorSpaceCadet);
+}
+
+@media screen and (max-width: 1080px) {
+
+  .App .Hack-guy {
+    width: 500px;
+  }
+
+  .App .App-Main-Section-Left {
+    width: 100%;
+  }
+
+  .App .App-Main-Section-Logo {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .App .Hack-guy.animate {
+    right: 0;
+  }
+
+  .App .Hack-guy {
+    animation: none;
+  }
+}
+
+@media screen and (max-width: 894px) {
+  .App .App-Main-Section-Logo {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .App .Header {
+    font-size: var(--fontSize20);
+  }
+}
+
+@media screen and (max-width: 543px) {
+  .App .Hack-guy {
+    width: 321px;
+  }
+
+  .App .App-Main-Section-Logo {
+    top: 45%;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@keyframes from-l-to-r {
+  0% {
+    left: -100%;
+  }
+  10% {
+    left: -50%;
+  }
+  15% {
+    left: -25%;
+  }
+  25% {
+    left: -10%;
+  }
+  30% {
+    left: 0;
+  }
+  40% {
+    left: 20%;
+  }
+  50% {
+    left: 30%;
+  }
+  55% {
+    left: 40%;
+  }
+  67% {
+    left: 30%;
+  }
+  75% {
+    left: 20%;
+  }
+  83% {
+    left: 10%;
+  }
+  90% {
+    left: 5%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes from-r-to-l {
+  0% {
+    right: -100%;
+  }
+  10% {
+    right: -50%;
+  }
+  15% {
+    right: -25%;
+  }
+  25% {
+    right: -10%;
+  }
+  30% {
+    right: 0;
+  }
+  40% {
+    right: 20%;
+  }
+  50% {
+    right: 30%;
+  }
+  55% {
+    right: 40%;
+  }
+  67% {
+    right: 30%;
+  }
+  75% {
+    right: 20%;
+  }
+  83% {
+    right: 10%;
+  }
+  90% {
+    right: 5%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
 

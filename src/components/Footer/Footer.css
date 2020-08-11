@@ -1,4 +1,98 @@
 .Footer {
+    background-color: var(--colorMesiumTorquoise);
+    position: relative;
+}
+
+.Footer .Footer-Title {
+    font-size: var(--fontSize48);
+    font-weight: var(--fontWeightPoppinsBold);
+    font-stretch: normal;
+    font-style: italic;
+    line-height: var(--lineHeight);
+    letter-spacing: normal;
     text-align: center;
-    margin: 2em;
+    color: var(--colorSpaceCadet);
+    padding-top: 2em;
+}
+
+.Footer .Credits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1em 0;
+    max-width: calc(var(--maxWidth) + 15em);
+}
+
+.Footer .Credits-Person {
+    padding: 1em;
+    width: 250px;
+}
+
+.Footer .Credits-Person .Credits-Person-Name {
+    margin-bottom: 0.125em;
+    font-size: var(--fontSize20);
+    font-weight: var(--fontWeightPoppinsBold);
+    font-style: italic;
+    color: var(--colorSpaceCadet);
+    position: relative;
+    display: block;
+}
+
+.Footer .Credits-Person .Credits-Person-Name:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background-color: var(--colorRadicalRed);
+}
+
+.Footer .Credits-Person .Credits-Person-Position {
+    margin-top: 1em;
+    color: var(--colorSpaceCadet);
+    position: relative;
+}
+
+.Footer .Credits-Person-Photo img {
+    object-fit: contain;
+    object-position: center;
+    position: relative;
+}
+
+.Footer .Figure-1 {
+    background-image: url(/assets/rectangle-y.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 30%;
+    height: 32%;
+    top: 0;
+    left: 0;
+}
+
+.Footer .Figure-2 {
+    background-image: url(/assets/rectangle.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 30%;
+    height: 32%;
+    top: 0;
+    right: 10%;
+}
+
+.Footer .Figure-3 {
+    background-image: url(/assets/triangle.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 30%;
+    height: 32%;
+    bottom: 0;
+    left: 50%;
 }

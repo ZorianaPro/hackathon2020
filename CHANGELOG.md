@@ -1,3 +1,17 @@
+## 3.4.0
+* Update Rules section
+* Update Schedule section
+
+## 3.3.0
+* Credits section
+* Fixes after Sebastian's check
+* Fix linting
+
+## 3.2.0
+* General join idea overlay with selector
+* Responsive
+* Button Hovers
+
 ## 3.1.0
 * [Implement design](https://app.zeplin.io/project/5b3640b6d713efa348d964d6/screen/5f2d253b4b239d27b509be83)
 *  Favicon

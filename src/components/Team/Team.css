@@ -122,3 +122,9 @@
 .Team.Team--full .Team-Members .Team--empty {
 
 }
+
+@media screen and (max-width: 543px) {
+    .Team.Team--full .Team-Member{
+        width: 100%;
+    }
+}

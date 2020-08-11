@@ -1,6 +1,6 @@
-import React from "react";
-import "./Schedule.css";
-import LightningSVG from "../LightningSVG";
+import React from 'react';
+import './Schedule.css';
+import LightningSVG from '../LightningSVG';
 
 const Schedule = ({ }) => {
   return (

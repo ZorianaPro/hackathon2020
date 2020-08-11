@@ -1,24 +1,25 @@
-import React, {useCallback} from 'react';
-import './AddIdeaButton.css'
-import * as addNewIdea from "../AddNewIdea/actions";
-import { useDispatch } from "react-redux";
+import React, { useCallback } from 'react';
+import './AddIdeaButton.css';
 
 const AddIdeaButton = ({
-  dispatch
+  onClick
 }) => {
+  const _onClick = useCallback((event) => {
+    if (typeof onClick === 'function') {
+      onClick(event);
+    }
+  }, [
+    onClick
+  ]);
 
-    dispatch = useDispatch();
-
-    const openAddNewIdeaOverlay = useCallback(() => {
-        dispatch(addNewIdea.open())
-    }, [dispatch]);
-
-    return (
-        <div className="AddIdeaButton"
-             onClick={() => openAddNewIdeaOverlay()}>
-            <div className="AddIdeaButton-Background"/>
-        </div>
-    )
+  return (
+    <div className="AddIdeaButton"
+      onClick={
+        _onClick
+      }>
+      <div className="AddIdeaButton-Background"/>
+    </div>
+  );
 };
 
 export default AddIdeaButton;

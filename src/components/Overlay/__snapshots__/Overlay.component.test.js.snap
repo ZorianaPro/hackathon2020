@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Overlay renders as expected 1`] = `
+<div
+  className="Overlay Overlay--isOpening"
+>
+  <div
+    className="Overlay-Content"
+    style={
+      Object {
+        "animationDuration": "200ms",
+      }
+    }
+  >
+    <div
+      className="Overlay-Mask"
+      onClick={[Function]}
+    />
+    <div
+      className="Overlay-Box"
+    >
+      <div
+        className="Overlay-Close"
+        onClick={[Function]}
+      >
+        close
+      </div>
+    </div>
+  </div>
+</div>
+`;
