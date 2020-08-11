@@ -4,6 +4,7 @@ exports[`Schedule renders as expected 1`] = `
 <Schedule>
   <div
     className="Schedule"
+    id="schedule"
   >
     <p
       className="Schedule-Title"
@@ -383,7 +384,7 @@ exports[`Schedule renders as expected 1`] = `
               <td
                 className="is-official-program"
                 colSpan="4"
-                rowSpan="2"
+                rowSpan="4"
               >
                 Announce winners & ending ceremony
                  

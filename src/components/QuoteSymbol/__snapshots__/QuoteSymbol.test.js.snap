@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuoteSymbol renders as expected 1`] = `
+<symbol
+  className="QuoteSymbol"
+  id="QuoteSymbol"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M0 0h24v24H0z"
+    fill="none"
+  />
+  <path
+    d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"
+    fill="#ff406a"
+  />
+</symbol>
+`;

@@ -12,6 +12,7 @@ import JoinIdeaOverlay from '../JoinIdeaOverlay';
 import AddNewIdea from '../AddNewIdea';
 import Schedule from '../Schedule';
 import Rules from '../Rules';
+import Inspiration from '../Inspiration';
 import SuccessOveray from '../SuccessOverlay';
 import memberService from '../../services/member';
 import ideaService from '../../services/idea';
@@ -182,12 +183,8 @@ const App = () => {
         onClickAddIdeaBtn={
           shouldOpenAddIdeaOverlay
         }/>
-      <section id="schedule" className="Schedule-Section">
-        <Schedule />
-      </section>
-      <section id="inspiration" className="Inspiration">
-        <h1 className="App-Section-Title">Inspiration</h1>
-      </section>
+      <Inspiration/>
+      <Schedule />
       <Rules />
       <SVGSpriteSheet />
       <Footer/>
