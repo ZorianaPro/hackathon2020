@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuoteSVG renders as expected 1`] = `
+<svg
+  className="QuoteSVG"
+>
+  <use
+    xlinkHref="#QuoteSymbol"
+  />
+</svg>
+`;
