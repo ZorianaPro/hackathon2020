@@ -34,13 +34,33 @@ exports[`App renders as expected 1`] = `
       </div>
     </div>
   </section>
-  <Registration />
-  <Ideas />
+  <Registration
+    onOpenAddIdeaOverlay={[Function]}
+    onOpenJoinIdeaOverlay={[Function]}
+  />
+  <Ideas
+    onClickAddIdeaBtn={[Function]}
+    onOpenIdeaInfoOverlay={[Function]}
+    onOpenJoinIdeaOverlay={[Function]}
+  />
+  <section
+    className="Schedule-Section"
+    id="schedule"
+  >
+    <Schedule />
+  </section>
+  <section
+    className="Inspiration"
+    id="inspiration"
+  >
+    <h1
+      className="App-Section-Title"
+    >
+      Inspiration
+    </h1>
+  </section>
   <Rules />
   <SVGSpriteSheet />
   <Footer />
-  <IdeaInfoOverlay />
-  <JoinIdeaOverlay />
-  <AddNewIdea />
 </div>
 `;

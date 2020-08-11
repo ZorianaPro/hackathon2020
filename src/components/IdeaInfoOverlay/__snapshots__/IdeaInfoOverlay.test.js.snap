@@ -1,39 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IdeaInfoOverlay renders as expected 1`] = `
-<Provider
-  store={
+<IdeaInfoOverlay
+  content={
     Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
+      "description": "",
+      "id": "",
+      "name": "",
+      "team": Object {},
     }
   }
 >
-   
-  <IdeaInfoOverlay>
+  <Overlay
+    onClose={[Function]}
+  >
     <div
-      className="IdeaInfoOverlay"
+      className="Overlay Overlay--isOpening"
     >
       <div
-        className="Overlay"
-        key="idea--overlay"
+        className="Overlay-Content"
+        style={
+          Object {
+            "animationDuration": "200ms",
+          }
+        }
       >
         <div
-          className="Overlay-Container"
+          className="Overlay-Mask"
+          onClick={[Function]}
+        />
+        <div
+          className="Overlay-Box"
         >
           <div
-            className="Overlay-Box"
+            className="Overlay-Close"
+            onClick={[Function]}
           >
-            <div
-              className="Overlay-Close"
-              onClick={[Function]}
-            >
-              close
-            </div>
+            close
+          </div>
+          <div
+            className="IdeaInfoOverlay"
+          >
             <p
               className="IdeaInfoOverlay-Title"
             />
@@ -71,6 +78,6 @@ exports[`IdeaInfoOverlay renders as expected 1`] = `
         </div>
       </div>
     </div>
-  </IdeaInfoOverlay>
-</Provider>
+  </Overlay>
+</IdeaInfoOverlay>
 `;

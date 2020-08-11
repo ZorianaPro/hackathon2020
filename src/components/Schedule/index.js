@@ -1,9 +1,18 @@
-import React from "react";
-import "./Schedule.css";
+import React from 'react';
+import './Schedule.css';
+import LightningSVG from '../LightningSVG';
 
-const Schedule = ({}) => {
-  return (
-    <div className="Schedule">
+const Schedule = () => (
+  <div className="Schedule">
+    <p className="Schedule-Title">Schedule</p>
+    <div className="Lightnings-Left">
+      <LightningSVG />
+      <LightningSVG />
+      <LightningSVG />
+      <LightningSVG />
+      <LightningSVG />
+    </div>
+    <div className="Schedule-Wrapper">
       <div className="Day">
         <h2>Day 1</h2>
         <table>
@@ -11,7 +20,7 @@ const Schedule = ({}) => {
             <tr>
               <th>09:00</th>
               <td colSpan="4" rowSpan="4" className="is-official-program">
-                Official welcome to Official Day 1{" "}
+                Official welcome to Official Day 1{' '}
                 <span>online (link TBA)</span>
               </td>
             </tr>
@@ -65,18 +74,24 @@ const Schedule = ({}) => {
             </tr>
             <tr>
               <th>16:00</th>
-              <td colSpan="4" rowSpan="2" className="is-official-program">
+              <td colSpan="4" rowSpan="3" className="is-official-program">
                 Virtual yoga <span>online (link TBA)</span>
               </td>
+            </tr>
+            <tr>
+              <th>16:15</th>
             </tr>
             <tr>
               <th>16:30</th>
             </tr>
             <tr>
               <th>17:00</th>
-              <td colSpan="4" rowSpan="6" className="is-hacking">
+              <td colSpan="4" rowSpan="8" className="is-hacking">
                 Hack, hack, hack
               </td>
+            </tr>
+            <tr>
+              <th>17:15</th>
             </tr>
             <tr>
               <th>17:30</th>
@@ -169,7 +184,7 @@ const Schedule = ({}) => {
             <tr>
               <th>17:15</th>
               <td colSpan="4" rowSpan="2" className="is-official-program">
-                Announce winners & ending ceremony{" "}
+                Announce winners & ending ceremony{' '}
                 <span>online (link tba)</span>
               </td>
             </tr>
@@ -185,7 +200,7 @@ const Schedule = ({}) => {
             <tr>
               <th>19:00</th>
               <td colSpan="4" rowSpan="2" className="is-official-program">
-                Offline afterparty for those who want to join{" "}
+                Offline afterparty for those who want to join{' '}
                 <span>Biergarten (tba)</span>
               </td>
             </tr>
@@ -193,7 +208,14 @@ const Schedule = ({}) => {
         </table>
       </div>
     </div>
-  );
-};
+    <div className="Lightnings-Right">
+      <LightningSVG />
+      <LightningSVG />
+      <LightningSVG />
+      <LightningSVG />
+      <LightningSVG />
+    </div>
+  </div>
+);
 
 export default Schedule;

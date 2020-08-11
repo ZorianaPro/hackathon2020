@@ -9,7 +9,7 @@
   --colorRadicalRed: #ff406a;
   --colorMesiumTorquoise: #50d3cd;
   --colorSaffron: #f2c433;
-  --colorPortiandOrange: #f25cc33;
+  --colorPortiandOrange: #f25c33;
   --colorPapayesWhip: #fff3db;
   --colorAndroidGreen: #aecc32;
 
@@ -257,13 +257,6 @@ p {
 
 a {
   text-decoration: none;
-}
-
-.App .Success-Message {
-  color: var(--colorSpaceCadet);
-  font-size: var(--fontSize48);
-  margin-top: 1em;
-  text-align: center;
 }
 
 .App .Error-Message {

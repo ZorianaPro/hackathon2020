@@ -1,44 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddNewIdea renders as expected 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <AddNewIdea>
+<AddNewIdea>
+  <Overlay
+    onClose={[Function]}
+  >
     <div
-      className="AddNewIdea"
+      className="Overlay Overlay--isOpening"
     >
       <div
-        className="Overlay"
+        className="Overlay-Content"
+        style={
+          Object {
+            "animationDuration": "200ms",
+          }
+        }
       >
         <div
-          className="Overlay-Container"
+          className="Overlay-Mask"
+          onClick={[Function]}
+        />
+        <div
+          className="Overlay-Box"
         >
           <div
-            className="Overlay-Box"
+            className="Overlay-Close"
+            onClick={[Function]}
           >
-            <div
-              className="Overlay-Close"
-              onClick={[Function]}
-            >
-              close
-            </div>
+            close
+          </div>
+          <div
+            className="AddNewIdea"
+          >
             <div
               className="AddNewIdea-Title"
             >
               Add new idea
             </div>
             <form
-              action=""
               method="POST"
               onSubmit={[Function]}
             >
@@ -50,13 +49,12 @@ exports[`AddNewIdea renders as expected 1`] = `
                   Idea Name*
                 </label>
                 <input
-                  name="ideaName"
+                  name="name"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
                   required={true}
                   type="text"
-                  value=""
                 />
               </div>
               <div>
@@ -73,7 +71,6 @@ exports[`AddNewIdea renders as expected 1`] = `
                   onFocus={[Function]}
                   required={true}
                   rows="5"
-                  value=""
                 />
               </div>
               <button
@@ -86,6 +83,6 @@ exports[`AddNewIdea renders as expected 1`] = `
         </div>
       </div>
     </div>
-  </AddNewIdea>
-</Provider>
+  </Overlay>
+</AddNewIdea>
 `;

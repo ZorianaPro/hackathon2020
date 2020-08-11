@@ -1,13 +1,12 @@
-import React, { useCallback } from "react";
-import "./Button.css";
+import React, { useCallback } from 'react';
+import './Button.css';
 
 const Button = ({ children, label, onClick, type }) => {
-
   const _onClick = useCallback(() => {
     if (typeof onClick === 'function') {
       onClick();
     }
-  }, []);
+  }, [onClick]);
 
   return (
     <div className={ `Button ${type ? `Button--${type}` : ''}` }>

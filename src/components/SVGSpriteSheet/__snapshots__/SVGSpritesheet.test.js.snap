@@ -8,5 +8,6 @@ exports[`SVGSpriteSheet renders as expected 1`] = `
   <LocationSymbol />
   <DateSymbol />
   <AddPersonSymbol />
+  <LightningSymbol />
 </svg>
 `;

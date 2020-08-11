@@ -1,18 +1,72 @@
 .Schedule {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    position: relative;
+    flex-direction: column;
+}
+
+.Schedule-Wrapper {
+    display: flex;
     align-items: flex-start;
     justify-content: center;
-    min-height: 100vh;
-    font-family: -system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    flex-wrap: wrap;
+    width: 80%;
 }
 
 .Day {
+    flex: 0 1 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex: 0 1 400px;
+    margin: 0 2em 0;
+}
+
+.Lightnings-Left,
+.Lightnings-Right {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+    z-index: -1;
+}
+
+.Lightnings-Left {
+    left: 0;
+}
+
+.Lightnings-Right {
+    right: 0;
+    
+}
+
+@media only screen and (max-width: 992px) {
+  .Schedule-Wrapper {
+    flex-direction: column;
+    margin: 0 3em 0;
+  }
+
+  .Day {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
+@media only screen and (max-width: 992px) {
+  .Lightnings-Left,
+  .Lightnings-Right {
+        display: none;
+    }
+}
+
+.Schedule table {
+    width: 100%;
 }
 
 .Schedule table tr:nth-child(even) th {
@@ -41,9 +95,71 @@
 }
 
 .is-hacking {
- background-color: var(--periwinkie-crayola-color);
+ background-color: var(--colorRadicalRed);
+ color: white;
 }
 
 .is-official-program {
-background-color: var(--salmon-pink-color);
+ background-color: var(--colorSpaceCadet);
+color: white;
+}
+
+.Schedule-Title {
+    font-size: var(--fontSize48);
+    font-weight: var(--fontWeightPoppinsBold);
+    font-stretch: normal;
+    font-style: italic;
+    line-height: var(--lineHeight);
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--colorSpaceCadet);
+}
+
+.Schedule .Lightnings-Left .LightningSVG:nth-of-type(1) {
+    transform: scale(0.5) translateX(50px);
+}
+
+.Schedule .Lightnings-Left .LightningSVG:nth-of-type(2) {
+    transform: scale(0.3);
+}
+
+.Schedule .Lightnings-Left .LightningSVG:nth-of-type(3) {
+    transform: scale(1);
+}
+
+.Schedule .Lightnings-Left .LightningSVG:nth-of-type(4) {
+    transform: scale(0.4);
+}
+
+.Schedule .Lightnings-Left .LightningSVG:nth-of-type(5) {
+    transform: scale(0.8);
+}
+
+.Schedule .Lightnings-Left .LightningSVG:nth-of-type(6) {
+    transform: scale(0.6);
+}
+
+/* Right */
+.Schedule .Lightnings-Right .LightningSVG:nth-of-type(1) {
+    transform: scale(0.5) translateX(-50px);
+}
+
+.Schedule .Lightnings-Right .LightningSVG:nth-of-type(2) {
+    transform: scale(0.3);
+}
+
+.Schedule .Lightnings-Right .LightningSVG:nth-of-type(3) {
+    transform: scale(1);
+}
+
+.Schedule .Lightnings-Right .LightningSVG:nth-of-type(4) {
+    transform: scale(0.4);
+}
+
+.Schedule .Lightnings-Right .LightningSVG:nth-of-type(5) {
+    transform: scale(0.8);
+}
+
+.Schedule .Lightnings-Right .LightningSVG:nth-of-type(6) {
+    transform: scale(0.6);
 }

@@ -1,5 +1,17 @@
-## 3.3.0
+## 4.1.0
 * Update Rules section to new design
+
+## 4.0.0
+* Get rid of REDUX
+
+## 3.4.0
+* Update Rules section
+* Update Schedule section
+
+## 3.3.0
+* Credits section
+* Fixes after Sebastian's check
+* Fix linting
 
 ## 3.2.0
 * General join idea overlay with selector

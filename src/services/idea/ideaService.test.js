@@ -1,13 +1,10 @@
 import fetchMock from 'fetch-mock';
 import config from '../config';
 import ideaService from './';
-import memberService from "../member";
 
 describe('idea service', () => {
   describe('post()', () => {
     describe('and the API call succeeds', () => {
-      let ideas;
-
       beforeEach((done) => {
         fetchMock.post(
           `${config.api.base}${config.api.ideas}`,
@@ -21,7 +18,6 @@ describe('idea service', () => {
           ]
         );
         return ideaService.post().then((_ideas) => {
-          ideas = _ideas;
           done();
         });
       });
@@ -33,7 +29,6 @@ describe('idea service', () => {
       it('calls the API', () => {
         expect(fetchMock.called()).toBe(true);
       });
-
     });
 
     describe('and the API call fails', () => {
@@ -59,8 +54,6 @@ describe('idea service', () => {
   });
   describe('get()', () => {
     describe('and the API call succeeds', () => {
-      let ideas;
-
       beforeEach((done) => {
         fetchMock.get(
           `${config.api.base}${config.api.ideas}`,
@@ -74,7 +67,6 @@ describe('idea service', () => {
           ]
         );
         return ideaService.get().then((_ideas) => {
-          ideas = _ideas;
           done();
         });
       });
@@ -86,9 +78,7 @@ describe('idea service', () => {
       it('calls the API', () => {
         expect(fetchMock.called()).toBe(true);
       });
-
     });
-
     describe('and the API call fails', () => {
       beforeAll(() => {
         fetchMock.get(
