@@ -50,7 +50,6 @@ exports[`AddNewIdea renders as expected 1`] = `
                 Add new idea
               </div>
               <form
-                action=""
                 method="POST"
                 onSubmit={[Function]}
               >
