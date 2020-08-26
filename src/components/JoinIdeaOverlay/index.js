@@ -85,7 +85,7 @@ const JoinIdeaOverlay = ({
           {
             ideas
             && <select name="id"
-              value={ selectedIdea ? selectedIdea._id : '' }
+              value={ selectedIdea && selectedIdea._id }
               required>
               <option disabled selected value>
                 Please choose the idea
