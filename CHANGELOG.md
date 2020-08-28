@@ -1,3 +1,6 @@
+## 4.4.0
+* Add production built
+
 ## 4.3.0
 * Animations
 * All fixes
