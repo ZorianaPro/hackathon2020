@@ -6,8 +6,9 @@ WORKDIR /app
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm ci
 # add app
 COPY . ./
+ENV NODE_ENV=production
+RUN npm ci
 # start app
 CMD ["npm", "start"]
