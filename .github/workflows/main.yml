@@ -53,8 +53,8 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: adaoraul/hackathon
-        tags: nginx
-        target: nginx
+        tags: frontend
+        target: frontend
         
     - name: Build and push Backend
       uses: docker/build-push-action@v1
