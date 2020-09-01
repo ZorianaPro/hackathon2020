@@ -50,16 +50,16 @@ jobs:
     - name: Build and push Frontend
       uses: docker/build-push-action@v1
       with:
-        username: zlesyk
-        password: 40bfcc9a-d0c2-4ec6-93b1-57a426229580
-        repository: zlesyk/hackathon-frontend
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        repository: ${{ secrets.DOCKER_USERNAME }}/hackathon-frontend
         tag_with_ref: true
         target: frontend
 
     - name: Build and push Backend
       uses: docker/build-push-action@v1
       with:
-        username: zlesyk
-        password: 40bfcc9a-d0c2-4ec6-93b1-57a426229580
-        repository: zlesyk/hackathon
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        repository: ${{ secrets.DOCKER_USERNAME }}/hackathon
         tag_with_ref: true
