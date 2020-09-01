@@ -1,15 +1,20 @@
-# pull official base image
-FROM node:13.12.0-alpine
-
-# set working directory
+FROM node:alpine as builder
+ENV PUBLIC_URL ""
 WORKDIR /app
-# install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
+COPY package.json /app
+COPY package-lock.json /app
+RUN npm install
+COPY . /app
+RUN npm run-script build
 
-RUN npm ci
+FROM nginx:alpine as frontend
+COPY --from=builder /app/build /usr/share/nginx/html
 
-# add app
-COPY . ./
-# start app
+FROM node:alpine
+WORKDIR /app
+COPY package.json /app
+COPY package-lock.json /app
+ENV NODE_ENV production
+RUN npm install --production
+COPY . /app
 CMD ["npm", "start"]

@@ -41,3 +41,25 @@ jobs:
         name: Jest
         path: test-results/jest
 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build and push Frontend
+      uses: docker/build-push-action@v1
+      with:
+        username: zlesyk
+        password: 40bfcc9a-d0c2-4ec6-93b1-57a426229580
+        repository: zlesyk/hackathon-frontend
+        tag_with_ref: true
+        target: frontend
+
+    - name: Build and push Backend
+      uses: docker/build-push-action@v1
+      with:
+        username: zlesyk
+        password: 40bfcc9a-d0c2-4ec6-93b1-57a426229580
+        repository: zlesyk/hackathon
+        tag_with_ref: true
