@@ -51,7 +51,7 @@ jobs:
       uses: docker/build-push-action@v1
       with:
         username: zlesyk
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        password: 40bfcc9a-d0c2-4ec6-93b1-57a426229580
         repository: zlesyk/hackathon-frontend
         tag_with_ref: true
         target: frontend
@@ -60,6 +60,6 @@ jobs:
       uses: docker/build-push-action@v1
       with:
         username: zlesyk
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        password: 40bfcc9a-d0c2-4ec6-93b1-57a426229580
         repository: zlesyk/hackathon
         tag_with_ref: true
