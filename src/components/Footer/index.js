@@ -66,6 +66,17 @@ const Footer = () => (
             Deployment
           </p>
         </div>
+        <div className="Credits-Person">
+          <div className="Credits-Person-Photo">
+            <img src="/assets/ar.jpg" alt=""/>
+          </div>
+          <p className="Credits-Person-Name">
+            Adão Raul
+          </p>
+          <p className="Credits-Person-Position">
+            DevOps
+          </p>
+        </div>
       </div>
     </div>
   </div>

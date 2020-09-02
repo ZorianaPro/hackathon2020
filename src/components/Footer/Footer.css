@@ -79,6 +79,9 @@
     object-fit: contain;
     object-position: center;
     position: relative;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
 }
 
 .Footer .Figure-1 {
