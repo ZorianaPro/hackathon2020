@@ -134,6 +134,28 @@ exports[`Footer renders as expected 1`] = `
           Deployment
         </p>
       </div>
+      <div
+        className="Credits-Person"
+      >
+        <div
+          className="Credits-Person-Photo"
+        >
+          <img
+            alt=""
+            src="/assets/ar.jpg"
+          />
+        </div>
+        <p
+          className="Credits-Person-Name"
+        >
+          Adão Raul
+        </p>
+        <p
+          className="Credits-Person-Position"
+        >
+          DevOps
+        </p>
+      </div>
     </div>
   </div>
 </div>
