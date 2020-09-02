@@ -15,6 +15,6 @@ WORKDIR /app
 COPY package.json /app
 COPY package-lock.json /app
 ENV NODE_ENV production
-RUN npm install --production
+RUN npm install
 COPY . /app
 CMD ["npm", "start"]
