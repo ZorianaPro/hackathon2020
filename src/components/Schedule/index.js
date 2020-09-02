@@ -65,7 +65,7 @@ const Schedule = () => (
             </tr>
             <tr>
               <th>15:00</th>
-              <td rowSpan="2" className="is-hacking">
+              <td rowSpan="15" className="is-hacking">
                 Hack, hack, hack
               </td>
             </tr>
@@ -74,9 +74,6 @@ const Schedule = () => (
             </tr>
             <tr>
               <th>16:00</th>
-              <td colSpan="4" rowSpan="3" className="is-official-program">
-                Virtual yoga <span>online (link TBA)</span>
-              </td>
             </tr>
             <tr>
               <th>16:15</th>
@@ -86,9 +83,6 @@ const Schedule = () => (
             </tr>
             <tr>
               <th>17:00</th>
-              <td colSpan="4" rowSpan="8" className="is-hacking">
-                Hack, hack, hack
-              </td>
             </tr>
             <tr>
               <th>17:15</th>
@@ -178,7 +172,7 @@ const Schedule = () => (
             <tr>
               <th>17:00</th>
               <td colSpan="4" rowSpan="1" className="is-official-program">
-                Voting <span>online (link tba)</span>
+                Voting online (link tba)
               </td>
             </tr>
             <tr>
@@ -201,7 +195,6 @@ const Schedule = () => (
               <th>19:00</th>
               <td colSpan="4" rowSpan="2" className="is-official-program">
                 Offline afterparty for those who want to join{' '}
-                <span>Biergarten (tba)</span>
               </td>
             </tr>
           </tbody>

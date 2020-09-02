@@ -1,3 +1,8 @@
+## 4.5.0
+* Add new member to credits
+* Update schedule
+* Working docker
+
 ## 4.4.0
 * Add production built
 

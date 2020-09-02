@@ -164,7 +164,7 @@ exports[`Schedule renders as expected 1`] = `
               </th>
               <td
                 className="is-hacking"
-                rowSpan="2"
+                rowSpan="15"
               >
                 Hack, hack, hack
               </td>
@@ -178,16 +178,6 @@ exports[`Schedule renders as expected 1`] = `
               <th>
                 16:00
               </th>
-              <td
-                className="is-official-program"
-                colSpan="4"
-                rowSpan="3"
-              >
-                Virtual yoga 
-                <span>
-                  online (link TBA)
-                </span>
-              </td>
             </tr>
             <tr>
               <th>
@@ -203,13 +193,6 @@ exports[`Schedule renders as expected 1`] = `
               <th>
                 17:00
               </th>
-              <td
-                className="is-hacking"
-                colSpan="4"
-                rowSpan="8"
-              >
-                Hack, hack, hack
-              </td>
             </tr>
             <tr>
               <th>
@@ -371,10 +354,7 @@ exports[`Schedule renders as expected 1`] = `
                 colSpan="4"
                 rowSpan="1"
               >
-                Voting 
-                <span>
-                  online (link tba)
-                </span>
+                Voting online (link tba)
               </td>
             </tr>
             <tr>
@@ -419,9 +399,6 @@ exports[`Schedule renders as expected 1`] = `
               >
                 Offline afterparty for those who want to join
                  
-                <span>
-                  Biergarten (tba)
-                </span>
               </td>
             </tr>
           </tbody>
